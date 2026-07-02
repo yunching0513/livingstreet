@@ -107,6 +107,18 @@ body { display: flex; flex-direction: column; height: 100vh; }
 }
 .btn:hover { background: var(--forest-deepest); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
 .btn:active { transform: translateY(0); }
+.btn:disabled { opacity: .6; cursor: default; transform: none; box-shadow: none; }
+
+/* 次要膠囊按鈕（描邊） */
+.btn-ghost {
+  background: transparent;
+  color: var(--forest-deep);
+  border: 2px solid var(--forest);
+  box-shadow: none;
+}
+.btn-ghost:hover { background: var(--forest); color: #fff; }
+
+.header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
 
 /* ── 版面 ─────────────────────────────────────────────── */
 .layout { display: flex; flex: 1; min-height: 0; }
@@ -281,15 +293,28 @@ body { display: flex; flex-direction: column; height: 100vh; }
 .popup .p-title { font-weight: 900; font-size: 16px; color: var(--ink); }
 .popup .p-note { font-size: 14px; color: var(--ink-body); margin: 6px 0; line-height: 1.6; }
 .popup .p-coord { font-size: 12px; color: var(--ink-muted); margin-top: 2px; }
-.popup a {
-  display: inline-block;
-  margin-top: 8px;
-  color: var(--forest-deep);
+
+/* 彈窗內的動作按鈕（下載 / Google 地圖） */
+.popup .p-actions { display: flex; gap: 8px; margin-top: 10px; }
+.popup .p-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 10px;
+  border-radius: var(--r-pill);
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
+  background: var(--forest-deep);
+  color: #fff !important;
+  transition: background .15s var(--ease-ui);
 }
-.popup a:hover { text-decoration: underline; }
+.popup .p-btn:hover { background: var(--forest-deepest); }
+.popup .p-btn.ghost {
+  background: transparent;
+  color: var(--forest-deep) !important;
+  border: 1.5px solid var(--forest);
+}
+.popup .p-btn.ghost:hover { background: var(--forest); color: #fff !important; }
 
 /* ── 提示條 ───────────────────────────────────────────── */
 .toast {
@@ -322,20 +347,47 @@ body { display: flex; flex-direction: column; height: 100vh; }
   * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
 }
 
+/* 手機底部面板的拖曳提示條（桌面隱藏） */
+.sheet-handle { display: none; }
+
 /* 響應式：手機 */
 @media (max-width: 768px) {
-  .app-header { padding: 14px 20px; }
+  .app-header { padding: 12px 16px; gap: 10px; }
+  .app-header h1 { font-size: 17px; }
+  .subtitle { display: none; }               /* 手機省空間 */
+  .brand-mark { width: 38px; height: 38px; font-size: 19px; }
+  .btn { padding: 0 16px; font-size: 14px; min-height: 40px; }
+
   .layout { flex-direction: column; }
+
+  /* 側邊清單改為可收合的底部面板 */
   .sidebar {
     position: absolute;
     z-index: 600;
-    height: 42%;
+    height: 45%;
     width: 100%;
     bottom: 0;
     top: auto;
     border-right: none;
     border-top: 1px solid var(--panel-edge);
     border-radius: var(--r-lg) var(--r-lg) 0 0;
-    box-shadow: 0 -8px 24px rgba(33,31,24,.10);
+    box-shadow: 0 -8px 24px rgba(33,31,24,.12);
+    transition: height .3s var(--ease-ui);
   }
+  .sidebar.collapsed { height: 56px; overflow: hidden; }
+
+  .sidebar-head { cursor: pointer; padding-top: 8px; text-align: center; }
+  .sheet-handle {
+    display: block;
+    width: 42px;
+    height: 5px;
+    border-radius: var(--r-pill);
+    background: var(--panel-edge);
+    margin: 2px auto 10px;
+  }
+  .section-label, .count { display: inline-block; }
+  .count { margin-left: 8px; }
+
+  /* 彈窗圖片在手機上放大一些 */
+  .popup img { width: 72vw; max-width: 72vw; }
 }

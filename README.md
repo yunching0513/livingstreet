@@ -35,6 +35,17 @@
 
 ---
 
+## 下載照片
+
+網站上的每張照片都能下載，方便他人取用案例素材：
+
+- **單張下載**：點地圖上的標記 → 彈出視窗裡按 **⬇ 下載**
+- **批量下載**：按右上角 **⬇ 下載全部**，會把目前地圖上的所有照片打包成一個 ZIP 檔
+
+> 下載的是網站顯示用的圖片（長邊約 1400px，畫質清晰、檔案精簡）。
+> 若需要「完整原始解析度」可供下載，可再調整讓 Pages 一併發佈 `photos/` 原始檔
+> （網站會變大，取捨見上面的大小說明）。
+
 ## 關於 Google 相簿
 
 你提到打算把照片上傳到 Google 相簿——這完全可以，但要注意：
@@ -62,13 +73,15 @@ python -m http.server 8000
 
 ## 放上網路（GitHub Pages）
 
-本專案已內建自動部署（`.github/workflows/deploy-pages.yml`），只要啟用一次即可：
+本專案已內建自動部署（`.github/workflows/deploy-pages.yml`），且會**自動啟用 Pages**
+（`enablement: true`），所以通常不需要手動設定：
 
-1. 到 GitHub Repo 的 **Settings → Pages**
-2. **Source** 選 **GitHub Actions**
-3. 把這個 PR 合併進 `main`（或推送到 `main`）後，Action 會自動部署，
-   稍等片刻就會得到一個公開網址，任何人都能看你的案例地圖
-4. 之後每次 `main` 有更新（包含用「Build map」自動產生的照片資料），都會自動重新部署
+1. 把變更合併／推送到 `main`
+2. `Deploy to GitHub Pages` Action 會自動啟用並部署，稍等片刻就會得到公開網址
+3. 之後每次 `main` 有更新（含「Build map」自動產生的照片資料）都會自動重新部署
+
+> 若第一次自動啟用失敗（部分帳號權限限制），到 **Settings → Pages** 把 **Source**
+> 手動選成 **GitHub Actions**，再重跑一次 Action 即可。
 
 > 部署到 Pages 時只會發佈網站需要的檔案（`index.html`、`assets/`、`data/`、`thumbs/`），
 > **不會**發佈 `photos/` 裡的原始大檔。

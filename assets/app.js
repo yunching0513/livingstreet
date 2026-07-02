@@ -20,6 +20,7 @@ const listEl = document.getElementById('photo-list');
 const countEl = document.getElementById('photo-count');
 const emptyEl = document.getElementById('empty-state');
 const toastEl = document.getElementById('toast');
+const downloadAllBtn = document.getElementById('download-all');
 
 let items = []; // { id, title, note, lat, lng, datetime, imgUrl, thumbUrl, temp, marker }
 
@@ -39,10 +40,20 @@ function gmapsLink(lat, lng) {
   return `https://www.google.com/maps/search/?api=1&query=${lat},${lng}`;
 }
 
+// 下載檔名：用標題／編號，濾掉不安全字元
+function downloadName(it) {
+  const base = String(it.title || it.id || 'photo')
+    .replace(/[\\/:*?"<>|]+/g, '_')
+    .slice(0, 60)
+    .trim() || 'photo';
+  return base + '.jpg';
+}
+
 // ---- 渲染 ----
 function refreshUI() {
   countEl.textContent = `${items.length} 個案例`;
   emptyEl.style.display = items.length ? 'none' : 'block';
+  downloadAllBtn.hidden = items.length === 0;
 
   listEl.innerHTML = '';
   items.forEach((it, idx) => {
@@ -90,7 +101,10 @@ function addItem(it) {
       ${it.note ? `<div class="p-note">${escapeHtml(it.note)}</div>` : ''}
       ${it.datetime ? `<div class="p-coord">🕑 ${escapeHtml(it.datetime)}</div>` : ''}
       <div class="p-coord">📍 ${fmtCoord(it.lat, it.lng)}</div>
-      <a href="${gmapsLink(it.lat, it.lng)}" target="_blank" rel="noopener">在 Google 地圖開啟 ↗</a>
+      <div class="p-actions">
+        <a class="p-btn" href="${it.imgUrl || it.thumbUrl}" download="${escapeHtml(downloadName(it))}">⬇ 下載</a>
+        <a class="p-btn ghost" href="${gmapsLink(it.lat, it.lng)}" target="_blank" rel="noopener">Google 地圖 ↗</a>
+      </div>
     </div>`;
   marker.bindPopup(popup, { maxWidth: 280 });
   it.marker = marker;
@@ -200,6 +214,72 @@ async function handleFiles(fileList) {
   else if (added) toast(`已加入 ${added} 張照片`);
   else if (noGps) toast(`這 ${noGps} 張照片都沒有 GPS 座標。請確認拍照時有開啟定位。`, 5000);
 }
+
+// ---- 批量下載（打包成 ZIP）----
+let downloading = false;
+async function downloadAll() {
+  if (downloading) return;
+  if (!items.length) { toast('目前沒有照片可下載'); return; }
+  if (typeof window.JSZip === 'undefined') { toast('下載元件尚未載入，請稍候再試'); return; }
+
+  downloading = true;
+  downloadAllBtn.disabled = true;
+  const total = items.length;
+
+  // 照片較多時提醒改用電腦
+  if (total > 60 && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
+    toast(`共 ${total} 張，手機打包可能較慢，建議用電腦下載`, 4000);
+  }
+
+  const zip = new JSZip();
+  const usedNames = new Set();
+  let done = 0, failed = 0;
+
+  for (const it of items) {
+    try {
+      const res = await fetch(it.imgUrl || it.thumbUrl);
+      if (!res.ok) throw new Error('fetch failed');
+      const blob = await res.blob();
+      // 避免同名覆蓋
+      let name = downloadName(it);
+      let n = 1;
+      while (usedNames.has(name)) { name = downloadName(it).replace(/\.jpg$/, `_${n++}.jpg`); }
+      usedNames.add(name);
+      zip.file(name, blob);
+      done++;
+    } catch (_) { failed++; }
+    if ((done + failed) % 10 === 0 || done + failed === total) {
+      toast(`打包中… ${done + failed}/${total}`, 60000);
+    }
+  }
+
+  if (!done) { toast('下載失敗，請稍後再試'); downloading = false; downloadAllBtn.disabled = false; return; }
+
+  toast('正在產生 ZIP 檔…', 60000);
+  const content = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
+  const url = URL.createObjectURL(content);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = '生活街道案例照片.zip';
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+
+  toast(failed ? `已下載 ${done} 張（${failed} 張失敗）` : `已下載 ${done} 張照片`);
+  downloading = false;
+  downloadAllBtn.disabled = false;
+}
+downloadAllBtn.addEventListener('click', downloadAll);
+
+// ---- 手機：點清單標題列可收合／展開底部面板 ----
+const sidebarEl = document.getElementById('sidebar');
+document.getElementById('sidebar-head').addEventListener('click', (e) => {
+  // 只在手機版（底部面板）時作用
+  if (window.matchMedia('(max-width: 768px)').matches) {
+    sidebarEl.classList.toggle('collapsed');
+  }
+});
 
 // ---- 事件綁定 ----
 document.getElementById('file-input').addEventListener('change', (e) => {
