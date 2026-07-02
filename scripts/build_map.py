@@ -39,6 +39,7 @@ THUMBS_DIR = ROOT / "thumbs"
 DATA_FILE = ROOT / "data" / "photos.json"
 
 DISPLAY_MAX = 1400   # 彈出視窗顯示用的圖片長邊像素
+SMALL_MAX = 400      # 側邊清單／地圖標記用的小縮圖長邊像素
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".tif", ".tiff", ".heic", ".heif", ".webp"}
 
 
@@ -94,13 +95,18 @@ def get_datetime(img):
         return str(raw)
 
 
-def make_thumb(img, dest):
-    """輸出 JPEG 縮圖（含方向校正）。"""
-    im = ImageOps.exif_transpose(img)
-    im = im.convert("RGB")
-    im.thumbnail((DISPLAY_MAX, DISPLAY_MAX))
-    dest.parent.mkdir(parents=True, exist_ok=True)
-    im.save(dest, "JPEG", quality=85, optimize=True)
+def make_thumbs(img, display_dest, small_dest):
+    """輸出兩種 JPEG 縮圖（含方向校正）：大圖給彈窗、小圖給清單／標記。"""
+    base = ImageOps.exif_transpose(img).convert("RGB")
+    display_dest.parent.mkdir(parents=True, exist_ok=True)
+
+    disp = base.copy()
+    disp.thumbnail((DISPLAY_MAX, DISPLAY_MAX))
+    disp.save(display_dest, "JPEG", quality=85, optimize=True)
+
+    small = base.copy()
+    small.thumbnail((SMALL_MAX, SMALL_MAX))
+    small.save(small_dest, "JPEG", quality=80, optimize=True)
 
 
 def load_existing_captions():
@@ -152,8 +158,9 @@ def main():
                     skipped_no_gps.append(str(rel))
                     continue
                 dt = get_datetime(img)
-                thumb_rel = f"thumbs/{pid}.jpg"
-                make_thumb(img, ROOT / thumb_rel)
+                thumb_rel = f"thumbs/{pid}.jpg"       # 大圖：彈窗顯示
+                small_rel = f"thumbs/{pid}_sm.jpg"    # 小圖：清單／標記
+                make_thumbs(img, ROOT / thumb_rel, ROOT / small_rel)
         except Exception as e:  # noqa: BLE001 — 單張照片壞掉不應中斷整批
             skipped_error.append(f"{rel}（{e}）")
             continue
@@ -167,8 +174,8 @@ def main():
             "lat": lat,
             "lng": lng,
             "datetime": dt,
-            "image": thumb_rel,
-            "thumb": thumb_rel,
+            "image": thumb_rel,   # 大圖，彈窗用
+            "thumb": small_rel,   # 小圖，清單／標記用
             "source": str(rel),
         })
         print(f"✓ {rel}  →  {lat}, {lng}")
