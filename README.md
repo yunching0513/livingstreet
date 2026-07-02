@@ -62,9 +62,16 @@ python -m http.server 8000
 
 ## 放上網路（GitHub Pages）
 
+本專案已內建自動部署（`.github/workflows/deploy-pages.yml`），只要啟用一次即可：
+
 1. 到 GitHub Repo 的 **Settings → Pages**
-2. Source 選 **Deploy from a branch**，Branch 選你的分支、資料夾選 `/ (root)`
-3. 稍等片刻，就會得到一個公開網址，任何人都能看你的案例地圖
+2. **Source** 選 **GitHub Actions**
+3. 把這個 PR 合併進 `main`（或推送到 `main`）後，Action 會自動部署，
+   稍等片刻就會得到一個公開網址，任何人都能看你的案例地圖
+4. 之後每次 `main` 有更新（包含用「Build map」自動產生的照片資料），都會自動重新部署
+
+> 部署到 Pages 時只會發佈網站需要的檔案（`index.html`、`assets/`、`data/`、`thumbs/`），
+> **不會**發佈 `photos/` 裡的原始大檔。
 
 > ⚠ **隱私提醒**：GitHub Pages 是公開的，放上去的照片與座標所有人都看得到。
 > 若照片涉及隱私（例如住家位置），請改用 **private repo**，或只用「方式一」在本機查看。
