@@ -33,6 +33,13 @@ try:
 except ImportError:
     HEIC_OK = False
 
+# 依座標反查城市／地區（離線，不需外部 API）；沒安裝也不影響其他功能
+try:
+    import reverse_geocode as _rgc
+    RGC_OK = True
+except ImportError:
+    RGC_OK = False
+
 ROOT = Path(__file__).resolve().parent.parent
 PHOTOS_DIR = ROOT / "photos"
 THUMBS_DIR = ROOT / "thumbs"
@@ -109,6 +116,27 @@ def make_thumbs(img, display_dest, small_dest):
     small.save(small_dest, "JPEG", quality=80, optimize=True)
 
 
+def add_locations(photos):
+    """依經緯度反查城市／地區／國家，寫回每張照片（離線）。"""
+    if not photos:
+        return
+    if not RGC_OK:
+        print("⚠ 未安裝 reverse_geocode，略過城市分類（清單將不分組）。")
+        print("  若要分組，請執行：pip install reverse_geocode")
+        return
+    coords = [(p["lat"], p["lng"]) for p in photos]
+    try:
+        results = _rgc.search(coords)
+    except Exception as e:  # noqa: BLE001 — 反查失敗不應中斷整批
+        print(f"⚠ 城市反查失敗，略過分類：{e}")
+        return
+    for p, r in zip(photos, results):
+        p["city"] = r.get("city") or ""
+        p["region"] = r.get("state") or ""
+        p["country"] = r.get("country") or ""
+        p["cc"] = r.get("country_code") or ""
+
+
 def load_existing_captions():
     """保留使用者先前填寫的 title / note。"""
     if not DATA_FILE.exists():
@@ -179,6 +207,9 @@ def main():
             "source": str(rel),
         })
         print(f"✓ {rel}  →  {lat}, {lng}")
+
+    # 反查城市／地區（供清單分組與分城市下載）
+    add_locations(photos)
 
     # 依時間排序（沒有時間的排在後面）
     photos.sort(key=lambda p: (p["datetime"] == "", p["datetime"]))

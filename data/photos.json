@@ -9,7 +9,11 @@
       "datetime": "2023-03-25 15:34:57",
       "image": "thumbs/IMG_6256.jpg",
       "thumb": "thumbs/IMG_6256_sm.jpg",
-      "source": "IMG_6256.heic"
+      "source": "IMG_6256.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_6289",
@@ -20,7 +24,11 @@
       "datetime": "2023-03-25 16:25:08",
       "image": "thumbs/IMG_6289.jpg",
       "thumb": "thumbs/IMG_6289_sm.jpg",
-      "source": "IMG_6289.heic"
+      "source": "IMG_6289.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_6292",
@@ -31,7 +39,11 @@
       "datetime": "2023-03-25 16:26:57",
       "image": "thumbs/IMG_6292.jpg",
       "thumb": "thumbs/IMG_6292_sm.jpg",
-      "source": "IMG_6292.heic"
+      "source": "IMG_6292.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_7106",
@@ -42,7 +54,11 @@
       "datetime": "2023-04-08 20:10:37",
       "image": "thumbs/IMG_7106.jpg",
       "thumb": "thumbs/IMG_7106_sm.jpg",
-      "source": "IMG_7106.heic"
+      "source": "IMG_7106.heic",
+      "city": "Kadoelen",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_7383",
@@ -53,7 +69,11 @@
       "datetime": "2023-04-10 19:50:34",
       "image": "thumbs/IMG_7383.jpg",
       "thumb": "thumbs/IMG_7383_sm.jpg",
-      "source": "IMG_7383.heic"
+      "source": "IMG_7383.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_7523",
@@ -64,7 +84,11 @@
       "datetime": "2023-04-12 20:25:45",
       "image": "thumbs/IMG_7523.jpg",
       "thumb": "thumbs/IMG_7523_sm.jpg",
-      "source": "IMG_7523.heic"
+      "source": "IMG_7523.heic",
+      "city": "Amstelveen",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0169",
@@ -75,7 +99,11 @@
       "datetime": "2023-05-20 15:48:00",
       "image": "thumbs/IMG_0169.jpg",
       "thumb": "thumbs/IMG_0169_sm.jpg",
-      "source": "IMG_0169.heic"
+      "source": "IMG_0169.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0170",
@@ -86,7 +114,11 @@
       "datetime": "2023-05-20 15:48:25",
       "image": "thumbs/IMG_0170.jpg",
       "thumb": "thumbs/IMG_0170_sm.jpg",
-      "source": "IMG_0170.heic"
+      "source": "IMG_0170.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0171",
@@ -97,7 +129,11 @@
       "datetime": "2023-05-20 15:48:29",
       "image": "thumbs/IMG_0171.jpg",
       "thumb": "thumbs/IMG_0171_sm.jpg",
-      "source": "IMG_0171.heic"
+      "source": "IMG_0171.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0172",
@@ -108,7 +144,11 @@
       "datetime": "2023-05-20 15:48:46",
       "image": "thumbs/IMG_0172.jpg",
       "thumb": "thumbs/IMG_0172_sm.jpg",
-      "source": "IMG_0172.heic"
+      "source": "IMG_0172.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0176",
@@ -119,7 +159,11 @@
       "datetime": "2023-05-20 15:49:31",
       "image": "thumbs/IMG_0176.jpg",
       "thumb": "thumbs/IMG_0176_sm.jpg",
-      "source": "IMG_0176.heic"
+      "source": "IMG_0176.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0177",
@@ -130,7 +174,11 @@
       "datetime": "2023-05-20 15:49:44",
       "image": "thumbs/IMG_0177.jpg",
       "thumb": "thumbs/IMG_0177_sm.jpg",
-      "source": "IMG_0177.heic"
+      "source": "IMG_0177.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0178",
@@ -141,7 +189,11 @@
       "datetime": "2023-05-20 15:49:51",
       "image": "thumbs/IMG_0178.jpg",
       "thumb": "thumbs/IMG_0178_sm.jpg",
-      "source": "IMG_0178.heic"
+      "source": "IMG_0178.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0180",
@@ -152,7 +204,11 @@
       "datetime": "2023-05-20 15:50:44",
       "image": "thumbs/IMG_0180.jpg",
       "thumb": "thumbs/IMG_0180_sm.jpg",
-      "source": "IMG_0180.heic"
+      "source": "IMG_0180.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0182",
@@ -163,7 +219,11 @@
       "datetime": "2023-05-20 15:51:22",
       "image": "thumbs/IMG_0182.jpg",
       "thumb": "thumbs/IMG_0182_sm.jpg",
-      "source": "IMG_0182.heic"
+      "source": "IMG_0182.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0364",
@@ -174,7 +234,11 @@
       "datetime": "2023-05-21 11:59:28",
       "image": "thumbs/IMG_0364.jpg",
       "thumb": "thumbs/IMG_0364_sm.jpg",
-      "source": "IMG_0364.heic"
+      "source": "IMG_0364.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0371",
@@ -185,7 +249,11 @@
       "datetime": "2023-05-21 12:04:36",
       "image": "thumbs/IMG_0371.jpg",
       "thumb": "thumbs/IMG_0371_sm.jpg",
-      "source": "IMG_0371.heic"
+      "source": "IMG_0371.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0372",
@@ -196,7 +264,11 @@
       "datetime": "2023-05-21 12:04:42",
       "image": "thumbs/IMG_0372.jpg",
       "thumb": "thumbs/IMG_0372_sm.jpg",
-      "source": "IMG_0372.heic"
+      "source": "IMG_0372.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0373",
@@ -207,7 +279,11 @@
       "datetime": "2023-05-21 12:06:02",
       "image": "thumbs/IMG_0373.jpg",
       "thumb": "thumbs/IMG_0373_sm.jpg",
-      "source": "IMG_0373.heic"
+      "source": "IMG_0373.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0028",
@@ -218,7 +294,11 @@
       "datetime": "2023-09-23 18:52:06",
       "image": "thumbs/IMG_0028.jpg",
       "thumb": "thumbs/IMG_0028_sm.jpg",
-      "source": "IMG_0028.heic"
+      "source": "IMG_0028.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0029",
@@ -229,7 +309,11 @@
       "datetime": "2023-09-23 18:53:09",
       "image": "thumbs/IMG_0029.jpg",
       "thumb": "thumbs/IMG_0029_sm.jpg",
-      "source": "IMG_0029.heic"
+      "source": "IMG_0029.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0030",
@@ -240,7 +324,11 @@
       "datetime": "2023-09-23 18:53:18",
       "image": "thumbs/IMG_0030.jpg",
       "thumb": "thumbs/IMG_0030_sm.jpg",
-      "source": "IMG_0030.heic"
+      "source": "IMG_0030.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0031",
@@ -251,7 +339,11 @@
       "datetime": "2023-09-23 18:56:42",
       "image": "thumbs/IMG_0031.jpg",
       "thumb": "thumbs/IMG_0031_sm.jpg",
-      "source": "IMG_0031.heic"
+      "source": "IMG_0031.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0036",
@@ -262,7 +354,11 @@
       "datetime": "2023-09-23 19:06:51",
       "image": "thumbs/IMG_0036.jpg",
       "thumb": "thumbs/IMG_0036_sm.jpg",
-      "source": "IMG_0036.heic"
+      "source": "IMG_0036.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0039",
@@ -273,7 +369,11 @@
       "datetime": "2023-09-23 19:12:21",
       "image": "thumbs/IMG_0039.jpg",
       "thumb": "thumbs/IMG_0039_sm.jpg",
-      "source": "IMG_0039.heic"
+      "source": "IMG_0039.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0077",
@@ -284,7 +384,11 @@
       "datetime": "2023-09-24 15:43:04",
       "image": "thumbs/IMG_0077.jpg",
       "thumb": "thumbs/IMG_0077_sm.jpg",
-      "source": "IMG_0077.heic"
+      "source": "IMG_0077.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0180 2",
@@ -295,7 +399,11 @@
       "datetime": "2023-09-25 19:32:22",
       "image": "thumbs/IMG_0180 2.jpg",
       "thumb": "thumbs/IMG_0180 2_sm.jpg",
-      "source": "IMG_0180 2.heic"
+      "source": "IMG_0180 2.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0252",
@@ -306,7 +414,11 @@
       "datetime": "2023-09-26 15:42:28",
       "image": "thumbs/IMG_0252.jpg",
       "thumb": "thumbs/IMG_0252_sm.jpg",
-      "source": "IMG_0252.heic"
+      "source": "IMG_0252.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0253",
@@ -317,7 +429,11 @@
       "datetime": "2023-09-26 15:42:31",
       "image": "thumbs/IMG_0253.jpg",
       "thumb": "thumbs/IMG_0253_sm.jpg",
-      "source": "IMG_0253.heic"
+      "source": "IMG_0253.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0280",
@@ -328,7 +444,11 @@
       "datetime": "2023-09-26 15:59:35",
       "image": "thumbs/IMG_0280.jpg",
       "thumb": "thumbs/IMG_0280_sm.jpg",
-      "source": "IMG_0280.heic"
+      "source": "IMG_0280.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0292",
@@ -339,7 +459,11 @@
       "datetime": "2023-09-26 16:05:39",
       "image": "thumbs/IMG_0292.jpg",
       "thumb": "thumbs/IMG_0292_sm.jpg",
-      "source": "IMG_0292.heic"
+      "source": "IMG_0292.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_1061",
@@ -350,7 +474,11 @@
       "datetime": "2023-10-15 12:49:05",
       "image": "thumbs/IMG_1061.jpg",
       "thumb": "thumbs/IMG_1061_sm.jpg",
-      "source": "IMG_1061.heic"
+      "source": "IMG_1061.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_1081",
@@ -361,7 +489,11 @@
       "datetime": "2023-10-15 13:24:15",
       "image": "thumbs/IMG_1081.jpg",
       "thumb": "thumbs/IMG_1081_sm.jpg",
-      "source": "IMG_1081.heic"
+      "source": "IMG_1081.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3463",
@@ -372,7 +504,11 @@
       "datetime": "2023-10-29 14:47:25",
       "image": "thumbs/IMG_3463.jpg",
       "thumb": "thumbs/IMG_3463_sm.jpg",
-      "source": "IMG_3463.heic"
+      "source": "IMG_3463.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3541",
@@ -383,7 +519,11 @@
       "datetime": "2023-10-29 16:19:37",
       "image": "thumbs/IMG_3541.jpg",
       "thumb": "thumbs/IMG_3541_sm.jpg",
-      "source": "IMG_3541.heic"
+      "source": "IMG_3541.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3564",
@@ -394,7 +534,11 @@
       "datetime": "2023-10-29 17:11:22",
       "image": "thumbs/IMG_3564.jpg",
       "thumb": "thumbs/IMG_3564_sm.jpg",
-      "source": "IMG_3564.heic"
+      "source": "IMG_3564.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3902",
@@ -405,7 +549,11 @@
       "datetime": "2023-11-09 10:29:22",
       "image": "thumbs/IMG_3902.jpg",
       "thumb": "thumbs/IMG_3902_sm.jpg",
-      "source": "IMG_3902.heic"
+      "source": "IMG_3902.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3904",
@@ -416,7 +564,11 @@
       "datetime": "2023-11-09 10:32:01",
       "image": "thumbs/IMG_3904.jpg",
       "thumb": "thumbs/IMG_3904_sm.jpg",
-      "source": "IMG_3904.heic"
+      "source": "IMG_3904.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4162",
@@ -427,7 +579,11 @@
       "datetime": "2023-11-16 11:21:05",
       "image": "thumbs/IMG_4162.jpg",
       "thumb": "thumbs/IMG_4162_sm.jpg",
-      "source": "IMG_4162.heic"
+      "source": "IMG_4162.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4206",
@@ -438,7 +594,11 @@
       "datetime": "2023-11-17 10:52:27",
       "image": "thumbs/IMG_4206.jpg",
       "thumb": "thumbs/IMG_4206_sm.jpg",
-      "source": "IMG_4206.heic"
+      "source": "IMG_4206.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4207",
@@ -449,7 +609,11 @@
       "datetime": "2023-11-17 10:58:10",
       "image": "thumbs/IMG_4207.jpg",
       "thumb": "thumbs/IMG_4207_sm.jpg",
-      "source": "IMG_4207.heic"
+      "source": "IMG_4207.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4208",
@@ -460,7 +624,11 @@
       "datetime": "2023-11-17 10:59:49",
       "image": "thumbs/IMG_4208.jpg",
       "thumb": "thumbs/IMG_4208_sm.jpg",
-      "source": "IMG_4208.heic"
+      "source": "IMG_4208.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4317",
@@ -471,7 +639,11 @@
       "datetime": "2023-11-20 10:39:52",
       "image": "thumbs/IMG_4317.jpg",
       "thumb": "thumbs/IMG_4317_sm.jpg",
-      "source": "IMG_4317.heic"
+      "source": "IMG_4317.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4321",
@@ -482,7 +654,11 @@
       "datetime": "2023-11-20 10:43:25",
       "image": "thumbs/IMG_4321.jpg",
       "thumb": "thumbs/IMG_4321_sm.jpg",
-      "source": "IMG_4321.heic"
+      "source": "IMG_4321.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4790",
@@ -493,7 +669,11 @@
       "datetime": "2023-11-26 12:08:48",
       "image": "thumbs/IMG_4790.jpg",
       "thumb": "thumbs/IMG_4790_sm.jpg",
-      "source": "IMG_4790.heic"
+      "source": "IMG_4790.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5016",
@@ -504,7 +684,11 @@
       "datetime": "2023-12-02 13:31:30",
       "image": "thumbs/IMG_5016.jpg",
       "thumb": "thumbs/IMG_5016_sm.jpg",
-      "source": "IMG_5016.heic"
+      "source": "IMG_5016.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5021",
@@ -515,7 +699,11 @@
       "datetime": "2023-12-02 13:37:44",
       "image": "thumbs/IMG_5021.jpg",
       "thumb": "thumbs/IMG_5021_sm.jpg",
-      "source": "IMG_5021.heic"
+      "source": "IMG_5021.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5034",
@@ -526,7 +714,11 @@
       "datetime": "2023-12-02 13:48:28",
       "image": "thumbs/IMG_5034.jpg",
       "thumb": "thumbs/IMG_5034_sm.jpg",
-      "source": "IMG_5034.heic"
+      "source": "IMG_5034.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5048",
@@ -537,7 +729,11 @@
       "datetime": "2023-12-02 14:15:22",
       "image": "thumbs/IMG_5048.jpg",
       "thumb": "thumbs/IMG_5048_sm.jpg",
-      "source": "IMG_5048.heic"
+      "source": "IMG_5048.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5253",
@@ -548,7 +744,11 @@
       "datetime": "2023-12-02 16:27:05",
       "image": "thumbs/IMG_5253.jpg",
       "thumb": "thumbs/IMG_5253_sm.jpg",
-      "source": "IMG_5253.heic"
+      "source": "IMG_5253.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0786",
@@ -559,7 +759,11 @@
       "datetime": "2024-01-19 12:21:44",
       "image": "thumbs/IMG_0786.jpg",
       "thumb": "thumbs/IMG_0786_sm.jpg",
-      "source": "IMG_0786.heic"
+      "source": "IMG_0786.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0787",
@@ -570,7 +774,11 @@
       "datetime": "2024-01-19 12:21:50",
       "image": "thumbs/IMG_0787.jpg",
       "thumb": "thumbs/IMG_0787_sm.jpg",
-      "source": "IMG_0787.heic"
+      "source": "IMG_0787.heic",
+      "city": "Dapperbuurt",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0792",
@@ -581,7 +789,11 @@
       "datetime": "2024-01-19 15:48:13",
       "image": "thumbs/IMG_0792.jpg",
       "thumb": "thumbs/IMG_0792_sm.jpg",
-      "source": "IMG_0792.heic"
+      "source": "IMG_0792.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0974",
@@ -592,7 +804,11 @@
       "datetime": "2024-01-22 10:12:04",
       "image": "thumbs/IMG_0974.jpg",
       "thumb": "thumbs/IMG_0974_sm.jpg",
-      "source": "IMG_0974.heic"
+      "source": "IMG_0974.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_1998",
@@ -603,7 +819,11 @@
       "datetime": "2024-02-06 14:54:11",
       "image": "thumbs/IMG_1998.jpg",
       "thumb": "thumbs/IMG_1998_sm.jpg",
-      "source": "IMG_1998.heic"
+      "source": "IMG_1998.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2021",
@@ -614,7 +834,11 @@
       "datetime": "2024-02-06 15:09:59",
       "image": "thumbs/IMG_2021.jpg",
       "thumb": "thumbs/IMG_2021_sm.jpg",
-      "source": "IMG_2021.heic"
+      "source": "IMG_2021.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2197",
@@ -625,7 +849,11 @@
       "datetime": "2024-02-06 17:08:21",
       "image": "thumbs/IMG_2197.jpg",
       "thumb": "thumbs/IMG_2197_sm.jpg",
-      "source": "IMG_2197.heic"
+      "source": "IMG_2197.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2903",
@@ -636,7 +864,11 @@
       "datetime": "2024-02-09 21:30:28",
       "image": "thumbs/IMG_2903.jpg",
       "thumb": "thumbs/IMG_2903_sm.jpg",
-      "source": "IMG_2903.heic"
+      "source": "IMG_2903.heic",
+      "city": "Bairro Alto",
+      "region": "Lisbon",
+      "country": "Portugal",
+      "cc": "PT"
     },
     {
       "id": "IMG_7903",
@@ -647,7 +879,11 @@
       "datetime": "2025-03-02 11:43:33",
       "image": "thumbs/IMG_7903.jpg",
       "thumb": "thumbs/IMG_7903_sm.jpg",
-      "source": "IMG_7903.heic"
+      "source": "IMG_7903.heic",
+      "city": "Gare",
+      "region": "Luxembourg",
+      "country": "Luxembourg",
+      "cc": "LU"
     },
     {
       "id": "IMG_8169",
@@ -658,7 +894,11 @@
       "datetime": "2025-03-03 18:17:26",
       "image": "thumbs/IMG_8169.jpg",
       "thumb": "thumbs/IMG_8169_sm.jpg",
-      "source": "IMG_8169.heic"
+      "source": "IMG_8169.heic",
+      "city": "Brussels",
+      "region": "Brussels Capital",
+      "country": "Belgium",
+      "cc": "BE"
     },
     {
       "id": "IMG_8195",
@@ -669,7 +909,11 @@
       "datetime": "2025-03-04 11:11:33",
       "image": "thumbs/IMG_8195.jpg",
       "thumb": "thumbs/IMG_8195_sm.jpg",
-      "source": "IMG_8195.heic"
+      "source": "IMG_8195.heic",
+      "city": "Brussels",
+      "region": "Brussels Capital",
+      "country": "Belgium",
+      "cc": "BE"
     },
     {
       "id": "IMG_8446",
@@ -680,7 +924,11 @@
       "datetime": "2025-03-08 17:07:35",
       "image": "thumbs/IMG_8446.jpg",
       "thumb": "thumbs/IMG_8446_sm.jpg",
-      "source": "IMG_8446.heic"
+      "source": "IMG_8446.heic",
+      "city": "The Hague",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_8728",
@@ -691,7 +939,11 @@
       "datetime": "2025-03-15 15:16:33",
       "image": "thumbs/IMG_8728.jpg",
       "thumb": "thumbs/IMG_8728_sm.jpg",
-      "source": "IMG_8728.heic"
+      "source": "IMG_8728.heic",
+      "city": "Utrecht",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_8798",
@@ -702,7 +954,11 @@
       "datetime": "2025-03-15 18:16:07",
       "image": "thumbs/IMG_8798.jpg",
       "thumb": "thumbs/IMG_8798_sm.jpg",
-      "source": "IMG_8798.heic"
+      "source": "IMG_8798.heic",
+      "city": "Grauwaart",
+      "region": "Utrecht",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_9160",
@@ -713,7 +969,11 @@
       "datetime": "2025-03-23 12:36:35",
       "image": "thumbs/IMG_9160.jpg",
       "thumb": "thumbs/IMG_9160_sm.jpg",
-      "source": "IMG_9160.heic"
+      "source": "IMG_9160.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_9231",
@@ -724,7 +984,11 @@
       "datetime": "2025-03-28 12:05:06",
       "image": "thumbs/IMG_9231.jpg",
       "thumb": "thumbs/IMG_9231_sm.jpg",
-      "source": "IMG_9231.heic"
+      "source": "IMG_9231.heic",
+      "city": "Amsterdam",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_9343",
@@ -735,7 +999,11 @@
       "datetime": "2025-03-30 11:41:42",
       "image": "thumbs/IMG_9343.jpg",
       "thumb": "thumbs/IMG_9343_sm.jpg",
-      "source": "IMG_9343.heic"
+      "source": "IMG_9343.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_9443",
@@ -746,7 +1014,11 @@
       "datetime": "2025-04-06 15:34:24",
       "image": "thumbs/IMG_9443.jpg",
       "thumb": "thumbs/IMG_9443_sm.jpg",
-      "source": "IMG_9443.heic"
+      "source": "IMG_9443.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_9445",
@@ -757,7 +1029,11 @@
       "datetime": "2025-04-06 15:39:28",
       "image": "thumbs/IMG_9445.jpg",
       "thumb": "thumbs/IMG_9445_sm.jpg",
-      "source": "IMG_9445.heic"
+      "source": "IMG_9445.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0225",
@@ -768,7 +1044,11 @@
       "datetime": "2025-04-20 13:23:19",
       "image": "thumbs/IMG_0225.jpg",
       "thumb": "thumbs/IMG_0225_sm.jpg",
-      "source": "IMG_0225.heic"
+      "source": "IMG_0225.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0226",
@@ -779,7 +1059,11 @@
       "datetime": "2025-04-20 13:23:22",
       "image": "thumbs/IMG_0226.jpg",
       "thumb": "thumbs/IMG_0226_sm.jpg",
-      "source": "IMG_0226.heic"
+      "source": "IMG_0226.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0227",
@@ -790,7 +1074,11 @@
       "datetime": "2025-04-20 13:23:28",
       "image": "thumbs/IMG_0227.jpg",
       "thumb": "thumbs/IMG_0227_sm.jpg",
-      "source": "IMG_0227.heic"
+      "source": "IMG_0227.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0228",
@@ -801,7 +1089,11 @@
       "datetime": "2025-04-20 13:23:40",
       "image": "thumbs/IMG_0228.jpg",
       "thumb": "thumbs/IMG_0228_sm.jpg",
-      "source": "IMG_0228.heic"
+      "source": "IMG_0228.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0229",
@@ -812,7 +1104,11 @@
       "datetime": "2025-04-20 13:23:45",
       "image": "thumbs/IMG_0229.jpg",
       "thumb": "thumbs/IMG_0229_sm.jpg",
-      "source": "IMG_0229.heic"
+      "source": "IMG_0229.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_0491",
@@ -823,7 +1119,11 @@
       "datetime": "2025-04-30 11:56:01",
       "image": "thumbs/IMG_0491.jpg",
       "thumb": "thumbs/IMG_0491_sm.jpg",
-      "source": "IMG_0491.heic"
+      "source": "IMG_0491.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2924",
@@ -834,7 +1134,11 @@
       "datetime": "2025-06-27 14:43:00",
       "image": "thumbs/IMG_2924.jpg",
       "thumb": "thumbs/IMG_2924_sm.jpg",
-      "source": "IMG_2924.heic"
+      "source": "IMG_2924.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2925",
@@ -845,7 +1149,11 @@
       "datetime": "2025-06-27 14:43:05",
       "image": "thumbs/IMG_2925.jpg",
       "thumb": "thumbs/IMG_2925_sm.jpg",
-      "source": "IMG_2925.heic"
+      "source": "IMG_2925.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3674",
@@ -856,7 +1164,11 @@
       "datetime": "2025-07-12 16:27:56",
       "image": "thumbs/IMG_3674.jpg",
       "thumb": "thumbs/IMG_3674_sm.jpg",
-      "source": "IMG_3674.heic"
+      "source": "IMG_3674.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3675",
@@ -867,7 +1179,11 @@
       "datetime": "2025-07-12 16:27:58",
       "image": "thumbs/IMG_3675.jpg",
       "thumb": "thumbs/IMG_3675_sm.jpg",
-      "source": "IMG_3675.heic"
+      "source": "IMG_3675.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3676",
@@ -878,7 +1194,11 @@
       "datetime": "2025-07-12 16:28:47",
       "image": "thumbs/IMG_3676.jpg",
       "thumb": "thumbs/IMG_3676_sm.jpg",
-      "source": "IMG_3676.heic"
+      "source": "IMG_3676.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3677",
@@ -889,7 +1209,11 @@
       "datetime": "2025-07-12 16:29:55",
       "image": "thumbs/IMG_3677.jpg",
       "thumb": "thumbs/IMG_3677_sm.jpg",
-      "source": "IMG_3677.heic"
+      "source": "IMG_3677.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3678",
@@ -900,7 +1224,11 @@
       "datetime": "2025-07-12 16:30:25",
       "image": "thumbs/IMG_3678.jpg",
       "thumb": "thumbs/IMG_3678_sm.jpg",
-      "source": "IMG_3678.heic"
+      "source": "IMG_3678.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_3704",
@@ -911,7 +1239,11 @@
       "datetime": "2025-07-12 16:56:41",
       "image": "thumbs/IMG_3704.jpg",
       "thumb": "thumbs/IMG_3704_sm.jpg",
-      "source": "IMG_3704.heic"
+      "source": "IMG_3704.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_4377",
@@ -922,7 +1254,11 @@
       "datetime": "2025-07-16 15:40:43",
       "image": "thumbs/IMG_4377.jpg",
       "thumb": "thumbs/IMG_4377_sm.jpg",
-      "source": "IMG_4377.heic"
+      "source": "IMG_4377.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_4378",
@@ -933,7 +1269,11 @@
       "datetime": "2025-07-16 15:40:45",
       "image": "thumbs/IMG_4378.jpg",
       "thumb": "thumbs/IMG_4378_sm.jpg",
-      "source": "IMG_4378.heic"
+      "source": "IMG_4378.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_4394",
@@ -944,7 +1284,11 @@
       "datetime": "2025-07-16 15:47:13",
       "image": "thumbs/IMG_4394.jpg",
       "thumb": "thumbs/IMG_4394_sm.jpg",
-      "source": "IMG_4394.heic"
+      "source": "IMG_4394.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_4461",
@@ -955,7 +1299,11 @@
       "datetime": "2025-07-17 09:47:20",
       "image": "thumbs/IMG_4461.jpg",
       "thumb": "thumbs/IMG_4461_sm.jpg",
-      "source": "IMG_4461.heic"
+      "source": "IMG_4461.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_4494",
@@ -966,7 +1314,11 @@
       "datetime": "2025-07-17 14:24:36",
       "image": "thumbs/IMG_4494.jpg",
       "thumb": "thumbs/IMG_4494_sm.jpg",
-      "source": "IMG_4494.heic"
+      "source": "IMG_4494.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_4523",
@@ -977,7 +1329,11 @@
       "datetime": "2025-07-17 16:22:17",
       "image": "thumbs/IMG_4523.jpg",
       "thumb": "thumbs/IMG_4523_sm.jpg",
-      "source": "IMG_4523.heic"
+      "source": "IMG_4523.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_4533",
@@ -988,7 +1344,11 @@
       "datetime": "2025-07-17 16:26:26",
       "image": "thumbs/IMG_4533.jpg",
       "thumb": "thumbs/IMG_4533_sm.jpg",
-      "source": "IMG_4533.heic"
+      "source": "IMG_4533.heic",
+      "city": "Munich",
+      "region": "Bavaria",
+      "country": "Germany",
+      "cc": "DE"
     },
     {
       "id": "IMG_5113",
@@ -999,7 +1359,11 @@
       "datetime": "2025-07-23 11:34:34",
       "image": "thumbs/IMG_5113.jpg",
       "thumb": "thumbs/IMG_5113_sm.jpg",
-      "source": "IMG_5113.heic"
+      "source": "IMG_5113.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5114",
@@ -1010,7 +1374,11 @@
       "datetime": "2025-07-23 11:34:37",
       "image": "thumbs/IMG_5114.jpg",
       "thumb": "thumbs/IMG_5114_sm.jpg",
-      "source": "IMG_5114.heic"
+      "source": "IMG_5114.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5116",
@@ -1021,7 +1389,11 @@
       "datetime": "2025-07-23 11:34:50",
       "image": "thumbs/IMG_5116.jpg",
       "thumb": "thumbs/IMG_5116_sm.jpg",
-      "source": "IMG_5116.heic"
+      "source": "IMG_5116.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5122",
@@ -1032,7 +1404,11 @@
       "datetime": "2025-07-23 11:39:01",
       "image": "thumbs/IMG_5122.jpg",
       "thumb": "thumbs/IMG_5122_sm.jpg",
-      "source": "IMG_5122.heic"
+      "source": "IMG_5122.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5125",
@@ -1043,7 +1419,11 @@
       "datetime": "2025-07-23 11:39:41",
       "image": "thumbs/IMG_5125.jpg",
       "thumb": "thumbs/IMG_5125_sm.jpg",
-      "source": "IMG_5125.heic"
+      "source": "IMG_5125.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5126",
@@ -1054,7 +1434,11 @@
       "datetime": "2025-07-23 11:40:12",
       "image": "thumbs/IMG_5126.jpg",
       "thumb": "thumbs/IMG_5126_sm.jpg",
-      "source": "IMG_5126.heic"
+      "source": "IMG_5126.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5127 2",
@@ -1065,7 +1449,11 @@
       "datetime": "2025-07-23 11:40:15",
       "image": "thumbs/IMG_5127 2.jpg",
       "thumb": "thumbs/IMG_5127 2_sm.jpg",
-      "source": "IMG_5127 2.heic"
+      "source": "IMG_5127 2.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5132",
@@ -1076,7 +1464,11 @@
       "datetime": "2025-07-23 11:54:33",
       "image": "thumbs/IMG_5132.jpg",
       "thumb": "thumbs/IMG_5132_sm.jpg",
-      "source": "IMG_5132.heic"
+      "source": "IMG_5132.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_5135",
@@ -1087,7 +1479,11 @@
       "datetime": "2025-07-23 11:59:13",
       "image": "thumbs/IMG_5135.jpg",
       "thumb": "thumbs/IMG_5135_sm.jpg",
-      "source": "IMG_5135.heic"
+      "source": "IMG_5135.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_8281",
@@ -1098,7 +1494,11 @@
       "datetime": "2025-09-05 15:29:26",
       "image": "thumbs/IMG_8281.jpg",
       "thumb": "thumbs/IMG_8281_sm.jpg",
-      "source": "IMG_8281.heic"
+      "source": "IMG_8281.heic",
+      "city": "Porte Saint-Denis",
+      "region": "Île-de-France",
+      "country": "France",
+      "cc": "FR"
     },
     {
       "id": "IMG_8342",
@@ -1109,7 +1509,11 @@
       "datetime": "2025-09-05 19:16:18",
       "image": "thumbs/IMG_8342.jpg",
       "thumb": "thumbs/IMG_8342_sm.jpg",
-      "source": "IMG_8342.heic"
+      "source": "IMG_8342.heic",
+      "city": "Saint-Ouen",
+      "region": "Île-de-France",
+      "country": "France",
+      "cc": "FR"
     },
     {
       "id": "IMG_8343",
@@ -1120,7 +1524,11 @@
       "datetime": "2025-09-05 19:16:20",
       "image": "thumbs/IMG_8343.jpg",
       "thumb": "thumbs/IMG_8343_sm.jpg",
-      "source": "IMG_8343.heic"
+      "source": "IMG_8343.heic",
+      "city": "Saint-Ouen",
+      "region": "Île-de-France",
+      "country": "France",
+      "cc": "FR"
     },
     {
       "id": "IMG_8344",
@@ -1131,7 +1539,11 @@
       "datetime": "2025-09-05 19:16:23",
       "image": "thumbs/IMG_8344.jpg",
       "thumb": "thumbs/IMG_8344_sm.jpg",
-      "source": "IMG_8344.heic"
+      "source": "IMG_8344.heic",
+      "city": "Saint-Ouen",
+      "region": "Île-de-France",
+      "country": "France",
+      "cc": "FR"
     },
     {
       "id": "IMG_8888",
@@ -1142,7 +1554,11 @@
       "datetime": "2025-09-26 08:48:33",
       "image": "thumbs/IMG_8888.jpg",
       "thumb": "thumbs/IMG_8888_sm.jpg",
-      "source": "IMG_8888.heic"
+      "source": "IMG_8888.heic",
+      "city": "New Taipei City",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_8889",
@@ -1153,7 +1569,11 @@
       "datetime": "2025-09-26 08:48:34",
       "image": "thumbs/IMG_8889.jpg",
       "thumb": "thumbs/IMG_8889_sm.jpg",
-      "source": "IMG_8889.heic"
+      "source": "IMG_8889.heic",
+      "city": "New Taipei City",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_8948",
@@ -1164,7 +1584,11 @@
       "datetime": "2025-09-27 17:14:32",
       "image": "thumbs/IMG_8948.jpg",
       "thumb": "thumbs/IMG_8948_sm.jpg",
-      "source": "IMG_8948.heic"
+      "source": "IMG_8948.heic",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_2074 2",
@@ -1175,7 +1599,11 @@
       "datetime": "2025-11-12 14:21:47",
       "image": "thumbs/IMG_2074 2.jpg",
       "thumb": "thumbs/IMG_2074 2_sm.jpg",
-      "source": "IMG_2074 2.heic"
+      "source": "IMG_2074 2.heic",
+      "city": "Delft",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2198",
@@ -1186,7 +1614,11 @@
       "datetime": "2025-11-16 11:31:23",
       "image": "thumbs/IMG_2198.jpg",
       "thumb": "thumbs/IMG_2198_sm.jpg",
-      "source": "IMG_2198.heic"
+      "source": "IMG_2198.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2350",
@@ -1197,7 +1629,11 @@
       "datetime": "2025-11-21 11:50:20",
       "image": "thumbs/IMG_2350.jpg",
       "thumb": "thumbs/IMG_2350_sm.jpg",
-      "source": "IMG_2350.heic"
+      "source": "IMG_2350.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2353 2",
@@ -1208,7 +1644,11 @@
       "datetime": "2025-11-21 11:58:20",
       "image": "thumbs/IMG_2353 2.jpg",
       "thumb": "thumbs/IMG_2353 2_sm.jpg",
-      "source": "IMG_2353 2.heic"
+      "source": "IMG_2353 2.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2353",
@@ -1219,7 +1659,11 @@
       "datetime": "2025-11-21 11:58:20",
       "image": "thumbs/IMG_2353.jpg",
       "thumb": "thumbs/IMG_2353_sm.jpg",
-      "source": "IMG_2353.heic"
+      "source": "IMG_2353.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2356 2",
@@ -1230,7 +1674,11 @@
       "datetime": "2025-11-21 12:00:34",
       "image": "thumbs/IMG_2356 2.jpg",
       "thumb": "thumbs/IMG_2356 2_sm.jpg",
-      "source": "IMG_2356 2.heic"
+      "source": "IMG_2356 2.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2356",
@@ -1241,7 +1689,11 @@
       "datetime": "2025-11-21 12:00:34",
       "image": "thumbs/IMG_2356.jpg",
       "thumb": "thumbs/IMG_2356_sm.jpg",
-      "source": "IMG_2356.heic"
+      "source": "IMG_2356.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2357",
@@ -1252,7 +1704,11 @@
       "datetime": "2025-11-21 12:00:35",
       "image": "thumbs/IMG_2357.jpg",
       "thumb": "thumbs/IMG_2357_sm.jpg",
-      "source": "IMG_2357.heic"
+      "source": "IMG_2357.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2362 2",
@@ -1263,7 +1719,11 @@
       "datetime": "2025-11-21 12:03:41",
       "image": "thumbs/IMG_2362 2.jpg",
       "thumb": "thumbs/IMG_2362 2_sm.jpg",
-      "source": "IMG_2362 2.heic"
+      "source": "IMG_2362 2.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2362",
@@ -1274,7 +1734,11 @@
       "datetime": "2025-11-21 12:03:41",
       "image": "thumbs/IMG_2362.jpg",
       "thumb": "thumbs/IMG_2362_sm.jpg",
-      "source": "IMG_2362.heic"
+      "source": "IMG_2362.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2380",
@@ -1285,7 +1749,11 @@
       "datetime": "2025-11-21 14:24:50",
       "image": "thumbs/IMG_2380.jpg",
       "thumb": "thumbs/IMG_2380_sm.jpg",
-      "source": "IMG_2380.heic"
+      "source": "IMG_2380.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2444",
@@ -1296,7 +1764,11 @@
       "datetime": "2025-11-25 13:44:59",
       "image": "thumbs/IMG_2444.jpg",
       "thumb": "thumbs/IMG_2444_sm.jpg",
-      "source": "IMG_2444.heic"
+      "source": "IMG_2444.heic",
+      "city": "Halfweg",
+      "region": "North Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2940",
@@ -1307,7 +1779,11 @@
       "datetime": "2025-12-03 10:47:10",
       "image": "thumbs/IMG_2940.jpg",
       "thumb": "thumbs/IMG_2940_sm.jpg",
-      "source": "IMG_2940.heic"
+      "source": "IMG_2940.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2958",
@@ -1318,7 +1794,11 @@
       "datetime": "2025-12-03 14:15:05",
       "image": "thumbs/IMG_2958.jpg",
       "thumb": "thumbs/IMG_2958_sm.jpg",
-      "source": "IMG_2958.heic"
+      "source": "IMG_2958.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_2959",
@@ -1329,7 +1809,11 @@
       "datetime": "2025-12-03 14:15:07",
       "image": "thumbs/IMG_2959.jpg",
       "thumb": "thumbs/IMG_2959_sm.jpg",
-      "source": "IMG_2959.heic"
+      "source": "IMG_2959.heic",
+      "city": "Leiden",
+      "region": "South Holland",
+      "country": "Netherlands",
+      "cc": "NL"
     },
     {
       "id": "IMG_6470",
@@ -1340,7 +1824,11 @@
       "datetime": "2026-02-21 10:51:08",
       "image": "thumbs/IMG_6470.jpg",
       "thumb": "thumbs/IMG_6470_sm.jpg",
-      "source": "IMG_6470.heic"
+      "source": "IMG_6470.heic",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_7182",
@@ -1351,7 +1839,11 @@
       "datetime": "2026-03-18 14:59:24",
       "image": "thumbs/IMG_7182.jpg",
       "thumb": "thumbs/IMG_7182_sm.jpg",
-      "source": "IMG_7182.heic"
+      "source": "IMG_7182.heic",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_7489",
@@ -1362,7 +1854,11 @@
       "datetime": "2026-04-02 18:45:25",
       "image": "thumbs/IMG_7489.jpg",
       "thumb": "thumbs/IMG_7489_sm.jpg",
-      "source": "IMG_7489.heic"
+      "source": "IMG_7489.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7492",
@@ -1373,7 +1869,11 @@
       "datetime": "2026-04-02 18:50:25",
       "image": "thumbs/IMG_7492.jpg",
       "thumb": "thumbs/IMG_7492_sm.jpg",
-      "source": "IMG_7492.heic"
+      "source": "IMG_7492.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7494",
@@ -1384,7 +1884,11 @@
       "datetime": "2026-04-02 18:50:36",
       "image": "thumbs/IMG_7494.jpg",
       "thumb": "thumbs/IMG_7494_sm.jpg",
-      "source": "IMG_7494.heic"
+      "source": "IMG_7494.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7509",
@@ -1395,7 +1899,11 @@
       "datetime": "2026-04-02 19:55:02",
       "image": "thumbs/IMG_7509.jpg",
       "thumb": "thumbs/IMG_7509_sm.jpg",
-      "source": "IMG_7509.heic"
+      "source": "IMG_7509.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7515",
@@ -1406,7 +1914,11 @@
       "datetime": "2026-04-02 21:29:26",
       "image": "thumbs/IMG_7515.jpg",
       "thumb": "thumbs/IMG_7515_sm.jpg",
-      "source": "IMG_7515.heic"
+      "source": "IMG_7515.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7516",
@@ -1417,7 +1929,11 @@
       "datetime": "2026-04-02 21:29:28",
       "image": "thumbs/IMG_7516.jpg",
       "thumb": "thumbs/IMG_7516_sm.jpg",
-      "source": "IMG_7516.heic"
+      "source": "IMG_7516.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7517",
@@ -1428,7 +1944,11 @@
       "datetime": "2026-04-02 21:32:36",
       "image": "thumbs/IMG_7517.jpg",
       "thumb": "thumbs/IMG_7517_sm.jpg",
-      "source": "IMG_7517.heic"
+      "source": "IMG_7517.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7565",
@@ -1439,7 +1959,11 @@
       "datetime": "2026-04-03 14:01:02",
       "image": "thumbs/IMG_7565.jpg",
       "thumb": "thumbs/IMG_7565_sm.jpg",
-      "source": "IMG_7565.heic"
+      "source": "IMG_7565.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7576",
@@ -1450,7 +1974,11 @@
       "datetime": "2026-04-03 14:04:22",
       "image": "thumbs/IMG_7576.jpg",
       "thumb": "thumbs/IMG_7576_sm.jpg",
-      "source": "IMG_7576.heic"
+      "source": "IMG_7576.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7584",
@@ -1461,7 +1989,11 @@
       "datetime": "2026-04-03 14:12:36",
       "image": "thumbs/IMG_7584.jpg",
       "thumb": "thumbs/IMG_7584_sm.jpg",
-      "source": "IMG_7584.heic"
+      "source": "IMG_7584.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7629",
@@ -1472,7 +2004,11 @@
       "datetime": "2026-04-03 15:07:33",
       "image": "thumbs/IMG_7629.jpg",
       "thumb": "thumbs/IMG_7629_sm.jpg",
-      "source": "IMG_7629.heic"
+      "source": "IMG_7629.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7630",
@@ -1483,7 +2019,11 @@
       "datetime": "2026-04-03 15:07:45",
       "image": "thumbs/IMG_7630.jpg",
       "thumb": "thumbs/IMG_7630_sm.jpg",
-      "source": "IMG_7630.heic"
+      "source": "IMG_7630.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7631",
@@ -1494,7 +2034,11 @@
       "datetime": "2026-04-03 15:07:47",
       "image": "thumbs/IMG_7631.jpg",
       "thumb": "thumbs/IMG_7631_sm.jpg",
-      "source": "IMG_7631.heic"
+      "source": "IMG_7631.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7632",
@@ -1505,7 +2049,11 @@
       "datetime": "2026-04-03 15:07:49",
       "image": "thumbs/IMG_7632.jpg",
       "thumb": "thumbs/IMG_7632_sm.jpg",
-      "source": "IMG_7632.heic"
+      "source": "IMG_7632.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7636",
@@ -1516,7 +2064,11 @@
       "datetime": "2026-04-03 15:08:43",
       "image": "thumbs/IMG_7636.jpg",
       "thumb": "thumbs/IMG_7636_sm.jpg",
-      "source": "IMG_7636.heic"
+      "source": "IMG_7636.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "dclassic 2026-04-03 22095720D06874D86E",
@@ -1527,7 +2079,11 @@
       "datetime": "2026-04-03 15:08:43",
       "image": "thumbs/dclassic 2026-04-03 22095720D06874D86E.jpg",
       "thumb": "thumbs/dclassic 2026-04-03 22095720D06874D86E_sm.jpg",
-      "source": "dclassic 2026-04-03 22095720D06874D86E.JPG"
+      "source": "dclassic 2026-04-03 22095720D06874D86E.JPG",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7648",
@@ -1538,7 +2094,11 @@
       "datetime": "2026-04-03 15:14:06",
       "image": "thumbs/IMG_7648.jpg",
       "thumb": "thumbs/IMG_7648_sm.jpg",
-      "source": "IMG_7648.heic"
+      "source": "IMG_7648.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "dclassic 2026-04-03 220956C4250F4BA6EE",
@@ -1549,7 +2109,11 @@
       "datetime": "2026-04-03 15:15:03",
       "image": "thumbs/dclassic 2026-04-03 220956C4250F4BA6EE.jpg",
       "thumb": "thumbs/dclassic 2026-04-03 220956C4250F4BA6EE_sm.jpg",
-      "source": "dclassic 2026-04-03 220956C4250F4BA6EE.JPG"
+      "source": "dclassic 2026-04-03 220956C4250F4BA6EE.JPG",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7683",
@@ -1560,7 +2124,11 @@
       "datetime": "2026-04-03 16:27:57",
       "image": "thumbs/IMG_7683.jpg",
       "thumb": "thumbs/IMG_7683_sm.jpg",
-      "source": "IMG_7683.heic"
+      "source": "IMG_7683.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_7701",
@@ -1571,7 +2139,11 @@
       "datetime": "2026-04-03 16:41:12",
       "image": "thumbs/IMG_7701.jpg",
       "thumb": "thumbs/IMG_7701_sm.jpg",
-      "source": "IMG_7701.heic"
+      "source": "IMG_7701.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "dclassic 2026-04-03 22095816F7820EB276",
@@ -1582,7 +2154,11 @@
       "datetime": "2026-04-03 16:41:12",
       "image": "thumbs/dclassic 2026-04-03 22095816F7820EB276.jpg",
       "thumb": "thumbs/dclassic 2026-04-03 22095816F7820EB276_sm.jpg",
-      "source": "dclassic 2026-04-03 22095816F7820EB276.JPG"
+      "source": "dclassic 2026-04-03 22095816F7820EB276.JPG",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8078",
@@ -1593,7 +2169,11 @@
       "datetime": "2026-04-05 09:56:05",
       "image": "thumbs/IMG_8078.jpg",
       "thumb": "thumbs/IMG_8078_sm.jpg",
-      "source": "IMG_8078.heic"
+      "source": "IMG_8078.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8494",
@@ -1604,7 +2184,11 @@
       "datetime": "2026-04-05 17:56:31",
       "image": "thumbs/IMG_8494.jpg",
       "thumb": "thumbs/IMG_8494_sm.jpg",
-      "source": "IMG_8494.heic"
+      "source": "IMG_8494.heic",
+      "city": "Chinju",
+      "region": "Gyeongsangnam-do",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8630",
@@ -1615,7 +2199,11 @@
       "datetime": "2026-04-06 10:52:42",
       "image": "thumbs/IMG_8630.jpg",
       "thumb": "thumbs/IMG_8630_sm.jpg",
-      "source": "IMG_8630.heic"
+      "source": "IMG_8630.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8632",
@@ -1626,7 +2214,11 @@
       "datetime": "2026-04-06 10:53:18",
       "image": "thumbs/IMG_8632.jpg",
       "thumb": "thumbs/IMG_8632_sm.jpg",
-      "source": "IMG_8632.heic"
+      "source": "IMG_8632.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8633",
@@ -1637,7 +2229,11 @@
       "datetime": "2026-04-06 10:53:21",
       "image": "thumbs/IMG_8633.jpg",
       "thumb": "thumbs/IMG_8633_sm.jpg",
-      "source": "IMG_8633.heic"
+      "source": "IMG_8633.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8635",
@@ -1648,7 +2244,11 @@
       "datetime": "2026-04-06 10:53:52",
       "image": "thumbs/IMG_8635.jpg",
       "thumb": "thumbs/IMG_8635_sm.jpg",
-      "source": "IMG_8635.heic"
+      "source": "IMG_8635.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8647",
@@ -1659,7 +2259,11 @@
       "datetime": "2026-04-06 10:59:28",
       "image": "thumbs/IMG_8647.jpg",
       "thumb": "thumbs/IMG_8647_sm.jpg",
-      "source": "IMG_8647.heic"
+      "source": "IMG_8647.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8650",
@@ -1670,7 +2274,11 @@
       "datetime": "2026-04-06 10:59:45",
       "image": "thumbs/IMG_8650.jpg",
       "thumb": "thumbs/IMG_8650_sm.jpg",
-      "source": "IMG_8650.heic"
+      "source": "IMG_8650.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8715",
@@ -1681,7 +2289,11 @@
       "datetime": "2026-04-06 12:52:31",
       "image": "thumbs/IMG_8715.jpg",
       "thumb": "thumbs/IMG_8715_sm.jpg",
-      "source": "IMG_8715.heic"
+      "source": "IMG_8715.heic",
+      "city": "Busan",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8733",
@@ -1692,7 +2304,11 @@
       "datetime": "2026-04-06 14:52:49",
       "image": "thumbs/IMG_8733.jpg",
       "thumb": "thumbs/IMG_8733_sm.jpg",
-      "source": "IMG_8733.heic"
+      "source": "IMG_8733.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8739",
@@ -1703,7 +2319,11 @@
       "datetime": "2026-04-06 15:18:08",
       "image": "thumbs/IMG_8739.jpg",
       "thumb": "thumbs/IMG_8739_sm.jpg",
-      "source": "IMG_8739.heic"
+      "source": "IMG_8739.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8801",
@@ -1714,7 +2334,11 @@
       "datetime": "2026-04-07 11:13:36",
       "image": "thumbs/IMG_8801.jpg",
       "thumb": "thumbs/IMG_8801_sm.jpg",
-      "source": "IMG_8801.heic"
+      "source": "IMG_8801.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8806",
@@ -1725,7 +2349,11 @@
       "datetime": "2026-04-07 11:44:24",
       "image": "thumbs/IMG_8806.jpg",
       "thumb": "thumbs/IMG_8806_sm.jpg",
-      "source": "IMG_8806.heic"
+      "source": "IMG_8806.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8817",
@@ -1736,7 +2364,11 @@
       "datetime": "2026-04-07 11:50:24",
       "image": "thumbs/IMG_8817.jpg",
       "thumb": "thumbs/IMG_8817_sm.jpg",
-      "source": "IMG_8817.heic"
+      "source": "IMG_8817.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8837",
@@ -1747,7 +2379,11 @@
       "datetime": "2026-04-07 12:42:39",
       "image": "thumbs/IMG_8837.jpg",
       "thumb": "thumbs/IMG_8837_sm.jpg",
-      "source": "IMG_8837.heic"
+      "source": "IMG_8837.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8841",
@@ -1758,7 +2394,11 @@
       "datetime": "2026-04-07 12:44:59",
       "image": "thumbs/IMG_8841.jpg",
       "thumb": "thumbs/IMG_8841_sm.jpg",
-      "source": "IMG_8841.heic"
+      "source": "IMG_8841.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8842",
@@ -1769,7 +2409,11 @@
       "datetime": "2026-04-07 12:45:14",
       "image": "thumbs/IMG_8842.jpg",
       "thumb": "thumbs/IMG_8842_sm.jpg",
-      "source": "IMG_8842.heic"
+      "source": "IMG_8842.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8847",
@@ -1780,7 +2424,11 @@
       "datetime": "2026-04-07 12:47:53",
       "image": "thumbs/IMG_8847.jpg",
       "thumb": "thumbs/IMG_8847_sm.jpg",
-      "source": "IMG_8847.heic"
+      "source": "IMG_8847.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8848",
@@ -1791,7 +2439,11 @@
       "datetime": "2026-04-07 12:48:13",
       "image": "thumbs/IMG_8848.jpg",
       "thumb": "thumbs/IMG_8848_sm.jpg",
-      "source": "IMG_8848.heic"
+      "source": "IMG_8848.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8851",
@@ -1802,7 +2454,11 @@
       "datetime": "2026-04-07 12:48:48",
       "image": "thumbs/IMG_8851.jpg",
       "thumb": "thumbs/IMG_8851_sm.jpg",
-      "source": "IMG_8851.heic"
+      "source": "IMG_8851.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8853",
@@ -1813,7 +2469,11 @@
       "datetime": "2026-04-07 12:48:52",
       "image": "thumbs/IMG_8853.jpg",
       "thumb": "thumbs/IMG_8853_sm.jpg",
-      "source": "IMG_8853.heic"
+      "source": "IMG_8853.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8859",
@@ -1824,7 +2484,11 @@
       "datetime": "2026-04-07 12:51:35",
       "image": "thumbs/IMG_8859.jpg",
       "thumb": "thumbs/IMG_8859_sm.jpg",
-      "source": "IMG_8859.heic"
+      "source": "IMG_8859.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8862",
@@ -1835,7 +2499,11 @@
       "datetime": "2026-04-07 12:53:05",
       "image": "thumbs/IMG_8862.jpg",
       "thumb": "thumbs/IMG_8862_sm.jpg",
-      "source": "IMG_8862.heic"
+      "source": "IMG_8862.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8907",
@@ -1846,7 +2514,11 @@
       "datetime": "2026-04-07 14:09:48",
       "image": "thumbs/IMG_8907.jpg",
       "thumb": "thumbs/IMG_8907_sm.jpg",
-      "source": "IMG_8907.heic"
+      "source": "IMG_8907.heic",
+      "city": "Dongnae",
+      "region": "Busan",
+      "country": "Korea, Republic of",
+      "cc": "KR"
     },
     {
       "id": "IMG_8989",
@@ -1857,7 +2529,11 @@
       "datetime": "2026-04-09 15:51:45",
       "image": "thumbs/IMG_8989.jpg",
       "thumb": "thumbs/IMG_8989_sm.jpg",
-      "source": "IMG_8989.heic"
+      "source": "IMG_8989.heic",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_9054",
@@ -1868,7 +2544,11 @@
       "datetime": "2026-04-13 10:02:46",
       "image": "thumbs/IMG_9054.jpg",
       "thumb": "thumbs/IMG_9054_sm.jpg",
-      "source": "IMG_9054.heic"
+      "source": "IMG_9054.heic",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_9059",
@@ -1879,7 +2559,11 @@
       "datetime": "2026-04-14 09:40:44",
       "image": "thumbs/IMG_9059.jpg",
       "thumb": "thumbs/IMG_9059_sm.jpg",
-      "source": "IMG_9059.heic"
+      "source": "IMG_9059.heic",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_9821",
@@ -1890,7 +2574,11 @@
       "datetime": "2026-04-27 15:37:33",
       "image": "thumbs/IMG_9821.jpg",
       "thumb": "thumbs/IMG_9821_sm.jpg",
-      "source": "IMG_9821.jpg"
+      "source": "IMG_9821.jpg",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_9856",
@@ -1901,7 +2589,11 @@
       "datetime": "2026-04-28 21:50:13",
       "image": "thumbs/IMG_9856.jpg",
       "thumb": "thumbs/IMG_9856_sm.jpg",
-      "source": "IMG_9856.JPG"
+      "source": "IMG_9856.JPG",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_9933",
@@ -1912,7 +2604,11 @@
       "datetime": "2026-05-01 12:28:18",
       "image": "thumbs/IMG_9933.jpg",
       "thumb": "thumbs/IMG_9933_sm.jpg",
-      "source": "IMG_9933.JPG"
+      "source": "IMG_9933.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0075",
@@ -1923,7 +2619,11 @@
       "datetime": "2026-05-02 15:42:46",
       "image": "thumbs/IMG_0075.jpg",
       "thumb": "thumbs/IMG_0075_sm.jpg",
-      "source": "IMG_0075.JPG"
+      "source": "IMG_0075.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0076",
@@ -1934,7 +2634,11 @@
       "datetime": "2026-05-02 15:42:47",
       "image": "thumbs/IMG_0076.jpg",
       "thumb": "thumbs/IMG_0076_sm.jpg",
-      "source": "IMG_0076.JPG"
+      "source": "IMG_0076.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0210",
@@ -1945,7 +2649,11 @@
       "datetime": "2026-05-08 12:43:30",
       "image": "thumbs/IMG_0210.jpg",
       "thumb": "thumbs/IMG_0210_sm.jpg",
-      "source": "IMG_0210.JPG"
+      "source": "IMG_0210.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0213",
@@ -1956,7 +2664,11 @@
       "datetime": "2026-05-08 12:43:42",
       "image": "thumbs/IMG_0213.jpg",
       "thumb": "thumbs/IMG_0213_sm.jpg",
-      "source": "IMG_0213.JPG"
+      "source": "IMG_0213.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0229",
@@ -1967,7 +2679,11 @@
       "datetime": "2026-05-09 07:08:46",
       "image": "thumbs/IMG_0229.jpg",
       "thumb": "thumbs/IMG_0229_sm.jpg",
-      "source": "IMG_0229.JPG"
+      "source": "IMG_0229.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0270",
@@ -1978,7 +2694,11 @@
       "datetime": "2026-05-11 15:36:57",
       "image": "thumbs/IMG_0270.jpg",
       "thumb": "thumbs/IMG_0270_sm.jpg",
-      "source": "IMG_0270.JPG"
+      "source": "IMG_0270.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_0680",
@@ -1989,7 +2709,11 @@
       "datetime": "2026-05-22 16:56:45",
       "image": "thumbs/IMG_0680.jpg",
       "thumb": "thumbs/IMG_0680_sm.jpg",
-      "source": "IMG_0680.jpg"
+      "source": "IMG_0680.jpg",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1036",
@@ -2000,7 +2724,11 @@
       "datetime": "2026-05-27 11:44:49",
       "image": "thumbs/IMG_1036.jpg",
       "thumb": "thumbs/IMG_1036_sm.jpg",
-      "source": "IMG_1036.JPG"
+      "source": "IMG_1036.JPG",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1042",
@@ -2011,7 +2739,11 @@
       "datetime": "2026-05-27 11:45:11",
       "image": "thumbs/IMG_1042.jpg",
       "thumb": "thumbs/IMG_1042_sm.jpg",
-      "source": "IMG_1042.JPG"
+      "source": "IMG_1042.JPG",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1044",
@@ -2022,7 +2754,11 @@
       "datetime": "2026-05-27 11:45:21",
       "image": "thumbs/IMG_1044.jpg",
       "thumb": "thumbs/IMG_1044_sm.jpg",
-      "source": "IMG_1044.JPG"
+      "source": "IMG_1044.JPG",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1124",
@@ -2033,7 +2769,11 @@
       "datetime": "2026-05-27 16:16:28",
       "image": "thumbs/IMG_1124.jpg",
       "thumb": "thumbs/IMG_1124_sm.jpg",
-      "source": "IMG_1124.JPG"
+      "source": "IMG_1124.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1213",
@@ -2044,7 +2784,11 @@
       "datetime": "2026-05-29 14:37:55",
       "image": "thumbs/IMG_1213.jpg",
       "thumb": "thumbs/IMG_1213_sm.jpg",
-      "source": "IMG_1213.JPG"
+      "source": "IMG_1213.JPG",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1375",
@@ -2055,7 +2799,11 @@
       "datetime": "2026-05-31 15:28:05",
       "image": "thumbs/IMG_1375.jpg",
       "thumb": "thumbs/IMG_1375_sm.jpg",
-      "source": "IMG_1375.jpg"
+      "source": "IMG_1375.jpg",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1475",
@@ -2066,7 +2814,11 @@
       "datetime": "2026-06-01 15:28:16",
       "image": "thumbs/IMG_1475.jpg",
       "thumb": "thumbs/IMG_1475_sm.jpg",
-      "source": "IMG_1475.jpg"
+      "source": "IMG_1475.jpg",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1523",
@@ -2077,7 +2829,11 @@
       "datetime": "2026-06-02 17:07:55",
       "image": "thumbs/IMG_1523.jpg",
       "thumb": "thumbs/IMG_1523_sm.jpg",
-      "source": "IMG_1523.jpg"
+      "source": "IMG_1523.jpg",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1733",
@@ -2088,7 +2844,11 @@
       "datetime": "2026-06-04 00:04:00",
       "image": "thumbs/IMG_1733.jpg",
       "thumb": "thumbs/IMG_1733_sm.jpg",
-      "source": "IMG_1733.jpg"
+      "source": "IMG_1733.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1735",
@@ -2099,7 +2859,11 @@
       "datetime": "2026-06-04 00:04:11",
       "image": "thumbs/IMG_1735.jpg",
       "thumb": "thumbs/IMG_1735_sm.jpg",
-      "source": "IMG_1735.jpg"
+      "source": "IMG_1735.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1737",
@@ -2110,7 +2874,11 @@
       "datetime": "2026-06-04 00:09:29",
       "image": "thumbs/IMG_1737.jpg",
       "thumb": "thumbs/IMG_1737_sm.jpg",
-      "source": "IMG_1737.jpg"
+      "source": "IMG_1737.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1759",
@@ -2121,7 +2889,11 @@
       "datetime": "2026-06-04 08:30:39",
       "image": "thumbs/IMG_1759.jpg",
       "thumb": "thumbs/IMG_1759_sm.jpg",
-      "source": "IMG_1759.JPG"
+      "source": "IMG_1759.JPG",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1765",
@@ -2132,7 +2904,11 @@
       "datetime": "2026-06-04 08:32:55",
       "image": "thumbs/IMG_1765.jpg",
       "thumb": "thumbs/IMG_1765_sm.jpg",
-      "source": "IMG_1765.jpg"
+      "source": "IMG_1765.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1775",
@@ -2143,7 +2919,11 @@
       "datetime": "2026-06-04 08:35:33",
       "image": "thumbs/IMG_1775.jpg",
       "thumb": "thumbs/IMG_1775_sm.jpg",
-      "source": "IMG_1775.JPG"
+      "source": "IMG_1775.JPG",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1776",
@@ -2154,7 +2934,11 @@
       "datetime": "2026-06-04 08:35:35",
       "image": "thumbs/IMG_1776.jpg",
       "thumb": "thumbs/IMG_1776_sm.jpg",
-      "source": "IMG_1776.JPG"
+      "source": "IMG_1776.JPG",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1803",
@@ -2165,7 +2949,11 @@
       "datetime": "2026-06-04 08:46:08",
       "image": "thumbs/IMG_1803.jpg",
       "thumb": "thumbs/IMG_1803_sm.jpg",
-      "source": "IMG_1803.jpg"
+      "source": "IMG_1803.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1804",
@@ -2176,7 +2964,11 @@
       "datetime": "2026-06-04 08:46:19",
       "image": "thumbs/IMG_1804.jpg",
       "thumb": "thumbs/IMG_1804_sm.jpg",
-      "source": "IMG_1804.jpg"
+      "source": "IMG_1804.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1816",
@@ -2187,7 +2979,11 @@
       "datetime": "2026-06-04 08:51:20",
       "image": "thumbs/IMG_1816.jpg",
       "thumb": "thumbs/IMG_1816_sm.jpg",
-      "source": "IMG_1816.jpg"
+      "source": "IMG_1816.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1847 2",
@@ -2198,7 +2994,11 @@
       "datetime": "2026-06-04 10:48:22",
       "image": "thumbs/IMG_1847 2.jpg",
       "thumb": "thumbs/IMG_1847 2_sm.jpg",
-      "source": "IMG_1847 2.JPG"
+      "source": "IMG_1847 2.JPG",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1851",
@@ -2209,7 +3009,11 @@
       "datetime": "2026-06-04 10:48:50",
       "image": "thumbs/IMG_1851.jpg",
       "thumb": "thumbs/IMG_1851_sm.jpg",
-      "source": "IMG_1851.JPG"
+      "source": "IMG_1851.JPG",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1857",
@@ -2220,7 +3024,11 @@
       "datetime": "2026-06-04 10:49:48",
       "image": "thumbs/IMG_1857.jpg",
       "thumb": "thumbs/IMG_1857_sm.jpg",
-      "source": "IMG_1857.jpg"
+      "source": "IMG_1857.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1877",
@@ -2231,7 +3039,11 @@
       "datetime": "2026-06-04 11:17:34",
       "image": "thumbs/IMG_1877.jpg",
       "thumb": "thumbs/IMG_1877_sm.jpg",
-      "source": "IMG_1877.jpg"
+      "source": "IMG_1877.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1878",
@@ -2242,7 +3054,11 @@
       "datetime": "2026-06-04 11:18:59",
       "image": "thumbs/IMG_1878.jpg",
       "thumb": "thumbs/IMG_1878_sm.jpg",
-      "source": "IMG_1878.jpg"
+      "source": "IMG_1878.jpg",
+      "city": "Taichung",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_1938",
@@ -2253,7 +3069,11 @@
       "datetime": "2026-06-05 09:37:41",
       "image": "thumbs/IMG_1938.jpg",
       "thumb": "thumbs/IMG_1938_sm.jpg",
-      "source": "IMG_1938.JPG"
+      "source": "IMG_1938.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_2086",
@@ -2264,7 +3084,11 @@
       "datetime": "2026-06-08 17:13:49",
       "image": "thumbs/IMG_2086.jpg",
       "thumb": "thumbs/IMG_2086_sm.jpg",
-      "source": "IMG_2086.JPG"
+      "source": "IMG_2086.JPG",
+      "city": "Xindian",
+      "region": "Taipei",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_2341",
@@ -2275,7 +3099,11 @@
       "datetime": "2026-06-15 16:51:32",
       "image": "thumbs/IMG_2341.jpg",
       "thumb": "thumbs/IMG_2341_sm.jpg",
-      "source": "IMG_2341.jpg"
+      "source": "IMG_2341.jpg",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_2342",
@@ -2286,7 +3114,11 @@
       "datetime": "2026-06-15 16:51:35",
       "image": "thumbs/IMG_2342.jpg",
       "thumb": "thumbs/IMG_2342_sm.jpg",
-      "source": "IMG_2342.jpg"
+      "source": "IMG_2342.jpg",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_2660",
@@ -2297,7 +3129,11 @@
       "datetime": "2026-06-20 16:42:40",
       "image": "thumbs/IMG_2660.jpg",
       "thumb": "thumbs/IMG_2660_sm.jpg",
-      "source": "IMG_2660.jpg"
+      "source": "IMG_2660.jpg",
+      "city": "Taipei",
+      "region": "Taiwan",
+      "country": "Taiwan",
+      "cc": "TW"
     },
     {
       "id": "IMG_2768",
@@ -2308,7 +3144,11 @@
       "datetime": "2026-06-21 21:48:14",
       "image": "thumbs/IMG_2768.jpg",
       "thumb": "thumbs/IMG_2768_sm.jpg",
-      "source": "IMG_2768.jpg"
+      "source": "IMG_2768.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_2789",
@@ -2319,7 +3159,11 @@
       "datetime": "2026-06-22 08:21:18",
       "image": "thumbs/IMG_2789.jpg",
       "thumb": "thumbs/IMG_2789_sm.jpg",
-      "source": "IMG_2789.jpg"
+      "source": "IMG_2789.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_2790",
@@ -2330,7 +3174,11 @@
       "datetime": "2026-06-22 08:21:19",
       "image": "thumbs/IMG_2790.jpg",
       "thumb": "thumbs/IMG_2790_sm.jpg",
-      "source": "IMG_2790.jpg"
+      "source": "IMG_2790.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_2814",
@@ -2341,7 +3189,11 @@
       "datetime": "2026-06-22 11:57:30",
       "image": "thumbs/IMG_2814.jpg",
       "thumb": "thumbs/IMG_2814_sm.jpg",
-      "source": "IMG_2814.JPG"
+      "source": "IMG_2814.JPG",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3208",
@@ -2352,7 +3204,11 @@
       "datetime": "2026-06-26 18:50:19",
       "image": "thumbs/IMG_3208.jpg",
       "thumb": "thumbs/IMG_3208_sm.jpg",
-      "source": "IMG_3208.JPG"
+      "source": "IMG_3208.JPG",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3218 2",
@@ -2363,7 +3219,11 @@
       "datetime": "2026-06-26 18:59:15",
       "image": "thumbs/IMG_3218 2.jpg",
       "thumb": "thumbs/IMG_3218 2_sm.jpg",
-      "source": "IMG_3218 2.jpg"
+      "source": "IMG_3218 2.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3359",
@@ -2374,7 +3234,11 @@
       "datetime": "2026-06-27 17:12:18",
       "image": "thumbs/IMG_3359.jpg",
       "thumb": "thumbs/IMG_3359_sm.jpg",
-      "source": "IMG_3359.JPG"
+      "source": "IMG_3359.JPG",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3405",
@@ -2385,7 +3249,11 @@
       "datetime": "2026-06-27 19:15:56",
       "image": "thumbs/IMG_3405.jpg",
       "thumb": "thumbs/IMG_3405_sm.jpg",
-      "source": "IMG_3405.jpg"
+      "source": "IMG_3405.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3431",
@@ -2396,7 +3264,11 @@
       "datetime": "2026-06-27 22:23:08",
       "image": "thumbs/IMG_3431.jpg",
       "thumb": "thumbs/IMG_3431_sm.jpg",
-      "source": "IMG_3431.jpg"
+      "source": "IMG_3431.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3512",
@@ -2407,7 +3279,11 @@
       "datetime": "2026-06-28 14:24:09",
       "image": "thumbs/IMG_3512.jpg",
       "thumb": "thumbs/IMG_3512_sm.jpg",
-      "source": "IMG_3512.JPG"
+      "source": "IMG_3512.JPG",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3708",
@@ -2418,7 +3294,11 @@
       "datetime": "2026-06-28 17:56:28",
       "image": "thumbs/IMG_3708.jpg",
       "thumb": "thumbs/IMG_3708_sm.jpg",
-      "source": "IMG_3708.jpg"
+      "source": "IMG_3708.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3709",
@@ -2429,7 +3309,11 @@
       "datetime": "2026-06-28 17:56:30",
       "image": "thumbs/IMG_3709.jpg",
       "thumb": "thumbs/IMG_3709_sm.jpg",
-      "source": "IMG_3709.JPG"
+      "source": "IMG_3709.JPG",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3710",
@@ -2440,7 +3324,11 @@
       "datetime": "2026-06-28 17:56:37",
       "image": "thumbs/IMG_3710.jpg",
       "thumb": "thumbs/IMG_3710_sm.jpg",
-      "source": "IMG_3710.jpg"
+      "source": "IMG_3710.jpg",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3935",
@@ -2451,7 +3339,11 @@
       "datetime": "2026-07-01 09:48:47",
       "image": "thumbs/IMG_3935.jpg",
       "thumb": "thumbs/IMG_3935_sm.jpg",
-      "source": "IMG_3935.JPG"
+      "source": "IMG_3935.JPG",
+      "city": "Arashiyama",
+      "region": "Kyoto",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_3942",
@@ -2462,7 +3354,11 @@
       "datetime": "2026-07-01 09:54:50",
       "image": "thumbs/IMG_3942.jpg",
       "thumb": "thumbs/IMG_3942_sm.jpg",
-      "source": "IMG_3942.JPG"
+      "source": "IMG_3942.JPG",
+      "city": "Arashiyama",
+      "region": "Kyoto",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_4042",
@@ -2473,7 +3369,11 @@
       "datetime": "2026-07-01 17:13:15",
       "image": "thumbs/IMG_4042.jpg",
       "thumb": "thumbs/IMG_4042_sm.jpg",
-      "source": "IMG_4042.JPG"
+      "source": "IMG_4042.JPG",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_4043 2",
@@ -2484,7 +3384,11 @@
       "datetime": "2026-07-01 17:13:19",
       "image": "thumbs/IMG_4043 2.jpg",
       "thumb": "thumbs/IMG_4043 2_sm.jpg",
-      "source": "IMG_4043 2.JPG"
+      "source": "IMG_4043 2.JPG",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_4043",
@@ -2495,7 +3399,11 @@
       "datetime": "2026-07-01 17:13:19",
       "image": "thumbs/IMG_4043.jpg",
       "thumb": "thumbs/IMG_4043_sm.jpg",
-      "source": "IMG_4043.JPG"
+      "source": "IMG_4043.JPG",
+      "city": "Kyoto",
+      "region": "Kyoto",
+      "country": "Japan",
+      "cc": "JP"
     },
     {
       "id": "IMG_4079",
@@ -2506,7 +3414,11 @@
       "datetime": "2026-07-02 11:16:03",
       "image": "thumbs/IMG_4079.jpg",
       "thumb": "thumbs/IMG_4079_sm.jpg",
-      "source": "IMG_4079.JPG"
+      "source": "IMG_4079.JPG",
+      "city": "Osaka",
+      "region": "Osaka",
+      "country": "Japan",
+      "cc": "JP"
     }
   ]
 }
