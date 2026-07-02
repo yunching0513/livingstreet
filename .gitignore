@@ -1,0 +1,9 @@
+# 作業系統雜項
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/

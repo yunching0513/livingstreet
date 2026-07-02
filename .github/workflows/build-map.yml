@@ -1,0 +1,43 @@
+name: Build map
+
+# 當 photos/ 資料夾內的照片有變動時，自動抽取 GPS、產生縮圖並更新地圖資料。
+# 讓你可以直接在 GitHub 網頁上把照片拖進 photos/，不需在本機執行任何指令。
+
+on:
+  push:
+    paths:
+      - "photos/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build photo database
+        run: python scripts/build_map.py
+
+      - name: Commit updated map data
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/ thumbs/
+          if git diff --staged --quiet; then
+            echo "沒有變更，略過提交。"
+          else
+            git commit -m "chore: 自動更新地圖資料 [skip ci]"
+            git push
+          fi
