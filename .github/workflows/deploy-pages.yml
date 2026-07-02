@@ -1,14 +1,9 @@
 name: Deploy to GitHub Pages
 
-# 把地圖網站部署到 GitHub Pages。
-# 首次使用請到 Settings → Pages，把 Source 設為「GitHub Actions」。
-# 之後只要 main 有更新（含照片經 Build map 自動產生的資料），就會自動重新部署。
+# 備用的 Actions 部署方式（目前改用 Pages「從分支部署 / Deploy from a branch」）。
+# 因此這個工作流程不再自動執行，只保留手動觸發，避免產生失敗訊息。
 
 on:
-  push:
-    branches:
-      - main
-      - claude/photo-location-map-display-br3696
   workflow_dispatch: {}
 
 permissions:

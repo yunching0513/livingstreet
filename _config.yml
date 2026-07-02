@@ -1,0 +1,7 @@
+# GitHub Pages（從分支部署 / Deploy from a branch）設定
+# 只發佈網站需要的檔案；不發佈 photos/ 原始大檔與 scripts/，讓網站保持精簡。
+exclude:
+  - photos
+  - scripts
+  - README.md
+  - .github
