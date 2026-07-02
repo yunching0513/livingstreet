@@ -6,7 +6,9 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: [main]
+    branches:
+      - main
+      - claude/photo-location-map-display-br3696
   workflow_dispatch: {}
 
 permissions:
