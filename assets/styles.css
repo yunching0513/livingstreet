@@ -1,12 +1,47 @@
+/* 生活街道案例地圖 — 視覺語言
+ * 參考「こども本の森 中之島 UI 設計準則 v1.0」
+ * 森林的溫度 · 留白即內容 · 圓潤而安心 · 建築的秩序
+ */
+
 :root {
-  --bg: #f5f5f0;
-  --panel: #ffffff;
-  --ink: #1f2933;
-  --muted: #6b7280;
-  --accent: #2f7d55;
-  --accent-dark: #1f5c3d;
-  --border: #e2e2da;
-  --shadow: 0 1px 3px rgba(0,0,0,.08), 0 8px 24px rgba(0,0,0,.06);
+  /* 中性 — 紙與墨 Neutrals */
+  --paper: #F3EFE4;        /* 頁面底色 */
+  --paper-lift: #FCFBF6;   /* 卡片、抬升面 */
+  --panel: #EAE3D2;        /* 區塊底 */
+  --panel-edge: #D8D1BF;   /* 細線、邊界 */
+  --ink: #211F18;          /* 主文字 */
+  --ink-body: #6A665A;     /* 內文 */
+  --ink-muted: #B4AF9F;    /* 輔助文字 */
+
+  /* 主色 — 森林 Forest */
+  --forest-deepest: #2E5339;
+  --forest-deep: #4C8C58;
+  --forest: #62A968;       /* accent */
+  --forest-soft: #7C9A6E;
+
+  /* 點綴 — 趣味 Playful accents */
+  --pink: #E89AB0;
+  --pink-soft: #FBE3EA;
+  --yellow: #E6CF3E;
+  --yellow-soft: #FBF3CC;
+  --sky: #8FB9C9;
+
+  /* 圓角 Radius — 處處圓潤 */
+  --r-pill: 9999px;
+  --r-card: 18px;
+  --r-lg: 20px;
+  --r-sm: 6px;
+
+  /* 陰影 — 溫柔的抬升 */
+  --shadow-soft: 0 1px 2px rgba(33,31,24,.04), 0 8px 24px rgba(33,31,24,.06);
+  --shadow-lift: 0 4px 14px rgba(33,31,24,.10), 0 18px 44px rgba(33,31,24,.12);
+
+  /* 緩動曲線 Easing */
+  --ease-ui: cubic-bezier(.4, 0, .2, 1);
+  --ease-play: cubic-bezier(.34, 1.56, .64, 1);
+
+  --font: 'Huninn', 'Varela Round', -apple-system, BlinkMacSystemFont,
+          "PingFang TC", "Noto Sans TC", "Segoe UI", Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -14,119 +49,202 @@
 html, body {
   margin: 0;
   height: 100%;
-  font-family: -apple-system, "PingFang TC", "Noto Sans TC", "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font);
   color: var(--ink);
-  background: var(--bg);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
 }
 
 body { display: flex; flex-direction: column; height: 100vh; }
 
-/* Header */
+/* ── 標頭：sticky 半透明紙色毛玻璃 ───────────────────────── */
 .app-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 16px;
-  padding: 12px 20px;
-  background: var(--panel);
-  border-bottom: 1px solid var(--border);
+  padding: 16px 40px;
+  background: rgba(252, 251, 246, .82);
+  backdrop-filter: saturate(1.4) blur(12px);
+  -webkit-backdrop-filter: saturate(1.4) blur(12px);
+  border-bottom: 1px solid var(--panel-edge);
   z-index: 500;
 }
-.brand { display: flex; align-items: center; gap: 12px; }
-.brand-mark { font-size: 26px; }
-.app-header h1 { margin: 0; font-size: 18px; font-weight: 700; }
-.subtitle { margin: 2px 0 0; font-size: 12px; color: var(--muted); }
+.brand { display: flex; align-items: center; gap: 14px; }
 
+/* 招牌圓形標記 */
+.brand-mark {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  box-shadow: 0 4px 10px rgba(46,83,57,.28);
+}
+.app-header h1 { margin: 0; font-size: 20px; font-weight: 900; letter-spacing: .3px; }
+.subtitle { margin: 3px 0 0; font-size: 13px; color: var(--ink-body); font-weight: 400; }
+
+/* 膠囊按鈕 — 最高強調的森林綠 */
 .btn {
-  display: inline-block;
-  padding: 8px 14px;
-  background: var(--accent);
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 22px;
+  background: var(--forest-deep);
   color: #fff;
   border: none;
-  border-radius: 8px;
-  font-size: 14px;
-  font-weight: 600;
+  border-radius: var(--r-pill);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background .15s;
+  box-shadow: 0 4px 12px rgba(46,83,57,.24);
+  transition: transform .2s var(--ease-play), background .18s var(--ease-ui), box-shadow .2s var(--ease-ui);
 }
-.btn:hover { background: var(--accent-dark); }
+.btn:hover { background: var(--forest-deepest); transform: translateY(-2px); box-shadow: var(--shadow-lift); }
+.btn:active { transform: translateY(0); }
 
-/* Layout */
+/* ── 版面 ─────────────────────────────────────────────── */
 .layout { display: flex; flex: 1; min-height: 0; }
 
 .sidebar {
-  width: 320px;
+  width: 340px;
   flex-shrink: 0;
-  background: var(--panel);
-  border-right: 1px solid var(--border);
+  background: var(--paper-lift);
+  border-right: 1px solid var(--panel-edge);
   overflow-y: auto;
   display: flex;
   flex-direction: column;
 }
 .sidebar-head {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border);
+  padding: 18px 24px 14px;
   position: sticky;
   top: 0;
-  background: var(--panel);
+  background: var(--paper-lift);
+  z-index: 2;
 }
-.count { font-size: 13px; color: var(--muted); font-weight: 600; }
+/* 章節標題樣式 */
+.section-label {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--forest-deep);
+  display: block;
+  margin-bottom: 4px;
+}
+.count { font-size: 15px; color: var(--ink); font-weight: 700; }
 
-.photo-list { list-style: none; margin: 0; padding: 8px; }
+.photo-list { list-style: none; margin: 0; padding: 8px 12px 24px; }
+
+/* 案例卡 — 圓角卡片，整列可點 */
 .photo-item {
   display: flex;
-  gap: 10px;
-  padding: 8px;
-  border-radius: 10px;
+  gap: 14px;
+  padding: 12px;
+  border-radius: var(--r-card);
   cursor: pointer;
-  transition: background .12s;
+  transition: background .16s var(--ease-ui), transform .2s var(--ease-play), box-shadow .2s var(--ease-ui);
+  animation: fade-in-up .5s var(--ease-ui) both;
 }
-.photo-item:hover { background: #f0f4f1; }
+.photo-item:hover {
+  background: var(--panel);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-soft);
+}
 .photo-item img {
-  width: 64px;
-  height: 64px;
+  width: 68px;
+  height: 68px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 14px;
   flex-shrink: 0;
-  background: #e5e7eb;
+  background: var(--panel);
 }
-.photo-item .meta { min-width: 0; }
+.photo-item .meta { min-width: 0; align-self: center; }
 .photo-item .title {
-  font-size: 14px;
-  font-weight: 600;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.photo-item .coord { font-size: 12px; color: var(--muted); margin-top: 2px; }
-.photo-item .date { font-size: 11px; color: var(--muted); margin-top: 2px; }
+/* 日期用綠 */
+.photo-item .date { font-size: 12px; color: var(--forest-deep); font-weight: 700; margin-top: 3px; }
+.photo-item .coord { font-size: 12px; color: var(--ink-muted); margin-top: 2px; }
+
+/* 招牌圓形標籤 — 白字綠底 */
 .badge-temp {
-  font-size: 10px;
-  color: var(--accent);
-  border: 1px solid var(--accent);
-  border-radius: 4px;
-  padding: 0 4px;
-  margin-left: 4px;
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--forest);
+  border-radius: var(--r-pill);
+  padding: 1px 9px;
+  margin-left: 6px;
+  vertical-align: middle;
 }
 
 .empty-state {
-  padding: 20px 16px;
-  color: var(--muted);
+  padding: 12px 24px 24px;
+  color: var(--ink-body);
+  font-size: 14px;
+  line-height: 1.9;
+}
+.empty-state strong { color: var(--ink); font-weight: 700; }
+.empty-state .hint {
   font-size: 13px;
+  margin-top: 16px;
+  color: var(--ink-body);
+  background: var(--yellow-soft);
+  border-radius: 14px;
+  padding: 12px 14px;
   line-height: 1.7;
 }
-.empty-state strong { color: var(--ink); }
-.empty-state .hint { font-size: 12px; margin-top: 12px; color: #9ca3af; }
 
-/* Map */
+/* ── 地圖 ─────────────────────────────────────────────── */
 .map-wrap { position: relative; flex: 1; min-width: 0; }
-#map { position: absolute; inset: 0; }
+#map { position: absolute; inset: 0; background: var(--panel); }
 
+/* 自訂圓形照片標記 — 招牌圓形標籤 */
+.photo-pin { background: transparent; border: none; }
+.photo-pin .pin-dot {
+  display: block;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--r-pill);
+  background: var(--forest);
+  border: 3px solid #fff;
+  box-shadow: 0 3px 8px rgba(33,31,24,.28);
+  transition: transform .2s var(--ease-play);
+}
+.photo-pin:hover .pin-dot { transform: scale(1.18); }
+.photo-pin.temp .pin-dot { background: var(--pink); }
+
+/* markercluster 改為森林綠圓 */
+.marker-cluster {
+  background: rgba(98,169,104,.35);
+  border-radius: var(--r-pill);
+}
+.marker-cluster div {
+  background: var(--forest-deep);
+  color: #fff;
+  font-family: var(--font);
+  font-weight: 700;
+  border-radius: var(--r-pill);
+}
+
+/* 拖曳提示 */
 .drop-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(47,125,85,.25);
-  backdrop-filter: blur(2px);
+  background: rgba(46,83,57,.22);
+  backdrop-filter: blur(3px);
   display: none;
   align-items: center;
   justify-content: center;
@@ -135,45 +253,89 @@ body { display: flex; flex-direction: column; height: 100vh; }
 }
 .drop-overlay.show { display: flex; }
 .drop-inner {
-  background: #fff;
-  padding: 18px 28px;
-  border-radius: 12px;
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--accent-dark);
-  border: 3px dashed var(--accent);
+  background: var(--paper-lift);
+  padding: 22px 34px;
+  border-radius: var(--r-lg);
+  font-size: 19px;
+  font-weight: 900;
+  color: var(--forest-deepest);
+  border: 3px dashed var(--forest);
+  box-shadow: var(--shadow-lift);
 }
 
-/* Popup */
-.leaflet-popup-content { margin: 10px 12px; }
+/* ── 彈出視窗 ─────────────────────────────────────────── */
+.leaflet-popup-content-wrapper {
+  border-radius: var(--r-card);
+  box-shadow: var(--shadow-lift);
+  background: var(--paper-lift);
+}
+.leaflet-popup-content { margin: 14px 16px; font-family: var(--font); }
+.leaflet-popup-tip { background: var(--paper-lift); }
 .popup img {
-  width: 240px;
-  max-width: 60vw;
-  border-radius: 8px;
+  width: 250px;
+  max-width: 62vw;
+  border-radius: 14px;
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
-.popup .p-title { font-weight: 700; font-size: 14px; }
-.popup .p-note { font-size: 13px; color: var(--ink); margin: 4px 0; }
-.popup .p-coord { font-size: 12px; color: var(--muted); }
-.popup a { color: var(--accent); font-size: 12px; }
+.popup .p-title { font-weight: 900; font-size: 16px; color: var(--ink); }
+.popup .p-note { font-size: 14px; color: var(--ink-body); margin: 6px 0; line-height: 1.6; }
+.popup .p-coord { font-size: 12px; color: var(--ink-muted); margin-top: 2px; }
+.popup a {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--forest-deep);
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.popup a:hover { text-decoration: underline; }
 
-/* Toast */
+/* ── 提示條 ───────────────────────────────────────────── */
 .toast {
   position: fixed;
-  bottom: 20px;
+  bottom: 24px;
   left: 50%;
   transform: translateX(-50%);
   background: var(--ink);
-  color: #fff;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-size: 13px;
+  color: var(--paper-lift);
+  padding: 12px 20px;
+  border-radius: var(--r-pill);
+  font-size: 14px;
+  font-weight: 700;
   z-index: 2000;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-lift);
+  animation: fade-in-up .35s var(--ease-play) both;
 }
 
-@media (max-width: 720px) {
-  .sidebar { position: absolute; z-index: 600; height: 40%; width: 100%; bottom: 0; top: auto; border-right: none; border-top: 1px solid var(--border); }
+/* 鍵盤聚焦 — 森林綠外框，不可移除 */
+:focus-visible { outline: 3px solid var(--forest); outline-offset: 2px; border-radius: var(--r-sm); }
+
+/* 動效 */
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* 減少動態 */
+@media (prefers-reduced-motion: reduce) {
+  * { animation-duration: .001ms !important; transition-duration: .001ms !important; }
+}
+
+/* 響應式：手機 */
+@media (max-width: 768px) {
+  .app-header { padding: 14px 20px; }
   .layout { flex-direction: column; }
+  .sidebar {
+    position: absolute;
+    z-index: 600;
+    height: 42%;
+    width: 100%;
+    bottom: 0;
+    top: auto;
+    border-right: none;
+    border-top: 1px solid var(--panel-edge);
+    border-radius: var(--r-lg) var(--r-lg) 0 0;
+    box-shadow: 0 -8px 24px rgba(33,31,24,.10);
+  }
 }

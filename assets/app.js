@@ -45,9 +45,11 @@ function refreshUI() {
   emptyEl.style.display = items.length ? 'none' : 'block';
 
   listEl.innerHTML = '';
-  for (const it of items) {
+  items.forEach((it, idx) => {
     const li = document.createElement('li');
     li.className = 'photo-item';
+    // 淡入上移，交錯延遲 stagger
+    li.style.animationDelay = Math.min(idx * 40, 400) + 'ms';
     li.innerHTML = `
       <img src="${it.thumbUrl || it.imgUrl}" alt="" loading="lazy" />
       <div class="meta">
@@ -60,7 +62,7 @@ function refreshUI() {
       it.marker.openPopup();
     });
     listEl.appendChild(li);
-  }
+  });
 }
 
 function escapeHtml(s) {
@@ -68,8 +70,19 @@ function escapeHtml(s) {
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
+// 招牌圓形照片標記
+function photoIcon(temp) {
+  return L.divIcon({
+    className: 'photo-pin' + (temp ? ' temp' : ''),
+    html: '<span class="pin-dot"></span>',
+    iconSize: [26, 26],
+    iconAnchor: [13, 13],
+    popupAnchor: [0, -15],
+  });
+}
+
 function addItem(it) {
-  const marker = L.marker([it.lat, it.lng]);
+  const marker = L.marker([it.lat, it.lng], { icon: photoIcon(it.temp) });
   const popup = `
     <div class="popup">
       <img src="${it.imgUrl || it.thumbUrl}" alt="" />
