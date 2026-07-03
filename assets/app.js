@@ -100,8 +100,8 @@ function refreshUI() {
         <img src="${it.thumbUrl || it.imgUrl}" alt="" loading="lazy" />
         <div class="meta">
           <div class="title">${escapeHtml(it.title)}${it.temp ? '<span class="badge-temp">暫時</span>' : ''}</div>
+          ${it.note ? `<div class="desc">${escapeHtml(it.note)}</div>` : ''}
           ${it.datetime ? `<div class="date">${escapeHtml(it.datetime)}</div>` : ''}
-          <div class="coord">${fmtCoord(it.lat, it.lng)}</div>
         </div>
       </div>`).join('');
     li.innerHTML = `
