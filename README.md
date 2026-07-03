@@ -122,3 +122,5 @@ python -m http.server 8000
 只是沒有縮圖。方式二的腳本則一定會把 HEIC 轉成 JPEG。
 
 <!-- redeploy trigger -->
+
+<!-- descriptions deploy -->
