@@ -120,3 +120,7 @@ python -m http.server 8000
 **HEIC 照片在方式一看不到縮圖？**
 瀏覽器原生不支援 HEIC，本網頁會即時轉檔顯示；若轉檔失敗，座標仍會標上地圖，
 只是沒有縮圖。方式二的腳本則一定會把 HEIC 轉成 JPEG。
+
+<!-- redeploy trigger -->
+
+<!-- descriptions deploy -->

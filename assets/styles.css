@@ -153,6 +153,73 @@ body { display: flex; flex-direction: column; height: 100vh; }
 
 .photo-list { list-style: none; margin: 0; padding: 8px 12px 24px; }
 
+/* 城市分組 */
+.photo-group { margin-bottom: 6px; }
+.group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 10px;
+  border-radius: 12px;
+  cursor: pointer;
+  position: sticky;
+  top: 0;
+  background: var(--paper-lift);
+  z-index: 1;
+  transition: background .15s var(--ease-ui);
+}
+.group-header:hover { background: var(--panel); }
+.gh-caret {
+  color: var(--ink-muted);
+  font-size: 12px;
+  transition: transform .2s var(--ease-ui);
+}
+.photo-group.collapsed .gh-caret { transform: rotate(-90deg); }
+.photo-group.collapsed .group-items { display: none; }
+.gh-text { flex: 1; min-width: 0; line-height: 1.25; }
+.gh-title {
+  display: block;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--ink);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gh-sub {
+  display: block;
+  font-size: 11px;
+  color: var(--ink-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.gh-count {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--forest-deep);
+  background: var(--yellow-soft);
+  border-radius: var(--r-pill);
+  padding: 1px 9px;
+  flex-shrink: 0;
+}
+.gh-dl {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: var(--r-pill);
+  border: 1.5px solid var(--forest);
+  background: transparent;
+  color: var(--forest-deep);
+  font-size: 14px;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: background .15s var(--ease-ui), color .15s var(--ease-ui);
+}
+.gh-dl:hover { background: var(--forest); color: #fff; }
+.group-items { padding-top: 2px; }
+
 /* 案例卡 — 圓角卡片，整列可點 */
 .photo-item {
   display: flex;
@@ -185,8 +252,19 @@ body { display: flex; flex-direction: column; height: 100vh; }
   overflow: hidden;
   text-overflow: ellipsis;
 }
+/* 交通安全／生活街道描述（清單內顯示，最多 3 行） */
+.photo-item .desc {
+  font-size: 12.5px;
+  color: var(--ink-body);
+  line-height: 1.5;
+  margin-top: 4px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
 /* 日期用綠 */
-.photo-item .date { font-size: 12px; color: var(--forest-deep); font-weight: 700; margin-top: 3px; }
+.photo-item .date { font-size: 12px; color: var(--forest-deep); font-weight: 700; margin-top: 4px; }
 .photo-item .coord { font-size: 12px; color: var(--ink-muted); margin-top: 2px; }
 
 /* 招牌圓形標籤 — 白字綠底 */

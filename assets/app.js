@@ -49,32 +49,88 @@ function downloadName(it) {
   return base + '.jpg';
 }
 
-// ---- 渲染 ----
+// ---- 渲染（依城市分組）----
+let uidCounter = 0;
+const uidMap = new Map();      // uid -> item
+let currentGroups = [];        // 目前排序後的分組（供分城市下載）
+
+function groupKeyOf(it) {
+  return it.city ? `${it.cc || ''}|${it.city}` : '__none__';
+}
+
 function refreshUI() {
   countEl.textContent = `${items.length} 個案例`;
   emptyEl.style.display = items.length ? 'none' : 'block';
   downloadAllBtn.hidden = items.length === 0;
 
+  // 分組
+  uidMap.clear();
+  const groups = new Map();
+  for (const it of items) {
+    if (it.uid == null) it.uid = uidCounter++;
+    uidMap.set(String(it.uid), it);
+    const key = groupKeyOf(it);
+    if (!groups.has(key)) {
+      groups.set(key, {
+        key,
+        city: it.city || '未分類',
+        region: it.region || '',
+        country: it.country || it.cc || '',
+        cc: it.cc || '',
+        items: [],
+      });
+    }
+    groups.get(key).items.push(it);
+  }
+
+  // 排序：同國家排在一起；「未分類」殿後
+  currentGroups = [...groups.values()].sort((a, b) => {
+    if (a.key === '__none__') return 1;
+    if (b.key === '__none__') return -1;
+    return (a.cc + a.region + a.city).localeCompare(b.cc + b.region + b.city, 'zh-Hant');
+  });
+
   listEl.innerHTML = '';
-  items.forEach((it, idx) => {
+  currentGroups.forEach((g, gi) => {
     const li = document.createElement('li');
-    li.className = 'photo-item';
-    // 淡入上移，交錯延遲 stagger
-    li.style.animationDelay = Math.min(idx * 40, 400) + 'ms';
+    li.className = 'photo-group';
+    const sub = [g.region, g.country].filter(Boolean).join(' · ');
+    const itemsHtml = g.items.map((it) => `
+      <div class="photo-item" data-uid="${it.uid}">
+        <img src="${it.thumbUrl || it.imgUrl}" alt="" loading="lazy" />
+        <div class="meta">
+          <div class="title">${escapeHtml(it.title)}${it.temp ? '<span class="badge-temp">暫時</span>' : ''}</div>
+          ${it.note ? `<div class="desc">${escapeHtml(it.note)}</div>` : ''}
+          ${it.datetime ? `<div class="date">${escapeHtml(it.datetime)}</div>` : ''}
+        </div>
+      </div>`).join('');
     li.innerHTML = `
-      <img src="${it.thumbUrl || it.imgUrl}" alt="" loading="lazy" />
-      <div class="meta">
-        <div class="title">${escapeHtml(it.title)}${it.temp ? '<span class="badge-temp">暫時</span>' : ''}</div>
-        <div class="coord">${fmtCoord(it.lat, it.lng)}</div>
-        ${it.datetime ? `<div class="date">${escapeHtml(it.datetime)}</div>` : ''}
-      </div>`;
-    li.addEventListener('click', () => {
-      map.setView([it.lat, it.lng], 17, { animate: true });
-      it.marker.openPopup();
-    });
+      <div class="group-header" data-gi="${gi}">
+        <span class="gh-caret" aria-hidden="true">▾</span>
+        <div class="gh-text">
+          <span class="gh-title">${escapeHtml(g.city)}</span>
+          ${sub ? `<span class="gh-sub">${escapeHtml(sub)}</span>` : ''}
+        </div>
+        <span class="gh-count">${g.items.length}</span>
+        <button class="gh-dl" data-gi="${gi}" title="下載「${escapeHtml(g.city)}」的全部照片（ZIP）">⬇</button>
+      </div>
+      <div class="group-items">${itemsHtml}</div>`;
     listEl.appendChild(li);
   });
 }
+
+// 清單事件委派：下載鈕 / 收合標題 / 點案例飛到地圖
+listEl.addEventListener('click', (e) => {
+  const dl = e.target.closest('.gh-dl');
+  if (dl) { e.stopPropagation(); downloadCity(Number(dl.dataset.gi)); return; }
+  const header = e.target.closest('.group-header');
+  if (header) { header.parentElement.classList.toggle('collapsed'); return; }
+  const row = e.target.closest('.photo-item');
+  if (row) {
+    const it = uidMap.get(row.dataset.uid);
+    if (it) { map.setView([it.lat, it.lng], 17, { animate: true }); it.marker.openPopup(); }
+  }
+});
 
 function escapeHtml(s) {
   return String(s ?? '').replace(/[&<>"']/g, (c) =>
@@ -136,6 +192,10 @@ async function loadDatabase() {
         datetime: p.datetime || '',
         imgUrl: p.image || p.thumb,
         thumbUrl: p.thumb || p.image,
+        city: p.city || '',
+        region: p.region || '',
+        country: p.country || '',
+        cc: p.cc || '',
         temp: false,
       });
     }
@@ -217,14 +277,15 @@ async function handleFiles(fileList) {
 
 // ---- 批量下載（打包成 ZIP）----
 let downloading = false;
-async function downloadAll() {
+
+async function zipAndDownload(list, baseName) {
   if (downloading) return;
-  if (!items.length) { toast('目前沒有照片可下載'); return; }
+  if (!list.length) { toast('沒有照片可下載'); return; }
   if (typeof window.JSZip === 'undefined') { toast('下載元件尚未載入，請稍候再試'); return; }
 
   downloading = true;
   downloadAllBtn.disabled = true;
-  const total = items.length;
+  const total = list.length;
 
   // 照片較多時提醒改用電腦
   if (total > 60 && /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent)) {
@@ -235,7 +296,7 @@ async function downloadAll() {
   const usedNames = new Set();
   let done = 0, failed = 0;
 
-  for (const it of items) {
+  for (const it of list) {
     try {
       const res = await fetch(it.imgUrl || it.thumbUrl);
       if (!res.ok) throw new Error('fetch failed');
@@ -258,9 +319,10 @@ async function downloadAll() {
   toast('正在產生 ZIP 檔…', 60000);
   const content = await zip.generateAsync({ type: 'blob', compression: 'STORE' });
   const url = URL.createObjectURL(content);
+  const safe = String(baseName).replace(/[\\/:*?"<>|]+/g, '_') || '照片';
   const a = document.createElement('a');
   a.href = url;
-  a.download = '生活街道案例照片.zip';
+  a.download = `${safe}.zip`;
   document.body.appendChild(a);
   a.click();
   a.remove();
@@ -270,6 +332,18 @@ async function downloadAll() {
   downloading = false;
   downloadAllBtn.disabled = false;
 }
+
+function downloadAll() {
+  return zipAndDownload(items, '生活街道案例照片');
+}
+
+// 下載單一城市的全部照片
+function downloadCity(gi) {
+  const g = currentGroups[gi];
+  if (!g) return;
+  zipAndDownload(g.items, `生活街道-${g.city}`);
+}
+
 downloadAllBtn.addEventListener('click', downloadAll);
 
 // ---- 手機：點清單標題列可收合／展開底部面板 ----
