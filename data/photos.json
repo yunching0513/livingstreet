@@ -13,7 +13,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "01_步行與商業街__IMG_6289",
@@ -28,7 +29,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_6292",
@@ -43,7 +45,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_7106",
@@ -58,7 +61,8 @@
       "city": "Kadoelen",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_7383",
@@ -73,7 +77,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "08_其他非街景__IMG_7523",
@@ -88,7 +93,8 @@
       "city": "Amstelveen",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "08_其他非街景"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0169",
@@ -103,7 +109,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_0170",
@@ -118,7 +125,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0171",
@@ -133,7 +141,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "01_步行與商業街__IMG_0172",
@@ -148,7 +157,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0176",
@@ -163,7 +173,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0177",
@@ -178,7 +189,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_0178",
@@ -193,7 +205,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "03_路口與道路交通__IMG_0180",
@@ -208,7 +221,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0182",
@@ -223,7 +237,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_0364",
@@ -238,7 +253,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0371",
@@ -253,7 +269,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0372",
@@ -268,7 +285,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "01_步行與商業街__IMG_0373",
@@ -283,7 +301,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_0028",
@@ -298,7 +317,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_0029",
@@ -313,7 +333,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_0030",
@@ -328,7 +349,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "03_路口與道路交通__IMG_0031",
@@ -343,7 +365,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_0036",
@@ -358,7 +381,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0039",
@@ -373,7 +397,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0077",
@@ -388,7 +413,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0180 2",
@@ -403,7 +429,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_0252",
@@ -418,7 +445,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "04_自行車與慢行__IMG_0253",
@@ -433,7 +461,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0280",
@@ -448,7 +477,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0292",
@@ -463,7 +493,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1061",
@@ -478,7 +509,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1081",
@@ -493,7 +525,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_1790",
@@ -508,7 +541,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2177",
@@ -523,7 +557,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2316",
@@ -538,7 +573,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_2332",
@@ -553,7 +589,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "08_其他非街景__IMG_2383",
@@ -568,7 +605,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2404",
@@ -583,7 +621,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2405",
@@ -598,7 +637,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_2407",
@@ -613,7 +653,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "08_其他非街景__IMG_2444",
@@ -628,7 +669,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2506",
@@ -643,7 +685,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2665",
@@ -658,7 +701,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2734",
@@ -673,7 +717,8 @@
       "city": "Christianshavn",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2746",
@@ -688,7 +733,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2748",
@@ -703,7 +749,8 @@
       "city": "Copenhagen",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_2816",
@@ -718,7 +765,8 @@
       "city": "Frederiksberg",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "08_其他非街景__IMG_2818",
@@ -733,7 +781,8 @@
       "city": "Frederiksberg",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_2821",
@@ -748,7 +797,8 @@
       "city": "Frederiksberg",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_2823",
@@ -763,7 +813,8 @@
       "city": "Frederiksberg",
       "region": "Capital Region",
       "country": "Denmark",
-      "cc": "DK"
+      "cc": "DK",
+      "category": "08_其他非街景"
     },
     {
       "id": "01_步行與商業街__IMG_3463",
@@ -778,7 +829,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "04_自行車與慢行__IMG_3541",
@@ -793,7 +845,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3564",
@@ -808,7 +861,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_3902",
@@ -823,7 +877,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3904",
@@ -838,7 +893,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_4162",
@@ -853,7 +909,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "08_其他非街景__IMG_4206",
@@ -868,7 +925,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "08_其他非街景"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4207",
@@ -883,7 +941,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4208",
@@ -898,7 +957,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4317",
@@ -913,7 +973,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4321",
@@ -928,7 +989,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_4790",
@@ -943,7 +1005,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5016",
@@ -958,7 +1021,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "01_步行與商業街__IMG_5021",
@@ -973,7 +1037,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5034",
@@ -988,7 +1053,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_5048",
@@ -1003,7 +1069,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5253",
@@ -1018,7 +1085,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "01_步行與商業街__IMG_0786",
@@ -1033,7 +1101,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0787",
@@ -1048,7 +1117,8 @@
       "city": "Dapperbuurt",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_0792",
@@ -1063,7 +1133,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "04_自行車與慢行__IMG_0974",
@@ -1078,7 +1149,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1998",
@@ -1093,7 +1165,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_2021",
@@ -1108,7 +1181,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "03_路口與道路交通__IMG_2197",
@@ -1123,7 +1197,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_2903",
@@ -1138,7 +1213,8 @@
       "city": "Bairro Alto",
       "region": "Lisbon",
       "country": "Portugal",
-      "cc": "PT"
+      "cc": "PT",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_7903",
@@ -1153,7 +1229,8 @@
       "city": "Gare",
       "region": "Luxembourg",
       "country": "Luxembourg",
-      "cc": "LU"
+      "cc": "LU",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "01_步行與商業街__IMG_8169",
@@ -1168,7 +1245,8 @@
       "city": "Brussels",
       "region": "Brussels Capital",
       "country": "Belgium",
-      "cc": "BE"
+      "cc": "BE",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_8195",
@@ -1183,7 +1261,8 @@
       "city": "Brussels",
       "region": "Brussels Capital",
       "country": "Belgium",
-      "cc": "BE"
+      "cc": "BE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_8446",
@@ -1198,7 +1277,8 @@
       "city": "The Hague",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_8728",
@@ -1213,7 +1293,8 @@
       "city": "Utrecht",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "04_自行車與慢行__IMG_8798",
@@ -1228,7 +1309,8 @@
       "city": "Grauwaart",
       "region": "Utrecht",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "04_自行車與慢行__IMG_9160",
@@ -1243,7 +1325,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "01_步行與商業街__IMG_9231",
@@ -1258,7 +1341,8 @@
       "city": "Amsterdam",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "03_路口與道路交通__IMG_9343",
@@ -1273,7 +1357,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_9443",
@@ -1288,7 +1373,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "04_自行車與慢行__IMG_9445",
@@ -1303,7 +1389,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "03_路口與道路交通__IMG_0225",
@@ -1318,7 +1405,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_0226",
@@ -1333,7 +1421,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0227",
@@ -1348,7 +1437,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0228",
@@ -1363,7 +1453,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0229",
@@ -1378,7 +1469,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "08_其他非街景__IMG_0491",
@@ -1393,7 +1485,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "08_其他非街景"
     },
     {
       "id": "03_路口與道路交通__IMG_2924",
@@ -1408,7 +1501,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_2925",
@@ -1423,7 +1517,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3674",
@@ -1438,7 +1533,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3675",
@@ -1453,7 +1549,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3676",
@@ -1468,7 +1565,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3677",
@@ -1483,7 +1581,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3678",
@@ -1498,7 +1597,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_3704",
@@ -1513,7 +1613,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "08_其他非街景__IMG_3979",
@@ -1528,7 +1629,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4109",
@@ -1543,7 +1645,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4152",
@@ -1558,7 +1661,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4153",
@@ -1573,7 +1677,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4154",
@@ -1588,7 +1693,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4196",
@@ -1603,7 +1709,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4224",
@@ -1618,7 +1725,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4231",
@@ -1633,7 +1741,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "04_自行車與慢行__IMG_4233",
@@ -1648,7 +1757,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4234",
@@ -1663,7 +1773,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4236",
@@ -1678,7 +1789,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4237",
@@ -1693,7 +1805,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4353",
@@ -1708,7 +1821,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4359",
@@ -1723,7 +1837,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4360",
@@ -1738,7 +1853,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4364",
@@ -1753,7 +1869,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4365",
@@ -1768,7 +1885,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4366",
@@ -1783,7 +1901,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4367",
@@ -1798,7 +1917,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4368",
@@ -1813,7 +1933,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4369",
@@ -1828,7 +1949,8 @@
       "city": "Bogenhausen",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "01_步行與商業街__IMG_4377",
@@ -1843,7 +1965,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4378",
@@ -1858,7 +1981,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4380",
@@ -1873,7 +1997,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4381",
@@ -1888,7 +2013,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4389",
@@ -1903,7 +2029,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "08_其他非街景__IMG_4390",
@@ -1918,7 +2045,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4392",
@@ -1933,7 +2061,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "03_路口與道路交通__IMG_4394",
@@ -1948,7 +2077,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4461",
@@ -1963,7 +2093,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4487",
@@ -1978,7 +2109,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4494",
@@ -1993,7 +2125,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4504",
@@ -2008,7 +2141,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4513",
@@ -2023,7 +2157,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4516",
@@ -2038,7 +2173,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4519",
@@ -2053,7 +2189,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4522",
@@ -2068,7 +2205,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4523",
@@ -2083,7 +2221,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4529",
@@ -2098,7 +2237,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4530",
@@ -2113,7 +2253,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "04_自行車與慢行__IMG_4533",
@@ -2128,7 +2269,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4565",
@@ -2143,7 +2285,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4596",
@@ -2158,7 +2301,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4600",
@@ -2173,7 +2317,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4603",
@@ -2188,7 +2333,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4701",
@@ -2203,7 +2349,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4702",
@@ -2218,7 +2365,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_4703",
@@ -2233,7 +2381,8 @@
       "city": "Munich",
       "region": "Bavaria",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5113",
@@ -2248,7 +2397,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5114",
@@ -2263,7 +2413,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5116",
@@ -2278,7 +2429,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_5122",
@@ -2293,7 +2445,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_5125",
@@ -2308,7 +2461,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "01_步行與商業街__IMG_5126",
@@ -2323,7 +2477,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_5127 2",
@@ -2338,7 +2493,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_5132",
@@ -2353,7 +2509,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "01_步行與商業街__IMG_5135",
@@ -2368,7 +2525,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "01_步行與商業街"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_6874",
@@ -2383,7 +2541,8 @@
       "city": "Berlin",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_6888",
@@ -2398,7 +2557,8 @@
       "city": "Treptow",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "08_其他非街景__IMG_7048",
@@ -2413,7 +2573,8 @@
       "city": "Gesundbrunnen",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "08_其他非街景__IMG_7051",
@@ -2428,7 +2589,8 @@
       "city": "Gesundbrunnen",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "08_其他非街景__IMG_7052",
@@ -2443,7 +2605,8 @@
       "city": "Gesundbrunnen",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_7242",
@@ -2458,7 +2621,8 @@
       "city": "Mitte",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_7244",
@@ -2473,7 +2637,8 @@
       "city": "Mitte",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_7245",
@@ -2488,7 +2653,8 @@
       "city": "Mitte",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "05_廣場公園與綠化__IMG_7247",
@@ -2503,7 +2669,8 @@
       "city": "Mitte",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "08_其他非街景__IMG_7251",
@@ -2518,7 +2685,8 @@
       "city": "Mitte",
       "region": "State of Berlin",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_7343",
@@ -2533,7 +2701,8 @@
       "city": "Wittenberg",
       "region": "Saxony-Anhalt",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_7344",
@@ -2548,7 +2717,8 @@
       "city": "Wittenberg",
       "region": "Saxony-Anhalt",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_7356",
@@ -2563,7 +2733,8 @@
       "city": "Wittenberg",
       "region": "Saxony-Anhalt",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "08_其他非街景__IMG_7408",
@@ -2578,7 +2749,8 @@
       "city": "Wittenberg",
       "region": "Saxony-Anhalt",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "08_其他非街景"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_7409",
@@ -2593,7 +2765,8 @@
       "city": "Wittenberg",
       "region": "Saxony-Anhalt",
       "country": "Germany",
-      "cc": "DE"
+      "cc": "DE",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "03_路口與道路交通__IMG_8281",
@@ -2608,7 +2781,8 @@
       "city": "Porte Saint-Denis",
       "region": "Île-de-France",
       "country": "France",
-      "cc": "FR"
+      "cc": "FR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "01_步行與商業街__IMG_8342",
@@ -2623,7 +2797,8 @@
       "city": "Saint-Ouen",
       "region": "Île-de-France",
       "country": "France",
-      "cc": "FR"
+      "cc": "FR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_8343",
@@ -2638,7 +2813,8 @@
       "city": "Saint-Ouen",
       "region": "Île-de-France",
       "country": "France",
-      "cc": "FR"
+      "cc": "FR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_8344",
@@ -2653,7 +2829,8 @@
       "city": "Saint-Ouen",
       "region": "Île-de-France",
       "country": "France",
-      "cc": "FR"
+      "cc": "FR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_8888",
@@ -2668,7 +2845,8 @@
       "city": "New Taipei City",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_8889",
@@ -2683,7 +2861,8 @@
       "city": "New Taipei City",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "05_廣場公園與綠化__IMG_8948",
@@ -2698,7 +2877,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_2074 2",
@@ -2713,7 +2893,8 @@
       "city": "Delft",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_2198",
@@ -2728,7 +2909,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__IMG_2350",
@@ -2743,7 +2925,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_2353 2",
@@ -2758,7 +2941,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "04_自行車與慢行__IMG_2353",
@@ -2773,7 +2957,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "03_路口與道路交通__IMG_2356 2",
@@ -2788,7 +2973,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_2356",
@@ -2803,7 +2989,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "04_自行車與慢行__IMG_2357",
@@ -2818,7 +3005,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "04_自行車與慢行__IMG_2362 2",
@@ -2833,7 +3021,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "04_自行車與慢行__IMG_2362",
@@ -2848,7 +3037,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "05_廣場公園與綠化__IMG_2380",
@@ -2863,7 +3053,8 @@
       "city": "Halfweg",
       "region": "North Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_2940",
@@ -2878,7 +3069,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_2958",
@@ -2893,7 +3085,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_2959",
@@ -2908,7 +3101,8 @@
       "city": "Leiden",
       "region": "South Holland",
       "country": "Netherlands",
-      "cc": "NL"
+      "cc": "NL",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_6470",
@@ -2923,7 +3117,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_7182",
@@ -2938,7 +3133,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "01_步行與商業街__IMG_7489",
@@ -2953,7 +3149,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "03_路口與道路交通__IMG_7492",
@@ -2968,7 +3165,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7494",
@@ -2983,7 +3181,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7509",
@@ -2998,7 +3197,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7515",
@@ -3013,7 +3213,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7516",
@@ -3028,7 +3229,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7517",
@@ -3043,7 +3245,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7565",
@@ -3058,7 +3261,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7576",
@@ -3073,7 +3277,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "01_步行與商業街__IMG_7584",
@@ -3088,7 +3293,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "03_路口與道路交通__IMG_7629",
@@ -3103,7 +3309,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7630",
@@ -3118,7 +3325,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7631",
@@ -3133,7 +3341,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7632",
@@ -3148,7 +3357,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__dclassic 2026-04-03 22095720D06874D86E",
@@ -3163,7 +3373,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "03_路口與道路交通__IMG_7636",
@@ -3178,7 +3389,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7648",
@@ -3193,7 +3405,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__dclassic 2026-04-03 220956C4250F4BA6EE",
@@ -3208,7 +3421,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_7683",
@@ -3223,7 +3437,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_7701",
@@ -3238,7 +3453,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "05_廣場公園與綠化__dclassic 2026-04-03 22095816F7820EB276",
@@ -3253,7 +3469,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_8078",
@@ -3268,7 +3485,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8494",
@@ -3283,7 +3501,8 @@
       "city": "Chinju",
       "region": "Gyeongsangnam-do",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8630",
@@ -3298,7 +3517,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8632",
@@ -3313,7 +3533,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8633",
@@ -3328,7 +3549,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8635",
@@ -3343,7 +3565,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "01_步行與商業街__IMG_8647",
@@ -3358,7 +3581,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_8650",
@@ -3373,7 +3597,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "03_路口與道路交通__IMG_8715",
@@ -3388,7 +3613,8 @@
       "city": "Busan",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "01_步行與商業街__IMG_8733",
@@ -3403,7 +3629,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "01_步行與商業街"
     },
     {
       "id": "05_廣場公園與綠化__IMG_8739",
@@ -3418,7 +3645,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_8801",
@@ -3433,7 +3661,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8806",
@@ -3448,7 +3677,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8817",
@@ -3463,7 +3693,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_8837",
@@ -3478,7 +3709,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_8841",
@@ -3493,7 +3725,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "03_路口與道路交通__IMG_8842",
@@ -3508,7 +3741,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8847",
@@ -3523,7 +3757,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8848",
@@ -3538,7 +3773,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8851",
@@ -3553,7 +3789,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8853",
@@ -3568,7 +3805,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_8859",
@@ -3583,7 +3821,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "03_路口與道路交通__IMG_8862",
@@ -3598,7 +3837,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_8907",
@@ -3613,7 +3853,8 @@
       "city": "Dongnae",
       "region": "Busan",
       "country": "Korea, Republic of",
-      "cc": "KR"
+      "cc": "KR",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_8989",
@@ -3628,7 +3869,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_9054",
@@ -3643,7 +3885,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_9059",
@@ -3658,7 +3901,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_9821",
@@ -3673,7 +3917,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_9856",
@@ -3688,7 +3933,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_9933",
@@ -3703,7 +3949,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_0075",
@@ -3718,7 +3965,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_0076",
@@ -3733,7 +3981,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_0210",
@@ -3748,7 +3997,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_0213",
@@ -3763,7 +4013,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "05_廣場公園與綠化__IMG_0229",
@@ -3778,7 +4029,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_0270",
@@ -3793,7 +4045,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_0680",
@@ -3808,7 +4061,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1036",
@@ -3823,7 +4077,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_1042",
@@ -3838,7 +4093,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1044",
@@ -3853,7 +4109,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_1124",
@@ -3868,7 +4125,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1213",
@@ -3883,7 +4141,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "04_自行車與慢行__IMG_1375",
@@ -3898,7 +4157,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "01_步行與商業街__IMG_1475",
@@ -3913,7 +4173,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "01_步行與商業街"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_1523",
@@ -3928,7 +4189,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_1733",
@@ -3943,7 +4205,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_1735",
@@ -3958,7 +4221,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "01_步行與商業街__IMG_1737",
@@ -3973,7 +4237,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "01_步行與商業街"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_1759",
@@ -3988,7 +4253,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "03_路口與道路交通__IMG_1765",
@@ -4003,7 +4269,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "01_步行與商業街__IMG_1775",
@@ -4018,7 +4285,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_1776",
@@ -4033,7 +4301,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "01_步行與商業街"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_1803",
@@ -4048,7 +4317,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "05_廣場公園與綠化__IMG_1804",
@@ -4063,7 +4333,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_1816",
@@ -4078,7 +4349,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_1847 2",
@@ -4093,7 +4365,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_1851",
@@ -4108,7 +4381,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_1857",
@@ -4123,7 +4397,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_1877",
@@ -4138,7 +4413,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "03_路口與道路交通__IMG_1878",
@@ -4153,7 +4429,8 @@
       "city": "Taichung",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_1938",
@@ -4168,7 +4445,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_2086",
@@ -4183,7 +4461,8 @@
       "city": "Xindian",
       "region": "Taipei",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_2341",
@@ -4198,7 +4477,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_2342",
@@ -4213,7 +4493,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "01_步行與商業街__IMG_2660",
@@ -4228,7 +4509,8 @@
       "city": "Taipei",
       "region": "Taiwan",
       "country": "Taiwan",
-      "cc": "TW"
+      "cc": "TW",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_2768",
@@ -4243,7 +4525,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "01_步行與商業街"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_2789",
@@ -4258,7 +4541,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "04_自行車與慢行__IMG_2790",
@@ -4273,7 +4557,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "04_自行車與慢行"
     },
     {
       "id": "03_路口與道路交通__IMG_2814",
@@ -4288,7 +4573,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "01_步行與商業街__IMG_3208",
@@ -4303,7 +4589,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "01_步行與商業街"
     },
     {
       "id": "01_步行與商業街__IMG_3218 2",
@@ -4318,7 +4605,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "01_步行與商業街"
     },
     {
       "id": "06_人行道停車與街道界面__IMG_3359",
@@ -4333,7 +4621,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "06_人行道停車與街道界面"
     },
     {
       "id": "03_路口與道路交通__IMG_3405",
@@ -4348,7 +4637,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "02_住宅與生活巷弄__IMG_3431",
@@ -4363,7 +4653,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "02_住宅與生活巷弄"
     },
     {
       "id": "03_路口與道路交通__IMG_3512",
@@ -4378,7 +4669,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_3708",
@@ -4393,7 +4685,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_3709",
@@ -4408,7 +4701,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "05_廣場公園與綠化__IMG_3710",
@@ -4423,7 +4717,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "05_廣場公園與綠化"
     },
     {
       "id": "03_路口與道路交通__IMG_3935",
@@ -4438,7 +4733,8 @@
       "city": "Arashiyama",
       "region": "Kyoto",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_3942",
@@ -4453,7 +4749,8 @@
       "city": "Arashiyama",
       "region": "Kyoto",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "07_建築歷史與街景細節__IMG_4042",
@@ -4468,7 +4765,8 @@
       "city": "Kyoto",
       "region": "Kyoto",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "07_建築歷史與街景細節"
     },
     {
       "id": "03_路口與道路交通__IMG_4043 2",
@@ -4483,7 +4781,8 @@
       "city": "Kyoto",
       "region": "Kyoto",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_4043",
@@ -4498,7 +4797,8 @@
       "city": "Kyoto",
       "region": "Kyoto",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     },
     {
       "id": "03_路口與道路交通__IMG_4079",
@@ -4513,7 +4813,8 @@
       "city": "Osaka",
       "region": "Osaka",
       "country": "Japan",
-      "cc": "JP"
+      "cc": "JP",
+      "category": "03_路口與道路交通"
     }
   ]
 }

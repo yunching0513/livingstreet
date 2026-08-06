@@ -21,8 +21,10 @@ const countEl = document.getElementById('photo-count');
 const emptyEl = document.getElementById('empty-state');
 const toastEl = document.getElementById('toast');
 const downloadAllBtn = document.getElementById('download-all');
+const categoryFiltersEl = document.getElementById('category-filters');
 
 let items = []; // { id, title, note, lat, lng, datetime, imgUrl, thumbUrl, temp, marker }
+let activeCategory = '__all__';
 
 // ---- 工具 ----
 function toast(msg, ms = 2600) {
@@ -49,6 +51,45 @@ function downloadName(it) {
   return base + '.jpg';
 }
 
+function categoryOf(it) {
+  if (it.category) return it.category;
+  const source = String(it.source || '');
+  return source.includes('/') ? source.split('/')[0] : '未分類';
+}
+
+function categoryLabel(category) {
+  return String(category || '未分類').replace(/^\d+_/, '');
+}
+
+function visibleItems() {
+  return activeCategory === '__all__'
+    ? items
+    : items.filter((it) => categoryOf(it) === activeCategory);
+}
+
+function refreshMarkers() {
+  clusterGroup.clearLayers();
+  for (const it of visibleItems()) clusterGroup.addLayer(it.marker);
+}
+
+function renderCategoryFilters() {
+  const counts = new Map();
+  for (const it of items) {
+    const category = categoryOf(it);
+    counts.set(category, (counts.get(category) || 0) + 1);
+  }
+
+  const categories = [...counts.keys()].sort((a, b) => a.localeCompare(b, 'zh-Hant'));
+  const buttons = [
+    `<button type="button" class="category-filter${activeCategory === '__all__' ? ' active' : ''}" data-category="__all__" aria-pressed="${activeCategory === '__all__'}">全部 <span>${items.length}</span></button>`,
+    ...categories.map((category) => `
+      <button type="button" class="category-filter${activeCategory === category ? ' active' : ''}" data-category="${escapeHtml(category)}" aria-pressed="${activeCategory === category}">
+        ${escapeHtml(categoryLabel(category))} <span>${counts.get(category)}</span>
+      </button>`),
+  ];
+  categoryFiltersEl.innerHTML = buttons.join('');
+}
+
 // ---- 渲染（依城市分組）----
 let uidCounter = 0;
 const uidMap = new Map();      // uid -> item
@@ -59,14 +100,20 @@ function groupKeyOf(it) {
 }
 
 function refreshUI() {
-  countEl.textContent = `${items.length} 個案例`;
-  emptyEl.style.display = items.length ? 'none' : 'block';
-  downloadAllBtn.hidden = items.length === 0;
+  const visible = visibleItems();
+  countEl.textContent = activeCategory === '__all__'
+    ? `${items.length} 個案例`
+    : `${visible.length} / ${items.length} 個案例`;
+  emptyEl.style.display = visible.length ? 'none' : 'block';
+  downloadAllBtn.hidden = visible.length === 0;
+  downloadAllBtn.textContent = activeCategory === '__all__' ? '⬇ 下載全部' : '⬇ 下載篩選結果';
+  renderCategoryFilters();
+  refreshMarkers();
 
   // 分組
   uidMap.clear();
   const groups = new Map();
-  for (const it of items) {
+  for (const it of visible) {
     if (it.uid == null) it.uid = uidCounter++;
     uidMap.set(String(it.uid), it);
     const key = groupKeyOf(it);
@@ -132,6 +179,19 @@ listEl.addEventListener('click', (e) => {
   }
 });
 
+categoryFiltersEl.addEventListener('click', (e) => {
+  const button = e.target.closest('.category-filter');
+  if (!button) return;
+  e.stopPropagation();
+  activeCategory = button.dataset.category || '__all__';
+  refreshUI();
+  const visible = visibleItems();
+  if (visible.length) fitToItems(visible);
+  toast(activeCategory === '__all__'
+    ? `顯示全部 ${items.length} 個案例`
+    : `已篩選「${categoryLabel(activeCategory)}」${visible.length} 個案例`);
+});
+
 function escapeHtml(s) {
   return String(s ?? '').replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
@@ -164,13 +224,12 @@ function addItem(it) {
     </div>`;
   marker.bindPopup(popup, { maxWidth: 280 });
   it.marker = marker;
-  clusterGroup.addLayer(marker);
   items.push(it);
 }
 
-function fitToItems() {
-  if (!items.length) return;
-  const bounds = L.latLngBounds(items.map((i) => [i.lat, i.lng]));
+function fitToItems(list = visibleItems()) {
+  if (!list.length) return;
+  const bounds = L.latLngBounds(list.map((i) => [i.lat, i.lng]));
   map.fitBounds(bounds, { padding: [50, 50], maxZoom: 17 });
 }
 
@@ -192,6 +251,8 @@ async function loadDatabase() {
         datetime: p.datetime || '',
         imgUrl: p.image || p.thumb,
         thumbUrl: p.thumb || p.image,
+        source: p.source || '',
+        category: p.category || '',
         city: p.city || '',
         region: p.region || '',
         country: p.country || '',
@@ -200,7 +261,7 @@ async function loadDatabase() {
       });
     }
     refreshUI();
-    fitToItems();
+    fitToItems(visibleItems());
     if (photos.length) toast(`已從資料庫載入 ${items.length} 個案例`);
   } catch (e) {
     // 以 file:// 開啟時 fetch 會失敗，屬正常；使用拖曳模式即可。
@@ -268,7 +329,7 @@ async function handleFiles(fileList) {
   }
 
   refreshUI();
-  fitToItems();
+  fitToItems(visibleItems());
 
   if (added && noGps) toast(`已加入 ${added} 張；${noGps} 張沒有 GPS 座標，已略過`);
   else if (added) toast(`已加入 ${added} 張照片`);
@@ -334,7 +395,10 @@ async function zipAndDownload(list, baseName) {
 }
 
 function downloadAll() {
-  return zipAndDownload(items, '生活街道案例照片');
+  const selected = visibleItems();
+  return zipAndDownload(selected, activeCategory === '__all__'
+    ? '生活街道案例照片'
+    : `生活街道-${categoryLabel(activeCategory)}`);
 }
 
 // 下載單一城市的全部照片
@@ -350,7 +414,7 @@ downloadAllBtn.addEventListener('click', downloadAll);
 const sidebarEl = document.getElementById('sidebar');
 document.getElementById('sidebar-head').addEventListener('click', (e) => {
   // 只在手機版（底部面板）時作用
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  if (window.matchMedia('(max-width: 768px)').matches && !e.target.closest('.category-toolbar')) {
     sidebarEl.classList.toggle('collapsed');
   }
 });

@@ -27,8 +27,7 @@
       </div>
     </div>
     <div class="header-actions">
-      <button class="btn btn-ghost" id="download-all" hidden>⬇ 下載全部</button>
-      <label class="btn" for="file-input">＋ 加入照片</label>
+      <label class="btn upload-label" for="file-input"><span class="upload-label-text">＋ 加入照片</span><span class="upload-label-short" aria-hidden="true">＋</span></label>
       <input id="file-input" type="file" accept="image/*,.heic,.heif" multiple hidden />
     </div>
   </header>
@@ -37,8 +36,17 @@
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-head" id="sidebar-head">
         <span class="sheet-handle" aria-hidden="true"></span>
-        <span class="section-label">案例清單 · Cases</span>
-        <span id="photo-count" class="count">0 個案例</span>
+        <div class="sidebar-summary">
+          <span class="section-label">案例清單 · Cases</span>
+          <span id="photo-count" class="count">0 個案例</span>
+        </div>
+        <div class="category-toolbar" aria-label="照片分類篩選">
+          <div class="toolbar-row">
+            <span class="toolbar-label">依分類瀏覽</span>
+            <button class="btn btn-ghost toolbar-download" id="download-all" hidden>⬇ 下載全部</button>
+          </div>
+          <div id="category-filters" class="category-filters" role="group" aria-label="照片分類"></div>
+        </div>
       </div>
       <ul id="photo-list" class="photo-list"></ul>
       <div id="empty-state" class="empty-state">

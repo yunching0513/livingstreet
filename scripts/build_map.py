@@ -195,10 +195,12 @@ def main():
 
         cap = captions.get(pid, {})
         lat, lng = gps
+        category = rel.parts[0] if len(rel.parts) > 1 else "未分類"
         photos.append({
             "id": pid,
             "title": cap.get("title") or f.stem,
             "note": cap.get("note", ""),
+            "category": category,
             "lat": lat,
             "lng": lng,
             "datetime": dt,

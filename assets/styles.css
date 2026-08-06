@@ -55,7 +55,7 @@ html, body {
   -webkit-font-smoothing: antialiased;
 }
 
-body { display: flex; flex-direction: column; height: 100vh; }
+body { display: flex; flex-direction: column; min-height: 100vh; min-height: 100dvh; }
 
 /* ── 標頭：sticky 半透明紙色毛玻璃 ───────────────────────── */
 .app-header {
@@ -119,6 +119,7 @@ body { display: flex; flex-direction: column; height: 100vh; }
 .btn-ghost:hover { background: var(--forest); color: #fff; }
 
 .header-actions { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: flex-end; }
+.upload-label-short { display: none; }
 
 /* ── 版面 ─────────────────────────────────────────────── */
 .layout { display: flex; flex: 1; min-height: 0; }
@@ -139,6 +140,34 @@ body { display: flex; flex-direction: column; height: 100vh; }
   background: var(--paper-lift);
   z-index: 2;
 }
+.sidebar-summary { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.sidebar-summary .section-label { margin-bottom: 0; }
+.category-toolbar { margin-top: 14px; }
+.toolbar-row { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+.toolbar-label { font-size: 12px; color: var(--ink-body); font-weight: 700; }
+.toolbar-download { min-height: 34px; padding: 0 12px; font-size: 12px; }
+.category-filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.category-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  min-height: 34px;
+  padding: 0 11px;
+  border: 1.5px solid var(--panel-edge);
+  border-radius: var(--r-pill);
+  background: var(--paper-lift);
+  color: var(--ink-body);
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 700;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: background .15s var(--ease-ui), border-color .15s var(--ease-ui), color .15s var(--ease-ui), transform .15s var(--ease-play);
+}
+.category-filter span { color: var(--ink-muted); font-size: 11px; }
+.category-filter:hover { border-color: var(--forest); color: var(--forest-deep); transform: translateY(-1px); }
+.category-filter.active { border-color: var(--forest-deep); background: var(--forest-deep); color: #fff; box-shadow: 0 3px 8px rgba(46,83,57,.18); }
+.category-filter.active span { color: rgba(255,255,255,.78); }
 /* 章節標題樣式 */
 .section-label {
   font-size: 12px;
@@ -229,6 +258,7 @@ body { display: flex; flex-direction: column; height: 100vh; }
   cursor: pointer;
   transition: background .16s var(--ease-ui), transform .2s var(--ease-play), box-shadow .2s var(--ease-ui);
   animation: fade-in-up .5s var(--ease-ui) both;
+  -webkit-tap-highlight-color: transparent;
 }
 .photo-item:hover {
   background: var(--panel);
@@ -385,6 +415,10 @@ body { display: flex; flex-direction: column; height: 100vh; }
   background: var(--forest-deep);
   color: #fff !important;
   transition: background .15s var(--ease-ui);
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .popup .p-btn:hover { background: var(--forest-deepest); }
 .popup .p-btn.ghost {
@@ -430,11 +464,14 @@ body { display: flex; flex-direction: column; height: 100vh; }
 
 /* 響應式：手機 */
 @media (max-width: 768px) {
-  .app-header { padding: 12px 16px; gap: 10px; }
+  .app-header { padding: 10px 14px; gap: 10px; }
+  .brand { min-width: 0; gap: 9px; }
+  .brand > div { min-width: 0; }
   .app-header h1 { font-size: 17px; }
+  .app-header h1 { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .subtitle { display: none; }               /* 手機省空間 */
   .brand-mark { width: 38px; height: 38px; font-size: 19px; }
-  .btn { padding: 0 16px; font-size: 14px; min-height: 40px; }
+  .btn { padding: 0 14px; font-size: 14px; min-height: 40px; }
 
   .layout { flex-direction: column; }
 
@@ -442,7 +479,8 @@ body { display: flex; flex-direction: column; height: 100vh; }
   .sidebar {
     position: absolute;
     z-index: 600;
-    height: 45%;
+    height: 52%;
+    max-height: 75dvh;
     width: 100%;
     bottom: 0;
     top: auto;
@@ -452,9 +490,9 @@ body { display: flex; flex-direction: column; height: 100vh; }
     box-shadow: 0 -8px 24px rgba(33,31,24,.12);
     transition: height .3s var(--ease-ui);
   }
-  .sidebar.collapsed { height: 56px; overflow: hidden; }
+  .sidebar.collapsed { height: 58px; overflow: hidden; }
 
-  .sidebar-head { cursor: pointer; padding-top: 8px; text-align: center; }
+  .sidebar-head { cursor: pointer; padding: 8px 14px 12px; text-align: center; }
   .sheet-handle {
     display: block;
     width: 42px;
@@ -463,9 +501,30 @@ body { display: flex; flex-direction: column; height: 100vh; }
     background: var(--panel-edge);
     margin: 2px auto 10px;
   }
+  .sidebar-summary { justify-content: center; gap: 8px; }
   .section-label, .count { display: inline-block; }
-  .count { margin-left: 8px; }
+  .category-toolbar { text-align: left; margin-top: 10px; }
+  .toolbar-row { margin-bottom: 7px; }
+  .category-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin: 0 -2px;
+    padding: 1px 2px 5px;
+    scrollbar-width: none;
+    overscroll-behavior-x: contain;
+  }
+  .category-filters::-webkit-scrollbar { display: none; }
+  .category-filter { min-height: 38px; flex: 0 0 auto; padding: 0 12px; }
+  .toolbar-download { min-height: 36px; }
 
   /* 彈窗圖片在手機上放大一些 */
   .popup img { width: 72vw; max-width: 72vw; }
+  .leaflet-control-zoom a { width: 40px !important; height: 40px !important; line-height: 40px !important; font-size: 22px !important; }
+  .leaflet-control-attribution { font-size: 9px; }
+}
+
+@media (max-width: 480px) {
+  .upload-label { width: 40px; padding: 0; justify-content: center; }
+  .upload-label-text { display: none; }
+  .upload-label-short { display: inline; font-size: 22px; line-height: 1; }
 }
