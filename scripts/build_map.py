@@ -138,7 +138,11 @@ def add_locations(photos):
 
 
 def load_existing_captions():
-    """保留使用者先前填寫的 title / note。"""
+    """保留先前填寫的 title / note。
+
+    以「檔名（不含副檔名）」為鍵，而非完整路徑 id——這樣把照片搬到不同
+    主題資料夾後，既有的名稱與描述仍能對應回來，不會被清空。
+    """
     if not DATA_FILE.exists():
         return {}
     try:
@@ -147,8 +151,15 @@ def load_existing_captions():
         return {}
     out = {}
     for p in data.get("photos", []):
-        if "id" in p:
-            out[p["id"]] = {"title": p.get("title", ""), "note": p.get("note", "")}
+        stem = Path(p.get("source") or p.get("id", "")).stem
+        if not stem:
+            continue
+        title, note = p.get("title", ""), p.get("note", "")
+        # 標題若只是檔名（未命名過）就不算有效說明
+        if title == stem:
+            title = ""
+        if title or note:
+            out[stem] = {"title": title, "note": note}
     return out
 
 
@@ -193,7 +204,7 @@ def main():
             skipped_error.append(f"{rel}（{e}）")
             continue
 
-        cap = captions.get(pid, {})
+        cap = captions.get(f.stem, {})
         lat, lng = gps
         photos.append({
             "id": pid,
@@ -205,6 +216,8 @@ def main():
             "image": thumb_rel,   # 大圖，彈窗用
             "thumb": small_rel,   # 小圖，清單／標記用
             "source": str(rel),
+            # 主題＝photos/ 下的第一層子資料夾（例：01_步行與商業街）
+            "theme": rel.parts[0] if len(rel.parts) > 1 else "",
         })
         print(f"✓ {rel}  →  {lat}, {lng}")
 

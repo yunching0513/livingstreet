@@ -49,13 +49,15 @@ function downloadName(it) {
   return base + '.jpg';
 }
 
-// ---- 渲染（依城市分組）----
+// ---- 渲染（可依「地點」或「主題」分組）----
 let uidCounter = 0;
 const uidMap = new Map();      // uid -> item
-let currentGroups = [];        // 目前排序後的分組（供分城市下載）
+let currentGroups = [];        // 目前排序後的分組（供分組下載）
+let groupMode = 'city';        // 'city' | 'theme'
 
-function groupKeyOf(it) {
-  return it.city ? `${it.cc || ''}|${it.city}` : '__none__';
+// 主題資料夾名稱如「01_步行與商業街」→ 顯示為「步行與商業街」，並保留排序用序號
+function themeLabel(t) {
+  return String(t || '').replace(/^\d+[_-]\s*/, '') || '未分類';
 }
 
 function refreshUI() {
@@ -69,32 +71,38 @@ function refreshUI() {
   for (const it of items) {
     if (it.uid == null) it.uid = uidCounter++;
     uidMap.set(String(it.uid), it);
-    const key = groupKeyOf(it);
+
+    let key, title, sub, sortKey;
+    if (groupMode === 'theme') {
+      key = it.theme ? `t|${it.theme}` : '__none__';
+      title = it.theme ? themeLabel(it.theme) : '未分類';
+      sub = '';
+      sortKey = it.theme || '￿';           // 依資料夾序號 01→09 排序
+    } else {
+      key = it.city ? `c|${it.cc || ''}|${it.city}` : '__none__';
+      title = it.city || '未分類';
+      sub = [it.region, it.country || it.cc].filter(Boolean).join(' · ');
+      sortKey = `${it.cc || ''}${it.region || ''}${it.city || ''}`;
+    }
+
     if (!groups.has(key)) {
-      groups.set(key, {
-        key,
-        city: it.city || '未分類',
-        region: it.region || '',
-        country: it.country || it.cc || '',
-        cc: it.cc || '',
-        items: [],
-      });
+      groups.set(key, { key, title, sub, sortKey, items: [] });
     }
     groups.get(key).items.push(it);
   }
 
-  // 排序：同國家排在一起；「未分類」殿後
+  // 排序：主題依序號、地點依國家/地區；「未分類」殿後
   currentGroups = [...groups.values()].sort((a, b) => {
     if (a.key === '__none__') return 1;
     if (b.key === '__none__') return -1;
-    return (a.cc + a.region + a.city).localeCompare(b.cc + b.region + b.city, 'zh-Hant');
+    return a.sortKey.localeCompare(b.sortKey, 'zh-Hant');
   });
 
   listEl.innerHTML = '';
   currentGroups.forEach((g, gi) => {
     const li = document.createElement('li');
     li.className = 'photo-group';
-    const sub = [g.region, g.country].filter(Boolean).join(' · ');
+    const sub = g.sub;
     const itemsHtml = g.items.map((it) => `
       <div class="photo-item" data-uid="${it.uid}">
         <img src="${it.thumbUrl || it.imgUrl}" alt="" loading="lazy" />
@@ -108,11 +116,11 @@ function refreshUI() {
       <div class="group-header" data-gi="${gi}">
         <span class="gh-caret" aria-hidden="true">▾</span>
         <div class="gh-text">
-          <span class="gh-title">${escapeHtml(g.city)}</span>
+          <span class="gh-title">${escapeHtml(g.title)}</span>
           ${sub ? `<span class="gh-sub">${escapeHtml(sub)}</span>` : ''}
         </div>
         <span class="gh-count">${g.items.length}</span>
-        <button class="gh-dl" data-gi="${gi}" title="下載「${escapeHtml(g.city)}」的全部照片（ZIP）">⬇</button>
+        <button class="gh-dl" data-gi="${gi}" title="下載「${escapeHtml(g.title)}」的全部照片（ZIP）">⬇</button>
       </div>
       <div class="group-items">${itemsHtml}</div>`;
     listEl.appendChild(li);
@@ -196,6 +204,7 @@ async function loadDatabase() {
         region: p.region || '',
         country: p.country || '',
         cc: p.cc || '',
+        theme: p.theme || '',
         temp: false,
       });
     }
@@ -337,18 +346,33 @@ function downloadAll() {
   return zipAndDownload(items, '生活街道案例照片');
 }
 
-// 下載單一城市的全部照片
+// 下載單一分組（城市或主題）的全部照片
 function downloadCity(gi) {
   const g = currentGroups[gi];
   if (!g) return;
-  zipAndDownload(g.items, `生活街道-${g.city}`);
+  zipAndDownload(g.items, `生活街道-${g.title}`);
 }
 
 downloadAllBtn.addEventListener('click', downloadAll);
 
+// ---- 分組方式切換：地點 / 主題 ----
+const groupModeEl = document.getElementById('group-mode');
+groupModeEl.addEventListener('click', (e) => {
+  const btn = e.target.closest('.seg-btn');
+  if (!btn) return;
+  e.stopPropagation();               // 不要觸發手機版面板收合
+  const mode = btn.dataset.mode;
+  if (mode === groupMode) return;
+  groupMode = mode;
+  groupModeEl.querySelectorAll('.seg-btn').forEach((b) =>
+    b.classList.toggle('is-on', b.dataset.mode === mode));
+  refreshUI();
+});
+
 // ---- 手機：點清單標題列可收合／展開底部面板 ----
 const sidebarEl = document.getElementById('sidebar');
 document.getElementById('sidebar-head').addEventListener('click', (e) => {
+  if (e.target.closest('.seg')) return;   // 點切換鈕時不收合
   // 只在手機版（底部面板）時作用
   if (window.matchMedia('(max-width: 768px)').matches) {
     sidebarEl.classList.toggle('collapsed');

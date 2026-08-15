@@ -151,6 +151,38 @@ body { display: flex; flex-direction: column; height: 100vh; }
 }
 .count { font-size: 15px; color: var(--ink); font-weight: 700; }
 
+/* 標題列：案例數 + 分組切換 */
+.head-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 2px;
+}
+
+/* 膠囊雙態切換（地點／主題）— 當前狀態以森林綠填滿 */
+.seg {
+  display: inline-flex;
+  background: var(--panel);
+  border-radius: var(--r-pill);
+  padding: 3px;
+  flex-shrink: 0;
+}
+.seg-btn {
+  border: none;
+  background: transparent;
+  font-family: var(--font);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-body);
+  padding: 5px 14px;
+  border-radius: var(--r-pill);
+  cursor: pointer;
+  transition: background .18s var(--ease-ui), color .18s var(--ease-ui);
+}
+.seg-btn:hover { color: var(--ink); }
+.seg-btn.is-on { background: var(--forest); color: #fff; }
+
 .photo-list { list-style: none; margin: 0; padding: 8px 12px 24px; }
 
 /* 城市分組 */

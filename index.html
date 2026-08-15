@@ -38,7 +38,13 @@
       <div class="sidebar-head" id="sidebar-head">
         <span class="sheet-handle" aria-hidden="true"></span>
         <span class="section-label">案例清單 · Cases</span>
-        <span id="photo-count" class="count">0 個案例</span>
+        <div class="head-row">
+          <span id="photo-count" class="count">0 個案例</span>
+          <div class="seg" id="group-mode">
+            <button type="button" class="seg-btn is-on" data-mode="city">地點</button>
+            <button type="button" class="seg-btn" data-mode="theme">主題</button>
+          </div>
+        </div>
       </div>
       <ul id="photo-list" class="photo-list"></ul>
       <div id="empty-state" class="empty-state">
