@@ -1,0 +1,8 @@
+# 部署到 Vercel 時排除這些檔案／資料夾
+# 網站只需要 index.html、assets/、data/、thumbs/
+
+photos/          # 原始大檔（約 1.2GB）：不對外發佈，只留在 repo 內
+scripts/         # 建置腳本（本機／Action 使用）
+.github/         # GitHub Actions 設定
+_config.yml      # GitHub Pages(Jekyll) 專用，Vercel 用不到
+README.md
