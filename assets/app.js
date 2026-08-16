@@ -21,8 +21,10 @@ const countEl = document.getElementById('photo-count');
 const emptyEl = document.getElementById('empty-state');
 const toastEl = document.getElementById('toast');
 const downloadAllBtn = document.getElementById('download-all');
+const categoryFiltersEl = document.getElementById('category-filters');
 
 let items = []; // { id, title, note, lat, lng, datetime, imgUrl, thumbUrl, temp, marker }
+let activeCategory = '__all__';
 
 // ---- 工具 ----
 function toast(msg, ms = 2600) {
@@ -49,60 +51,97 @@ function downloadName(it) {
   return base + '.jpg';
 }
 
-// ---- 渲染（可依「地點」或「主題」分組）----
+function categoryOf(it) {
+  if (it.category) return it.category;
+  const source = String(it.source || '');
+  return source.includes('/') ? source.split('/')[0] : '未分類';
+}
+
+function categoryLabel(category) {
+  return String(category || '未分類').replace(/^\d+_/, '');
+}
+
+function visibleItems() {
+  return activeCategory === '__all__'
+    ? items
+    : items.filter((it) => categoryOf(it) === activeCategory);
+}
+
+function refreshMarkers() {
+  clusterGroup.clearLayers();
+  for (const it of visibleItems()) clusterGroup.addLayer(it.marker);
+}
+
+function renderCategoryFilters() {
+  const counts = new Map();
+  for (const it of items) {
+    const category = categoryOf(it);
+    counts.set(category, (counts.get(category) || 0) + 1);
+  }
+
+  const categories = [...counts.keys()].sort((a, b) => a.localeCompare(b, 'zh-Hant'));
+  const buttons = [
+    `<button type="button" class="category-filter${activeCategory === '__all__' ? ' active' : ''}" data-category="__all__" aria-pressed="${activeCategory === '__all__'}">全部 <span>${items.length}</span></button>`,
+    ...categories.map((category) => `
+      <button type="button" class="category-filter${activeCategory === category ? ' active' : ''}" data-category="${escapeHtml(category)}" aria-pressed="${activeCategory === category}">
+        ${escapeHtml(categoryLabel(category))} <span>${counts.get(category)}</span>
+      </button>`),
+  ];
+  categoryFiltersEl.innerHTML = buttons.join('');
+}
+
+// ---- 渲染（依城市分組）----
 let uidCounter = 0;
 const uidMap = new Map();      // uid -> item
-let currentGroups = [];        // 目前排序後的分組（供分組下載）
-let groupMode = 'city';        // 'city' | 'theme'
+let currentGroups = [];        // 目前排序後的分組（供分城市下載）
 
-// 主題資料夾名稱如「01_步行與商業街」→ 顯示為「步行與商業街」，並保留排序用序號
-function themeLabel(t) {
-  return String(t || '').replace(/^\d+[_-]\s*/, '') || '未分類';
+function groupKeyOf(it) {
+  return it.city ? `${it.cc || ''}|${it.city}` : '__none__';
 }
 
 function refreshUI() {
-  countEl.textContent = `${items.length} 個案例`;
-  emptyEl.style.display = items.length ? 'none' : 'block';
-  downloadAllBtn.hidden = items.length === 0;
+  const visible = visibleItems();
+  countEl.textContent = activeCategory === '__all__'
+    ? `${items.length} 個案例`
+    : `${visible.length} / ${items.length} 個案例`;
+  emptyEl.style.display = visible.length ? 'none' : 'block';
+  downloadAllBtn.hidden = visible.length === 0;
+  downloadAllBtn.textContent = activeCategory === '__all__' ? '⬇ 下載全部' : '⬇ 下載篩選結果';
+  renderCategoryFilters();
+  refreshMarkers();
 
   // 分組
   uidMap.clear();
   const groups = new Map();
-  for (const it of items) {
+  for (const it of visible) {
     if (it.uid == null) it.uid = uidCounter++;
     uidMap.set(String(it.uid), it);
-
-    let key, title, sub, sortKey;
-    if (groupMode === 'theme') {
-      key = it.theme ? `t|${it.theme}` : '__none__';
-      title = it.theme ? themeLabel(it.theme) : '未分類';
-      sub = '';
-      sortKey = it.theme || '￿';           // 依資料夾序號 01→09 排序
-    } else {
-      key = it.city ? `c|${it.cc || ''}|${it.city}` : '__none__';
-      title = it.city || '未分類';
-      sub = [it.region, it.country || it.cc].filter(Boolean).join(' · ');
-      sortKey = `${it.cc || ''}${it.region || ''}${it.city || ''}`;
-    }
-
+    const key = groupKeyOf(it);
     if (!groups.has(key)) {
-      groups.set(key, { key, title, sub, sortKey, items: [] });
+      groups.set(key, {
+        key,
+        city: it.city || '未分類',
+        region: it.region || '',
+        country: it.country || it.cc || '',
+        cc: it.cc || '',
+        items: [],
+      });
     }
     groups.get(key).items.push(it);
   }
 
-  // 排序：主題依序號、地點依國家/地區；「未分類」殿後
+  // 排序：同國家排在一起；「未分類」殿後
   currentGroups = [...groups.values()].sort((a, b) => {
     if (a.key === '__none__') return 1;
     if (b.key === '__none__') return -1;
-    return a.sortKey.localeCompare(b.sortKey, 'zh-Hant');
+    return (a.cc + a.region + a.city).localeCompare(b.cc + b.region + b.city, 'zh-Hant');
   });
 
   listEl.innerHTML = '';
   currentGroups.forEach((g, gi) => {
     const li = document.createElement('li');
     li.className = 'photo-group';
-    const sub = g.sub;
+    const sub = [g.region, g.country].filter(Boolean).join(' · ');
     const itemsHtml = g.items.map((it) => `
       <div class="photo-item" data-uid="${it.uid}">
         <img src="${it.thumbUrl || it.imgUrl}" alt="" loading="lazy" />
@@ -116,11 +155,11 @@ function refreshUI() {
       <div class="group-header" data-gi="${gi}">
         <span class="gh-caret" aria-hidden="true">▾</span>
         <div class="gh-text">
-          <span class="gh-title">${escapeHtml(g.title)}</span>
+          <span class="gh-title">${escapeHtml(g.city)}</span>
           ${sub ? `<span class="gh-sub">${escapeHtml(sub)}</span>` : ''}
         </div>
         <span class="gh-count">${g.items.length}</span>
-        <button class="gh-dl" data-gi="${gi}" title="下載「${escapeHtml(g.title)}」的全部照片（ZIP）">⬇</button>
+        <button class="gh-dl" data-gi="${gi}" title="下載「${escapeHtml(g.city)}」的全部照片（ZIP）">⬇</button>
       </div>
       <div class="group-items">${itemsHtml}</div>`;
     listEl.appendChild(li);
@@ -138,6 +177,19 @@ listEl.addEventListener('click', (e) => {
     const it = uidMap.get(row.dataset.uid);
     if (it) { map.setView([it.lat, it.lng], 17, { animate: true }); it.marker.openPopup(); }
   }
+});
+
+categoryFiltersEl.addEventListener('click', (e) => {
+  const button = e.target.closest('.category-filter');
+  if (!button) return;
+  e.stopPropagation();
+  activeCategory = button.dataset.category || '__all__';
+  refreshUI();
+  const visible = visibleItems();
+  if (visible.length) fitToItems(visible);
+  toast(activeCategory === '__all__'
+    ? `顯示全部 ${items.length} 個案例`
+    : `已篩選「${categoryLabel(activeCategory)}」${visible.length} 個案例`);
 });
 
 function escapeHtml(s) {
@@ -172,13 +224,12 @@ function addItem(it) {
     </div>`;
   marker.bindPopup(popup, { maxWidth: 280 });
   it.marker = marker;
-  clusterGroup.addLayer(marker);
   items.push(it);
 }
 
-function fitToItems() {
-  if (!items.length) return;
-  const bounds = L.latLngBounds(items.map((i) => [i.lat, i.lng]));
+function fitToItems(list = visibleItems()) {
+  if (!list.length) return;
+  const bounds = L.latLngBounds(list.map((i) => [i.lat, i.lng]));
   map.fitBounds(bounds, { padding: [50, 50], maxZoom: 17 });
 }
 
@@ -200,16 +251,17 @@ async function loadDatabase() {
         datetime: p.datetime || '',
         imgUrl: p.image || p.thumb,
         thumbUrl: p.thumb || p.image,
+        source: p.source || '',
+        category: p.category || '',
         city: p.city || '',
         region: p.region || '',
         country: p.country || '',
         cc: p.cc || '',
-        theme: p.theme || '',
         temp: false,
       });
     }
     refreshUI();
-    fitToItems();
+    fitToItems(visibleItems());
     if (photos.length) toast(`已從資料庫載入 ${items.length} 個案例`);
   } catch (e) {
     // 以 file:// 開啟時 fetch 會失敗，屬正常；使用拖曳模式即可。
@@ -277,7 +329,7 @@ async function handleFiles(fileList) {
   }
 
   refreshUI();
-  fitToItems();
+  fitToItems(visibleItems());
 
   if (added && noGps) toast(`已加入 ${added} 張；${noGps} 張沒有 GPS 座標，已略過`);
   else if (added) toast(`已加入 ${added} 張照片`);
@@ -343,38 +395,26 @@ async function zipAndDownload(list, baseName) {
 }
 
 function downloadAll() {
-  return zipAndDownload(items, '生活街道案例照片');
+  const selected = visibleItems();
+  return zipAndDownload(selected, activeCategory === '__all__'
+    ? '生活街道案例照片'
+    : `生活街道-${categoryLabel(activeCategory)}`);
 }
 
-// 下載單一分組（城市或主題）的全部照片
+// 下載單一城市的全部照片
 function downloadCity(gi) {
   const g = currentGroups[gi];
   if (!g) return;
-  zipAndDownload(g.items, `生活街道-${g.title}`);
+  zipAndDownload(g.items, `生活街道-${g.city}`);
 }
 
 downloadAllBtn.addEventListener('click', downloadAll);
 
-// ---- 分組方式切換：地點 / 主題 ----
-const groupModeEl = document.getElementById('group-mode');
-groupModeEl.addEventListener('click', (e) => {
-  const btn = e.target.closest('.seg-btn');
-  if (!btn) return;
-  e.stopPropagation();               // 不要觸發手機版面板收合
-  const mode = btn.dataset.mode;
-  if (mode === groupMode) return;
-  groupMode = mode;
-  groupModeEl.querySelectorAll('.seg-btn').forEach((b) =>
-    b.classList.toggle('is-on', b.dataset.mode === mode));
-  refreshUI();
-});
-
 // ---- 手機：點清單標題列可收合／展開底部面板 ----
 const sidebarEl = document.getElementById('sidebar');
 document.getElementById('sidebar-head').addEventListener('click', (e) => {
-  if (e.target.closest('.seg')) return;   // 點切換鈕時不收合
   // 只在手機版（底部面板）時作用
-  if (window.matchMedia('(max-width: 768px)').matches) {
+  if (window.matchMedia('(max-width: 768px)').matches && !e.target.closest('.category-toolbar')) {
     sidebarEl.classList.toggle('collapsed');
   }
 });

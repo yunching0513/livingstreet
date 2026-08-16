@@ -140,8 +140,8 @@ def add_locations(photos):
 def load_existing_captions():
     """保留先前填寫的 title / note。
 
-    以「檔名（不含副檔名）」為鍵，而非完整路徑 id——這樣把照片搬到不同
-    主題資料夾後，既有的名稱與描述仍能對應回來，不會被清空。
+    以「檔名（不含副檔名）」為鍵，而非含資料夾的 id——這樣把照片搬到不同
+    分類資料夾後，既有的標題與說明仍能對應回來，不會被清空。
     """
     if not DATA_FILE.exists():
         return {}
@@ -155,8 +155,7 @@ def load_existing_captions():
         if not stem:
             continue
         title, note = p.get("title", ""), p.get("note", "")
-        # 標題若只是檔名（未命名過）就不算有效說明
-        if title == stem:
+        if title == stem:      # 標題只是檔名，視為未命名
             title = ""
         if title or note:
             out[stem] = {"title": title, "note": note}
@@ -206,18 +205,18 @@ def main():
 
         cap = captions.get(f.stem, {})
         lat, lng = gps
+        category = rel.parts[0] if len(rel.parts) > 1 else "未分類"
         photos.append({
             "id": pid,
             "title": cap.get("title") or f.stem,
             "note": cap.get("note", ""),
+            "category": category,
             "lat": lat,
             "lng": lng,
             "datetime": dt,
             "image": thumb_rel,   # 大圖，彈窗用
             "thumb": small_rel,   # 小圖，清單／標記用
             "source": str(rel),
-            # 主題＝photos/ 下的第一層子資料夾（例：01_步行與商業街）
-            "theme": rel.parts[0] if len(rel.parts) > 1 else "",
         })
         print(f"✓ {rel}  →  {lat}, {lng}")
 
