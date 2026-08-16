@@ -138,7 +138,11 @@ def add_locations(photos):
 
 
 def load_existing_captions():
-    """保留使用者先前填寫的 title / note。"""
+    """保留先前填寫的 title / note。
+
+    以「檔名（不含副檔名）」為鍵，而非含資料夾的 id——這樣把照片搬到不同
+    分類資料夾後，既有的標題與說明仍能對應回來，不會被清空。
+    """
     if not DATA_FILE.exists():
         return {}
     try:
@@ -147,8 +151,14 @@ def load_existing_captions():
         return {}
     out = {}
     for p in data.get("photos", []):
-        if "id" in p:
-            out[p["id"]] = {"title": p.get("title", ""), "note": p.get("note", "")}
+        stem = Path(p.get("source") or p.get("id", "")).stem
+        if not stem:
+            continue
+        title, note = p.get("title", ""), p.get("note", "")
+        if title == stem:      # 標題只是檔名，視為未命名
+            title = ""
+        if title or note:
+            out[stem] = {"title": title, "note": note}
     return out
 
 
@@ -193,7 +203,7 @@ def main():
             skipped_error.append(f"{rel}（{e}）")
             continue
 
-        cap = captions.get(pid, {})
+        cap = captions.get(f.stem, {})
         lat, lng = gps
         category = rel.parts[0] if len(rel.parts) > 1 else "未分類"
         photos.append({
