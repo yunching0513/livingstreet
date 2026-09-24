@@ -44,6 +44,9 @@
 - 依場域類型篩選，點清單或地圖標記可看設計措施、觀察重點與資料來源
 - 自動列出每個停留點 250 公尺內的實拍照片（讀取 `data/photos.json`）
 - 路線與停留點資料在 `data/routes.json`；步行路線依 OpenStreetMap 路網預先計算
+- 底圖預設為 OpenStreetMap；在 `assets/config.js` 填入 Google Maps JavaScript API 金鑰，
+  即改用 Google 地圖（可切換 Google 衛星）。金鑰會公開在網頁原始碼，請在 Google Cloud Console
+  設定「HTTP 參照網址」限制為你的網域，並只允許 Maps JavaScript API
 
 ---
 
@@ -112,6 +115,7 @@ python -m http.server 8000
 ├── assets/
 │   ├── app.js              # 地圖邏輯（讀 EXIF、畫標記）
 │   ├── routes.js / routes.css  # 考察路線地圖
+│   ├── config.js           # Google Maps 金鑰設定（選填）
 │   └── styles.css
 ├── photos/                 # ← 把原始照片放這裡（方式二）
 ├── thumbs/                 # 自動產生的縮圖

@@ -3,11 +3,37 @@
  */
 (function () {
   const map = L.map('map', { zoomControl: true }).setView([52.2, 4.9], 9);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    maxZoom: 20,
-    subdomains: 'abcd',
-    attribution: '&copy; OpenStreetMap 貢獻者 &copy; CARTO',
-  }).addTo(map);
+  // ---- 底圖：有 Google 金鑰用 Google 地圖，否則用 OpenStreetMap ----
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap 貢獻者',
+  });
+  const GKEY = (window.LIVINGSTREET_CONFIG || {}).googleMapsApiKey || '';
+
+  function useOsm(msg) {
+    map.eachLayer((l) => { if (l instanceof L.GridLayer && l !== osm) map.removeLayer(l); });
+    if (!map.hasLayer(osm)) osm.addTo(map);
+    if (msg) console.warn(msg);
+  }
+
+  if (GKEY && typeof L.gridLayer.googleMutant === 'function') {
+    // 金鑰無效、未啟用計費或網域未授權時，Google 會呼叫這個函式 → 改回 OpenStreetMap
+    window.gm_authFailure = () => useOsm('Google Maps 金鑰驗證失敗，已改用 OpenStreetMap 底圖。');
+    window.__initGoogleBase = () => {
+      const road = L.gridLayer.googleMutant({ type: 'roadmap', maxZoom: 21 });
+      const sat = L.gridLayer.googleMutant({ type: 'hybrid', maxZoom: 21 });
+      road.addTo(map);
+      L.control.layers({ 'Google 地圖': road, 'Google 衛星': sat, 'OpenStreetMap': osm }, null, { position: 'topright' }).addTo(map);
+    };
+    const s = document.createElement('script');
+    s.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(GKEY) +
+      '&v=weekly&loading=async&language=zh-TW&callback=__initGoogleBase';
+    s.async = true;
+    s.onerror = () => useOsm('無法載入 Google Maps，已改用 OpenStreetMap 底圖。');
+    document.head.appendChild(s);
+  } else {
+    osm.addTo(map);
+  }
 
   const routeLayer = L.layerGroup().addTo(map);
   const stopLayer = L.layerGroup().addTo(map);
