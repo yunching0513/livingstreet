@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>荷蘭生活街區考察路線</title>
+  <meta name="description" content="115A-036 生活街區道路設計策略：烏特勒支、台夫特、阿姆斯特丹六類場域半日考察路線互動地圖" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Huninn&family=Varela+Round&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="assets/styles.css" />
+  <link rel="stylesheet" href="assets/routes.css" />
+</head>
+<body>
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark">🚶</span>
+      <div>
+        <h1>荷蘭生活街區考察路線</h1>
+        <p class="subtitle">六類場域半日行程 · 烏特勒支、台夫特、阿姆斯特丹 · 2026/11/16–18</p>
+      </div>
+    </div>
+    <div class="header-actions">
+      <a class="btn btn-ghost" href="index.html"><span class="upload-label-text">照片案例地圖</span><span class="upload-label-short" aria-hidden="true">📷</span></a>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head" id="sidebar-head">
+        <span class="sheet-handle" aria-hidden="true"></span>
+        <div class="city-tabs" id="city-tabs" role="tablist" aria-label="城市"></div>
+        <div class="city-summary" id="city-summary"></div>
+        <div class="type-filters" id="type-filters" role="group" aria-label="場域類型"></div>
+        <label class="photo-toggle"><input type="checkbox" id="photo-toggle" checked /> 顯示附近實拍照片</label>
+      </div>
+      <ol id="stop-list" class="stop-list"></ol>
+      <p class="list-foot">路線依OpenStreetMap步行路網計算，時間為估算值；標示「待確認」者請於行前向地方政府或學校確認。</p>
+    </aside>
+
+    <main class="map-wrap">
+      <div id="map"></div>
+      <div class="map-legend" id="map-legend">
+        <span><i class="lg lg-walk"></i>步行</span>
+        <span><i class="lg lg-bike"></i>自行車</span>
+        <span><i class="lg lg-tram"></i>電車</span>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="assets/routes.js"></script>
+</body>
+</html>

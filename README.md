@@ -35,6 +35,18 @@
 
 ---
 
+## 考察路線地圖（routes.html）
+
+`routes.html` 是 115A-036 荷蘭考察的互動路線地圖：烏特勒支（11/16）、台夫特（11/17）、
+阿姆斯特丹（11/18）各一條半日路線，每條串聯六類場域（4.1 中心市區～4.6 民眾參與規劃區域）。
+
+- 上方切換城市，網址會帶 `#utrecht`、`#delft`、`#amsterdam`，可直接分享單一城市
+- 依場域類型篩選，點清單或地圖標記可看設計措施、觀察重點與資料來源
+- 自動列出每個停留點 250 公尺內的實拍照片（讀取 `data/photos.json`）
+- 路線與停留點資料在 `data/routes.json`；步行路線依 OpenStreetMap 路網預先計算
+
+---
+
 ## 下載照片
 
 網站上的每張照片都能下載，方便他人取用案例素材：
@@ -96,13 +108,16 @@ python -m http.server 8000
 ```
 .
 ├── index.html              # 地圖網頁
+├── routes.html             # 荷蘭考察路線地圖
 ├── assets/
 │   ├── app.js              # 地圖邏輯（讀 EXIF、畫標記）
+│   ├── routes.js / routes.css  # 考察路線地圖
 │   └── styles.css
 ├── photos/                 # ← 把原始照片放這裡（方式二）
 ├── thumbs/                 # 自動產生的縮圖
 ├── data/
-│   └── photos.json         # 自動產生的地圖資料
+│   ├── photos.json         # 自動產生的地圖資料
+│   └── routes.json         # 考察路線與停留點
 ├── scripts/
 │   ├── build_map.py        # 抽 GPS + 產縮圖 + 生成資料
 │   └── requirements.txt
