@@ -45,6 +45,7 @@
   function markerHtml(stop, label) {
     if (stop.kind === 'hub') return `<div class="stop-marker hub">▶</div>`;
     if (stop.kind === 'meal') return `<div class="stop-marker meal">☕</div>`;
+    if (stop.kind === 'meeting') return `<div class="stop-marker meeting">★</div>`;
     const t1 = DATA.types[stop.types[0]];
     const t2 = stop.types[1] ? DATA.types[stop.types[1]] : null;
     const ring = t2 ? `box-shadow:0 0 0 3px ${t2.color},0 2px 8px rgba(33,31,24,.35)` : '';
@@ -54,6 +55,8 @@
   function numHtml(stop, label) {
     if (stop.kind === 'hub') return `<span class="num hub">▶</span>`;
     if (stop.kind === 'meal') return `<span class="num meal">☕</span>`;
+    if (stop.kind === 'meeting') return `<span class="num meeting">★</span>`;
+    if (stop.kind === 'buffer') return `<span class="num buffer">⏱</span>`;
     const t = DATA.types[stop.types[0]];
     return `<span class="num" style="background:${t.color};color:${t.text}">${label}</span>`;
   }
@@ -91,13 +94,13 @@
   function setActive(i, { fly = true, scroll = true } = {}) {
     stopEls.forEach((s, j) => {
       s.li.classList.toggle('active', j === i);
-      const el = s.marker.getElement();
+      const el = s.marker?.getElement();
       if (el) el.firstElementChild?.classList.toggle('active', j === i);
     });
     const s = stopEls[i];
     if (!s) return;
     if (fly) map.flyTo([s.stop.lat, s.stop.lng], Math.max(map.getZoom(), 16), { duration: 0.6 });
-    s.marker.openPopup();
+    if (s.marker) s.marker.openPopup();
     if (scroll) s.li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
@@ -106,7 +109,7 @@
     stopEls.forEach(({ li, marker, stop }) => {
       const on = !activeType || stop.types.includes(activeType);
       li.classList.toggle('dim', !on);
-      const el = marker.getElement();
+      const el = marker?.getElement();
       if (el) el.firstElementChild?.classList.toggle('dim', !on);
     });
   }
@@ -154,9 +157,10 @@
     let n = 0;
     city.stops.forEach((stop, i) => {
       const label = stop.kind === 'stop' ? String(++n) : '';
-      const marker = L.marker([stop.lat, stop.lng], {
-        icon: L.divIcon({ className: '', html: markerHtml(stop, label), iconSize: stop.kind === 'stop' ? [30, 30] : [24, 24] }),
-        zIndexOffset: stop.kind === 'stop' ? 500 : 0,
+      const big = stop.kind === 'stop' || stop.kind === 'meeting';
+      const marker = stop.kind === 'buffer' ? null : L.marker([stop.lat, stop.lng], {
+        icon: L.divIcon({ className: '', html: markerHtml(stop, label), iconSize: big ? [30, 30] : [24, 24] }),
+        zIndexOffset: stop.kind === 'meeting' ? 800 : big ? 500 : 0,
       }).bindPopup(popupHtml(stop), { maxWidth: 300, autoPanPadding: [40, 40] })
         .on('click', () => setActive(i, { fly: false }))
         .addTo(stopLayer);
@@ -164,7 +168,7 @@
 
       const near = nearbyPhotos(stop);
       const li = document.createElement('li');
-      li.className = 'stop';
+      li.className = 'stop' + (stop.kind === 'buffer' ? ' buffer-row' : '');
       li.innerHTML = `${numHtml(stop, label)}
         <div>
           <div class="stop-time">${esc(stop.time)}</div>
@@ -173,8 +177,8 @@
           ${stop.flag ? `<div class="stop-flag">待確認：${esc(stop.flag)}</div>` : ''}
           ${stop.observe ? `<div class="stop-short">${esc(stop.observe.slice(0, 44))}${stop.observe.length > 44 ? '…' : ''}</div>` : (stop.measures ? `<div class="stop-short">${esc(stop.measures)}</div>` : '')}
           <div class="stop-detail stop-body">
-            ${stop.measures ? `<h4>既有設計與政策</h4><p>${esc(stop.measures)}</p>` : ''}
-            ${stop.observe ? `<h4>現場觀察重點</h4><p>${esc(stop.observe)}</p>` : ''}
+            ${stop.measures ? `<h4>${stop.kind === 'meeting' ? '拜訪資訊' : '既有設計與政策'}</h4><p>${esc(stop.measures)}</p>` : ''}
+            ${stop.observe ? `<h4>${stop.kind === 'meeting' ? '建議提問' : '現場觀察重點'}</h4><p>${esc(stop.observe)}</p>` : ''}
             ${stop.sources.length ? `<div class="stop-src">${stop.sources.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join('')}</div>` : ''}
           </div>
           ${near.length ? `<div class="near-label">附近實拍（${NEAR_M}公尺內）</div><div class="near">${near.map((p, k) => `<img src="${esc(p.thumb || p.image)}" alt="${esc(p.title)}" title="${esc(p.title)}" loading="lazy" data-k="${k}" />`).join('')}</div>` : ''}

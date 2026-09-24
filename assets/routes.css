@@ -78,6 +78,9 @@ a.btn { text-decoration: none; }
   box-shadow: 0 0 0 3px var(--paper-lift);
 }
 .num.hub { background: var(--ink); color: #fff; font-size: 12px; }
+.num.meeting { background: var(--forest-deepest); color: var(--yellow); font-size: 16px; }
+.num.buffer { background: var(--paper-lift); color: var(--ink-muted); border: 1.5px dashed var(--panel-edge); font-size: 13px; }
+.stop.buffer-row .stop-name { font-size: 13px; color: var(--ink-body); }
 .num.meal { background: var(--paper-lift); color: var(--ink-body); border: 1.5px solid var(--panel-edge); font-size: 14px; }
 
 .stop-time { font-size: 12px; font-weight: 700; color: var(--forest-deep); letter-spacing: .3px; }
@@ -110,6 +113,7 @@ a.btn { text-decoration: none; }
   transition: transform .2s var(--ease-play);
 }
 .stop-marker.hub { background: var(--ink); color: #fff; width: 24px; height: 24px; font-size: 10px; }
+.stop-marker.meeting { background: var(--forest-deepest); color: var(--yellow); width: 34px; height: 34px; font-size: 17px; }
 .stop-marker.meal { background: var(--paper-lift); color: var(--ink); width: 24px; height: 24px; font-size: 12px; border-color: var(--panel-edge); }
 .stop-marker.active { transform: scale(1.3); }
 .stop-marker.dim { opacity: .3; }
