@@ -30,7 +30,7 @@ jobs:
       - name: Assemble site
         run: |
           mkdir -p _site
-          cp index.html _site/
+          cp index.html routes.html _site/
           cp -r assets data thumbs _site/
           touch _site/.nojekyll
 
