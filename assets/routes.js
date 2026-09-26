@@ -3,11 +3,37 @@
  */
 (function () {
   const map = L.map('map', { zoomControl: true }).setView([52.2, 4.9], 9);
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
-    maxZoom: 20,
-    subdomains: 'abcd',
-    attribution: '&copy; OpenStreetMap 貢獻者 &copy; CARTO',
-  }).addTo(map);
+  // ---- 底圖：有 Google 金鑰用 Google 地圖，否則用 OpenStreetMap ----
+  const osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap 貢獻者',
+  });
+  const GKEY = (window.LIVINGSTREET_CONFIG || {}).googleMapsApiKey || '';
+
+  function useOsm(msg) {
+    map.eachLayer((l) => { if (l instanceof L.GridLayer && l !== osm) map.removeLayer(l); });
+    if (!map.hasLayer(osm)) osm.addTo(map);
+    if (msg) console.warn(msg);
+  }
+
+  if (GKEY && typeof L.gridLayer.googleMutant === 'function') {
+    // 金鑰無效、未啟用計費或網域未授權時，Google 會呼叫這個函式 → 改回 OpenStreetMap
+    window.gm_authFailure = () => useOsm('Google Maps 金鑰驗證失敗，已改用 OpenStreetMap 底圖。');
+    window.__initGoogleBase = () => {
+      const road = L.gridLayer.googleMutant({ type: 'roadmap', maxZoom: 21 });
+      const sat = L.gridLayer.googleMutant({ type: 'hybrid', maxZoom: 21 });
+      road.addTo(map);
+      L.control.layers({ 'Google 地圖': road, 'Google 衛星': sat, 'OpenStreetMap': osm }, null, { position: 'topright' }).addTo(map);
+    };
+    const s = document.createElement('script');
+    s.src = 'https://maps.googleapis.com/maps/api/js?key=' + encodeURIComponent(GKEY) +
+      '&v=weekly&loading=async&language=zh-TW&callback=__initGoogleBase';
+    s.async = true;
+    s.onerror = () => useOsm('無法載入 Google Maps，已改用 OpenStreetMap 底圖。');
+    document.head.appendChild(s);
+  } else {
+    osm.addTo(map);
+  }
 
   const routeLayer = L.layerGroup().addTo(map);
   const stopLayer = L.layerGroup().addTo(map);
@@ -45,6 +71,7 @@
   function markerHtml(stop, label) {
     if (stop.kind === 'hub') return `<div class="stop-marker hub">▶</div>`;
     if (stop.kind === 'meal') return `<div class="stop-marker meal">☕</div>`;
+    if (stop.kind === 'meeting') return `<div class="stop-marker meeting">★</div>`;
     const t1 = DATA.types[stop.types[0]];
     const t2 = stop.types[1] ? DATA.types[stop.types[1]] : null;
     const ring = t2 ? `box-shadow:0 0 0 3px ${t2.color},0 2px 8px rgba(33,31,24,.35)` : '';
@@ -54,6 +81,8 @@
   function numHtml(stop, label) {
     if (stop.kind === 'hub') return `<span class="num hub">▶</span>`;
     if (stop.kind === 'meal') return `<span class="num meal">☕</span>`;
+    if (stop.kind === 'meeting') return `<span class="num meeting">★</span>`;
+    if (stop.kind === 'buffer') return `<span class="num buffer">⏱</span>`;
     const t = DATA.types[stop.types[0]];
     return `<span class="num" style="background:${t.color};color:${t.text}">${label}</span>`;
   }
@@ -91,13 +120,13 @@
   function setActive(i, { fly = true, scroll = true } = {}) {
     stopEls.forEach((s, j) => {
       s.li.classList.toggle('active', j === i);
-      const el = s.marker.getElement();
+      const el = s.marker?.getElement();
       if (el) el.firstElementChild?.classList.toggle('active', j === i);
     });
     const s = stopEls[i];
     if (!s) return;
     if (fly) map.flyTo([s.stop.lat, s.stop.lng], Math.max(map.getZoom(), 16), { duration: 0.6 });
-    s.marker.openPopup();
+    if (s.marker) s.marker.openPopup();
     if (scroll) s.li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
 
@@ -106,7 +135,7 @@
     stopEls.forEach(({ li, marker, stop }) => {
       const on = !activeType || stop.types.includes(activeType);
       li.classList.toggle('dim', !on);
-      const el = marker.getElement();
+      const el = marker?.getElement();
       if (el) el.firstElementChild?.classList.toggle('dim', !on);
     });
   }
@@ -154,9 +183,10 @@
     let n = 0;
     city.stops.forEach((stop, i) => {
       const label = stop.kind === 'stop' ? String(++n) : '';
-      const marker = L.marker([stop.lat, stop.lng], {
-        icon: L.divIcon({ className: '', html: markerHtml(stop, label), iconSize: stop.kind === 'stop' ? [30, 30] : [24, 24] }),
-        zIndexOffset: stop.kind === 'stop' ? 500 : 0,
+      const big = stop.kind === 'stop' || stop.kind === 'meeting';
+      const marker = stop.kind === 'buffer' ? null : L.marker([stop.lat, stop.lng], {
+        icon: L.divIcon({ className: '', html: markerHtml(stop, label), iconSize: big ? [30, 30] : [24, 24] }),
+        zIndexOffset: stop.kind === 'meeting' ? 800 : big ? 500 : 0,
       }).bindPopup(popupHtml(stop), { maxWidth: 300, autoPanPadding: [40, 40] })
         .on('click', () => setActive(i, { fly: false }))
         .addTo(stopLayer);
@@ -164,7 +194,7 @@
 
       const near = nearbyPhotos(stop);
       const li = document.createElement('li');
-      li.className = 'stop';
+      li.className = 'stop' + (stop.kind === 'buffer' ? ' buffer-row' : '');
       li.innerHTML = `${numHtml(stop, label)}
         <div>
           <div class="stop-time">${esc(stop.time)}</div>
@@ -173,8 +203,8 @@
           ${stop.flag ? `<div class="stop-flag">待確認：${esc(stop.flag)}</div>` : ''}
           ${stop.observe ? `<div class="stop-short">${esc(stop.observe.slice(0, 44))}${stop.observe.length > 44 ? '…' : ''}</div>` : (stop.measures ? `<div class="stop-short">${esc(stop.measures)}</div>` : '')}
           <div class="stop-detail stop-body">
-            ${stop.measures ? `<h4>既有設計與政策</h4><p>${esc(stop.measures)}</p>` : ''}
-            ${stop.observe ? `<h4>現場觀察重點</h4><p>${esc(stop.observe)}</p>` : ''}
+            ${stop.measures ? `<h4>${stop.kind === 'meeting' ? '拜訪資訊' : '既有設計與政策'}</h4><p>${esc(stop.measures)}</p>` : ''}
+            ${stop.observe ? `<h4>${stop.kind === 'meeting' ? '建議提問' : '現場觀察重點'}</h4><p>${esc(stop.observe)}</p>` : ''}
             ${stop.sources.length ? `<div class="stop-src">${stop.sources.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join('')}</div>` : ''}
           </div>
           ${near.length ? `<div class="near-label">附近實拍（${NEAR_M}公尺內）</div><div class="near">${near.map((p, k) => `<img src="${esc(p.thumb || p.image)}" alt="${esc(p.title)}" title="${esc(p.title)}" loading="lazy" data-k="${k}" />`).join('')}</div>` : ''}
