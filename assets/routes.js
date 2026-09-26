@@ -1,4 +1,4 @@
-/* 荷蘭生活街區考察路線 — 互動地圖
+/* 荷蘭、德國生活街區考察路線 — 互動地圖
  * 資料：data/routes.json（路線、停留點）＋ data/photos.json（附近實拍照片）
  */
 (function () {
@@ -40,6 +40,7 @@
   const photoLayer = L.layerGroup().addTo(map);
 
   const $ = (id) => document.getElementById(id);
+  const countryEl = $('country-tabs');
   const tabsEl = $('city-tabs');
   const summaryEl = $('city-summary');
   const filtersEl = $('type-filters');
@@ -50,6 +51,7 @@
   let DATA = null;
   let PHOTOS = [];
   let city = null;
+  let country = null;
   let activeType = null;
   let stopEls = [];   // { li, marker, stop }
   const NEAR_M = 250;
@@ -93,7 +95,7 @@
       <div class="p-title">${esc(stop.name)}</div>
       ${stop.types.length ? `<div class="p-types">${stop.types.map(badge).join('')}</div>` : ''}
       ${stop.observe ? `<div class="p-note">${esc(stop.observe)}</div>` : ''}
-      <div class="p-actions"><a class="p-btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${stop.lat},${stop.lng}">Google Maps</a></div>
+      <div class="p-actions"><a class="p-btn ghost" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(stop.q || (stop.lat + ',' + stop.lng))}">Google Maps</a></div>
     </div>`;
   }
 
@@ -157,21 +159,27 @@
 
   function selectCity(id) {
     city = DATA.cities.find((c) => c.id === id) || DATA.cities[0];
+    if (city.country !== country) renderCityTabs(city.country);
     history.replaceState(null, '', '#' + city.id);
     [...tabsEl.children].forEach((b) => b.setAttribute('aria-selected', String(b.dataset.id === city.id)));
 
     const km = city.legs.reduce((a, l) => a + l.km, 0);
     const modes = [...new Set(city.legs.map((l) => l.label))].join('＋');
-    summaryEl.innerHTML = `<div class="meta"><span>${esc(city.date)} ${esc(city.window)}</span><span>${modes}約${km.toFixed(1)}公里</span></div>${esc(city.summary)}`;
+    const approx = city.legs.some((l) => l.approx);
+    summaryEl.innerHTML = `<div class="meta"><span>${esc(city.date)} ${esc(city.window)}</span>` +
+      (city.legs.length ? `<span>${modes}約${km.toFixed(1)}公里${approx ? '（概略）' : ''}</span>` : '') +
+      `</div>${esc(city.summary)}`;
 
     // 路線
     routeLayer.clearLayers();
     const bounds = L.latLngBounds([]);
     for (const leg of city.legs) {
       const style = { walk: {}, bike: { dashArray: '8 8' }, tram: { dashArray: '2 8' } }[leg.mode] || {};
+      // 概略連線：未經步行路網計算，以灰色虛線區分
+      if (leg.approx) Object.assign(style, { dashArray: '6 6', color: '#5C5A50', opacity: 0.75 });
       L.polyline(leg.coords, { color: '#FFFFFF', weight: 8, opacity: 0.9 }).addTo(routeLayer);
       L.polyline(leg.coords, { color: '#211F18', weight: 4, opacity: 0.85, lineCap: 'round', ...style })
-        .bindTooltip(leg.label + ' 約' + leg.km + '公里', { sticky: true })
+        .bindTooltip(leg.label + (leg.approx ? '（概略）' : '') + ' 約' + leg.km + '公里', { sticky: true })
         .addTo(routeLayer);
       leg.coords.forEach((c) => bounds.extend(c));
     }
@@ -227,9 +235,28 @@
     applyFilter();
   }
 
-  function renderChrome() {
-    tabsEl.innerHTML = DATA.cities.map((c) =>
+  function renderCityTabs(name) {
+    country = name;
+    const list = DATA.cities.filter((c) => c.country === country);
+    tabsEl.innerHTML = list.map((c) =>
       `<button class="city-tab" role="tab" data-id="${c.id}"><b>${esc(c.city)}</b><small>${esc(c.date)}</small></button>`).join('');
+    [...countryEl.children].forEach((b) => b.setAttribute('aria-selected', String(b.dataset.country === country)));
+  }
+
+  function renderChrome() {
+    const countries = [...new Set(DATA.cities.map((c) => c.country))];
+    countryEl.innerHTML = countries.map((name) => {
+      const days = DATA.cities.filter((c) => c.country === name).length;
+      return `<button class="country-tab" role="tab" data-country="${esc(name)}">${esc(name)}<small>${days}天</small></button>`;
+    }).join('');
+    countryEl.addEventListener('click', (e) => {
+      const b = e.target.closest('.country-tab');
+      if (!b) return;
+      e.stopPropagation();
+      if (b.dataset.country === country) return;
+      selectCity(DATA.cities.find((c) => c.country === b.dataset.country).id);
+    });
+
     tabsEl.addEventListener('click', (e) => {
       const b = e.target.closest('.city-tab');
       if (b) { e.stopPropagation(); selectCity(b.dataset.id); }
