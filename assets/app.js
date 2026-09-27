@@ -412,12 +412,29 @@ downloadAllBtn.addEventListener('click', downloadAll);
 
 // ---- 手機：點清單標題列可收合／展開底部面板 ----
 const sidebarEl = document.getElementById('sidebar');
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
+
+// 讓定位按鈕永遠浮在底部面板上方
+function syncSheetVar() {
+  const h = isMobile() ? Math.round(sidebarEl.getBoundingClientRect().height) : 0;
+  document.documentElement.style.setProperty('--sheet-h', h + 'px');
+}
+
 document.getElementById('sidebar-head').addEventListener('click', (e) => {
   // 只在手機版（底部面板）時作用
-  if (window.matchMedia('(max-width: 768px)').matches && !e.target.closest('.category-toolbar')) {
+  if (isMobile() && !e.target.closest('.category-toolbar')) {
     sidebarEl.classList.toggle('collapsed');
+    setTimeout(syncSheetVar, 320);   // 等收合動畫結束再量高度
   }
 });
+window.addEventListener('resize', syncSheetVar);
+syncSheetVar();
+
+// ---- 我的位置（共用控制項見 assets/locate.js）----
+const locateBtn = document.getElementById('locate-btn');
+if (locateBtn && typeof createLocateControl === 'function') {
+  createLocateControl(map, { button: locateBtn, toast: (text) => toast(text, 5000) });
+}
 
 // ---- 事件綁定 ----
 document.getElementById('file-input').addEventListener('change', (e) => {
