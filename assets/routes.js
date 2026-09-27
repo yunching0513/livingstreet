@@ -46,6 +46,7 @@
   const filtersEl = $('type-filters');
   const listEl = $('stop-list');
   const photoToggle = $('photo-toggle');
+  const labelToggle = $('label-toggle');
   const sidebar = $('sidebar');
 
   let DATA = null;
@@ -124,6 +125,7 @@
       s.li.classList.toggle('active', j === i);
       const el = s.marker?.getElement();
       if (el) el.firstElementChild?.classList.toggle('active', j === i);
+      s.marker?.getTooltip()?.getElement()?.classList.toggle('active', j === i);
     });
     const s = stopEls[i];
     if (!s) return;
@@ -139,6 +141,7 @@
       li.classList.toggle('dim', !on);
       const el = marker?.getElement();
       if (el) el.firstElementChild?.classList.toggle('dim', !on);
+      marker?.getTooltip()?.getElement()?.classList.toggle('dim', !on);
     });
   }
 
@@ -196,6 +199,10 @@
         icon: L.divIcon({ className: '', html: markerHtml(stop, label), iconSize: big ? [30, 30] : [24, 24] }),
         zIndexOffset: stop.kind === 'meeting' ? 800 : big ? 500 : 0,
       }).bindPopup(popupHtml(stop), { maxWidth: 300, autoPanPadding: [40, 40] })
+        .bindTooltip(stop.name, {
+          permanent: true, direction: 'right', className: 'stop-label',
+          offset: [big ? 19 : 15, 0], interactive: false,
+        })
         .on('click', () => setActive(i, { fly: false }))
         .addTo(stopLayer);
       bounds.extend([stop.lat, stop.lng]);
@@ -276,6 +283,12 @@
 
     photoToggle.addEventListener('change', renderPhotos);
     photoToggle.parentElement.addEventListener('click', (e) => e.stopPropagation());
+
+    const applyLabels = () => document.body.classList.toggle('no-labels', !labelToggle.checked);
+    labelToggle.checked = !window.matchMedia('(max-width: 768px)').matches;
+    applyLabels();
+    labelToggle.addEventListener('change', applyLabels);
+    labelToggle.parentElement.addEventListener('click', (e) => e.stopPropagation());
 
     // 手機：點標頭收合底部面板（與案例地圖相同操作）
     $('sidebar-head').addEventListener('click', () => {
