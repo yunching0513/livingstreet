@@ -45,6 +45,7 @@
   const summaryEl = $('city-summary');
   const filtersEl = $('type-filters');
   const listEl = $('stop-list');
+  const cityDocsEl = $('city-docs');
   const photoToggle = $('photo-toggle');
   const labelToggle = $('label-toggle');
   const sidebar = $('sidebar');
@@ -240,7 +241,7 @@
           <div class="stop-detail stop-body">
             ${stop.measures ? `<h4>${stop.kind === 'meeting' ? '拜訪資訊' : '既有設計與政策'}</h4><p>${esc(stop.measures)}</p>` : ''}
             ${stop.observe ? `<h4>${stop.kind === 'meeting' ? '建議提問' : '現場觀察重點'}</h4><p>${esc(stop.observe)}</p>` : ''}
-            ${stop.sources.length ? `<div class="stop-src">${stop.sources.map(([t, u]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`).join('')}</div>` : ''}
+            ${docsHtml(stop.docs, stop.kind === 'meeting' ? '相關計畫與政策文件' : '計畫與政策文件')}
           </div>
           ${near.length ? `<div class="near-label">附近實拍（${NEAR_M}公尺內）</div><div class="near">${near.map((p, k) => `<img src="${esc(p.thumb || p.image)}" alt="${esc(p.title)}" title="${esc(p.title)}" loading="lazy" data-k="${k}" />`).join('')}</div>` : ''}
         </div>`;
@@ -260,7 +261,40 @@
     renderPhotos();
     applyFilter();
     renderDistances();
+    renderCityDocs();
     setPeek(city.stops.find((s) => s.kind === 'stop') || city.stops[0]);
+  }
+
+  // 一份文件一列：原文名稱（連結）＋類型＋中文說明＋發布單位與日期
+  function docHtml(x) {
+    const meta = [x.by, x.d].filter(Boolean).join(' · ');
+    return `<li>
+      <a href="${esc(x.u)}" target="_blank" rel="noopener">${esc(x.t)}</a>
+      ${x.k ? `<span class="doc-k">${esc(x.k)}</span>` : ''}
+      ${x.ok ? '' : '<span class="doc-k warn" title="本次作業環境無法開啟，請以瀏覽器確認">未能開啟</span>'}
+      ${x.zh ? `<div class="doc-zh">${esc(x.zh)}</div>` : ''}
+      ${meta ? `<div class="doc-meta">${esc(meta)}</div>` : ''}
+    </li>`;
+  }
+
+  function docsHtml(list, title) {
+    if (!list || !list.length) return '';
+    return `<h4>${esc(title)}（${list.length}）</h4>
+      <ul class="doc-list">${list.map(docHtml).join('')}</ul>`;
+  }
+
+  function renderCityDocs() {
+    const parts = [];
+    if (city.docs && city.docs.length) {
+      parts.push(`<details class="doc-block"><summary>全市政策文件（${city.docs.length}）</summary>
+        <ul class="doc-list">${city.docs.map(docHtml).join('')}</ul></details>`);
+    }
+    if (city.gaps && city.gaps.length) {
+      parts.push(`<details class="doc-block"><summary>尚未查得的資料（${city.gaps.length}）</summary>
+        <ul class="gap-list">${city.gaps.map((g) =>
+          `<li><b>${esc(g.t)}</b><div>${esc(g.why)}</div></li>`).join('')}</ul></details>`);
+    }
+    cityDocsEl.innerHTML = parts.join('');
   }
 
   function renderCityTabs(name) {

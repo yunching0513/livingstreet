@@ -226,6 +226,13 @@ def main():
     # 依時間排序（沒有時間的排在後面）
     photos.sort(key=lambda p: (p["datetime"] == "", p["datetime"]))
 
+    # 清掉不再被引用的舊縮圖（例如照片搬到別的分類資料夾後留下的孤兒檔）
+    used = {p["image"] for p in photos} | {p["thumb"] for p in photos}
+    stale = [f for f in THUMBS_DIR.rglob("*.jpg")
+             if str(f.relative_to(ROOT)).replace("\\", "/") not in used]
+    for f in stale:
+        f.unlink()
+
     DATA_FILE.parent.mkdir(parents=True, exist_ok=True)
     DATA_FILE.write_text(
         json.dumps({"photos": photos}, ensure_ascii=False, indent=2),
@@ -234,6 +241,8 @@ def main():
 
     print("\n────────── 完成 ──────────")
     print(f"已加入地圖：{len(photos)} 張")
+    if stale:
+        print(f"清除不再引用的舊縮圖：{len(stale)} 個")
     if skipped_no_gps:
         print(f"沒有 GPS 座標而略過：{len(skipped_no_gps)} 張")
         for s in skipped_no_gps:
