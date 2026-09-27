@@ -158,6 +158,40 @@ a.btn { text-decoration: none; }
 .leaflet-tooltip.stop-label.active { background: var(--ink); color: #fff; }
 body.no-labels .leaflet-tooltip.stop-label { display: none; }
 
+/* 兩個地圖開關併成一列 */
+.map-toggles { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.map-toggles .photo-toggle { margin-top: 10px; }
+
+/* 離你最近的停留點 */
+.near-me {
+  display: flex; align-items: center; gap: 7px;
+  margin: 10px 2px 0; padding: 7px 11px;
+  background: var(--paper-lift); border: 1.5px solid var(--sky);
+  border-radius: var(--r-pill);
+  font-size: 12px; line-height: 1.4; color: var(--ink-body); text-align: left;
+}
+.near-me b { color: var(--ink); }
+.me-pin { width: 10px; height: 10px; border-radius: 50%; background: var(--sky); flex-shrink: 0; }
+
+/* 清單中的距離：只有定位開啟時才出現 */
+.stop-dist { display: none; margin-left: 8px; color: var(--sky); font-weight: 900; }
+body.has-me .stop-dist { display: inline; }
+.stop.nearest { box-shadow: inset 0 0 0 1.5px var(--sky); }
+
+/* 地圖提示訊息 */
+.map-msg {
+  position: absolute; left: 50%; transform: translateX(-50%);
+  bottom: min(calc(var(--sheet-h, 0px) + 84px), calc(100% - 84px)); z-index: 460;
+  max-width: min(420px, calc(100% - 32px));
+  padding: 10px 16px; border-radius: var(--r-card);
+  background: var(--ink); color: var(--paper-lift);
+  font-size: 13px; line-height: 1.5; text-align: center;
+  box-shadow: var(--shadow-lift);
+}
+
+/* 底部面板的拖曳握把（桌面隱藏） */
+.sheet-grip, .sheet-peek { display: none; }
+
 .photo-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--pink); border: 2px solid #fff; box-shadow: 0 1px 3px rgba(0,0,0,.3); }
 
 .popup .p-types { display: flex; flex-wrap: wrap; gap: 4px; margin: 6px 0; }
@@ -183,4 +217,51 @@ body.no-labels .leaflet-tooltip.stop-label { display: none; }
   .type-filters { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; padding-bottom: 4px; }
   .type-filters::-webkit-scrollbar { display: none; }
   .map-legend { top: 10px; bottom: auto; left: 50%; transform: translateX(-50%); }
+
+  /* ── 底部面板：握把可拖曳，三段高度 ─────────────────── */
+  .sidebar {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    overscroll-behavior: contain;
+  }
+  .sidebar-head { cursor: default; padding-top: 0; }
+  .sheet-grip {
+    display: block; width: 100%; padding: 10px 0 8px;
+    touch-action: none; cursor: grab; -webkit-tap-highlight-color: transparent;
+  }
+  .sheet-grip:active { cursor: grabbing; }
+  .sheet-grip .sheet-handle { display: block; width: 44px; height: 5px; margin: 0 auto; }
+  .stop-list { overscroll-behavior: contain; -webkit-overflow-scrolling: touch; }
+
+  /* 收合時只露出「目前停留點」一行 */
+  .sheet-peek {
+    display: none; text-align: left; padding: 2px 2px 4px;
+    font-size: 13px; line-height: 1.4; color: var(--ink-body);
+  }
+  .sheet-peek b { display: block; font-size: 15px; font-weight: 900; color: var(--ink); }
+  .sidebar[data-sheet="peek"] .sheet-peek { display: block; }
+  .sidebar[data-sheet="peek"] .country-tabs,
+  .sidebar[data-sheet="peek"] .city-tabs,
+  .sidebar[data-sheet="peek"] .city-summary,
+  .sidebar[data-sheet="peek"] .near-me,
+  .sidebar[data-sheet="peek"] .type-filters,
+  .sidebar[data-sheet="peek"] .map-toggles,
+  .sidebar[data-sheet="peek"] .stop-list,
+  .sidebar[data-sheet="peek"] .list-foot { display: none; }
+
+  /* 半開時摘要收成三行，全開才展開 */
+  .sidebar[data-sheet="half"] .city-summary {
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+
+  /* 觸控目標放大 */
+  .country-tab { min-height: 40px; }
+  .city-tab { min-height: 46px; padding: 6px 4px; }
+  .type-chip { min-height: 38px; }
+  .photo-toggle { min-height: 32px; }
+  .stop { padding: 12px 8px 16px 0; }
+
+  /* 手機用捏合縮放，省下左上角的空間 */
+  .leaflet-control-zoom { display: none; }
+  .locate-btn { right: 10px; width: 52px; height: 52px; }
+  .stop-label { max-width: 42vw; }
 }

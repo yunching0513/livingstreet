@@ -31,13 +31,18 @@
   <div class="layout">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-head" id="sidebar-head">
-        <span class="sheet-handle" aria-hidden="true"></span>
+        <div class="sheet-grip" id="sheet-grip" role="button" tabindex="0"
+             aria-label="展開或收合清單"><span class="sheet-handle" aria-hidden="true"></span></div>
+        <div class="sheet-peek" id="sheet-peek" aria-hidden="true"></div>
         <div class="country-tabs" id="country-tabs" role="tablist" aria-label="國家"></div>
         <div class="city-tabs" id="city-tabs" role="tablist" aria-label="日期與城市"></div>
         <div class="city-summary" id="city-summary"></div>
+        <div class="near-me" id="near-me" hidden></div>
         <div class="type-filters" id="type-filters" role="group" aria-label="場域類型"></div>
-        <label class="photo-toggle"><input type="checkbox" id="label-toggle" checked /> 地圖顯示地點名稱</label>
-        <label class="photo-toggle"><input type="checkbox" id="photo-toggle" checked /> 顯示附近實拍照片</label>
+        <div class="map-toggles">
+          <label class="photo-toggle"><input type="checkbox" id="label-toggle" checked /> 地點名稱</label>
+          <label class="photo-toggle"><input type="checkbox" id="photo-toggle" checked /> 附近實拍</label>
+        </div>
       </div>
       <ol id="stop-list" class="stop-list"></ol>
       <p class="list-foot">荷蘭段路線依OpenStreetMap步行路網計算。德國段停留點座標已逐點校對，少數（EUREF正門與園區餐廳、Stadtforum、IÖR Weberplatz）依鄰近參考點推估；其路線線條為概略連線，非步行路網計算結果。彈出視窗的 Google Maps 連結以地點名稱查詢，實際導航請以該連結為準。時間皆為估算值；標示「待確認」者請於行前向地方政府、學校或接待單位確認。</p>
@@ -45,6 +50,9 @@
 
     <main class="map-wrap">
       <div id="map"></div>
+      <button class="locate-btn" id="locate-btn" type="button" aria-pressed="false"
+              title="顯示我的位置"><span class="locate-icon" aria-hidden="true"></span><span class="sr-only">顯示我的位置</span></button>
+      <div class="map-msg" id="map-msg" role="status" hidden></div>
       <div class="map-legend" id="map-legend">
         <span><i class="lg lg-walk"></i>步行</span>
         <span><i class="lg lg-bike"></i>自行車</span>
@@ -57,6 +65,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
   <script src="https://unpkg.com/leaflet.gridlayer.googlemutant@0.16.0/dist/Leaflet.GoogleMutant.js"></script>
   <script src="assets/config.js"></script>
+  <script src="assets/locate.js"></script>
   <script src="assets/routes.js"></script>
 </body>
 </html>

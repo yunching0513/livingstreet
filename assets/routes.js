@@ -48,6 +48,12 @@
   const photoToggle = $('photo-toggle');
   const labelToggle = $('label-toggle');
   const sidebar = $('sidebar');
+  const nearMeEl = $('near-me');
+  const peekEl = $('sheet-peek');
+  const locateBtn = $('locate-btn');
+  const msgEl = $('map-msg');
+
+  const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
   let DATA = null;
   let PHOTOS = [];
@@ -129,7 +135,21 @@
     });
     const s = stopEls[i];
     if (!s) return;
-    if (fly) map.flyTo([s.stop.lat, s.stop.lng], Math.max(map.getZoom(), 16), { duration: 0.6 });
+    setPeek(s.stop);
+    if (isMobile() && sidebar.dataset.sheet === 'full' && setSheet) setSheet('half');
+    if (fly) {
+      const at = [s.stop.lat, s.stop.lng];
+      if (isMobile()) {
+        // 目標點若落在底部面板後方就看不到，改用留白的 flyToBounds
+        map.flyToBounds(L.latLngBounds(at, at), {
+          paddingTopLeft: [24, 70],
+          paddingBottomRight: [24, Math.round(sheetHeight()) + 24],
+          maxZoom: 17, duration: 0.6,
+        });
+      } else {
+        map.flyTo(at, Math.max(map.getZoom(), 16), { duration: 0.6 });
+      }
+    }
     if (s.marker) s.marker.openPopup();
     if (scroll) s.li.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
   }
@@ -212,7 +232,7 @@
       li.className = 'stop' + (stop.kind === 'buffer' ? ' buffer-row' : '');
       li.innerHTML = `${numHtml(stop, label)}
         <div>
-          <div class="stop-time">${esc(stop.time)}</div>
+          <div class="stop-time">${esc(stop.time)}<span class="stop-dist"></span></div>
           <div class="stop-name">${esc(stop.name)}</div>
           ${stop.types.length ? `<div class="stop-types">${stop.types.map(badge).join('')}</div>` : ''}
           ${stop.flag ? `<div class="stop-flag">待確認：${esc(stop.flag)}</div>` : ''}
@@ -234,12 +254,13 @@
       stopEls.push({ li, marker, stop });
     });
 
-    const mobile = window.matchMedia('(max-width: 768px)').matches;
-    map.fitBounds(bounds, mobile
-      ? { paddingTopLeft: [24, 70], paddingBottomRight: [24, Math.round(window.innerHeight * 0.55)] }
+    map.fitBounds(bounds, isMobile()
+      ? { paddingTopLeft: [24, 70], paddingBottomRight: [24, Math.round(sheetHeight()) + 24] }
       : { padding: [40, 40] });
     renderPhotos();
     applyFilter();
+    renderDistances();
+    setPeek(city.stops.find((s) => s.kind === 'stop') || city.stops[0]);
   }
 
   function renderCityTabs(name) {
@@ -290,9 +311,137 @@
     labelToggle.addEventListener('change', applyLabels);
     labelToggle.parentElement.addEventListener('click', (e) => e.stopPropagation());
 
-    // 手機：點標頭收合底部面板（與案例地圖相同操作）
-    $('sidebar-head').addEventListener('click', () => {
-      if (window.matchMedia('(max-width: 768px)').matches) sidebar.classList.toggle('collapsed');
+    setupSheet();
+    setupLocate();
+  }
+
+  // ── 手機底部面板：握把可拖曳，三段高度 ───────────────────────────
+  function sheetHeight() {
+    return isMobile() ? sidebar.getBoundingClientRect().height : 0;
+  }
+
+  function setPeek(stop) {
+    if (!stop) return;
+    peekEl.innerHTML = `${esc(stop.time)}<b>${esc(stop.name)}</b>`;
+  }
+
+  let setSheet = null;   // 由 setupSheet 指派
+  const SHEET_PEEK = 108;
+  const snapPx = (s) => (s === 'peek' ? SHEET_PEEK
+    : Math.round(window.innerHeight * (s === 'full' ? 0.88 : 0.52)));
+
+  function setupSheet() {
+    const grip = $('sheet-grip');
+    let state = 'half';
+    let startY = 0, startH = 0, dragging = false, moved = false;
+
+    function setSheetVar(h) {
+      document.documentElement.style.setProperty('--sheet-h', Math.round(h) + 'px');
+    }
+
+    function apply(next) {
+      state = next;
+      sidebar.dataset.sheet = next;
+      if (!isMobile()) { sidebar.style.height = ''; setSheetVar(0); return; }
+      const h = snapPx(next);
+      sidebar.style.height = h + 'px';
+      setSheetVar(h);
+      map.invalidateSize({ pan: false });
+    }
+
+    grip.addEventListener('pointerdown', (e) => {
+      if (!isMobile()) return;
+      dragging = true;
+      moved = false;
+      startY = e.clientY;
+      startH = sidebar.getBoundingClientRect().height;
+      sidebar.style.transition = 'none';
+      grip.setPointerCapture(e.pointerId);
+    });
+
+    grip.addEventListener('pointermove', (e) => {
+      if (!dragging) return;
+      const dy = startY - e.clientY;
+      if (Math.abs(dy) > 4) moved = true;
+      const h = Math.min(window.innerHeight * 0.92, Math.max(64, startH + dy));
+      sidebar.style.height = h + 'px';
+      setSheetVar(h);
+      e.preventDefault();
+    });
+
+    function end() {
+      if (!dragging) return;
+      dragging = false;
+      sidebar.style.transition = '';
+      if (!moved) { apply(state === 'peek' ? 'half' : 'peek'); return; }
+      const h = sidebar.getBoundingClientRect().height;
+      const best = ['peek', 'half', 'full']
+        .reduce((a, b) => (Math.abs(snapPx(b) - h) < Math.abs(snapPx(a) - h) ? b : a));
+      apply(best);
+    }
+    grip.addEventListener('pointerup', end);
+    grip.addEventListener('pointercancel', end);
+    grip.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); apply(state === 'peek' ? 'half' : 'peek'); }
+    });
+
+    setSheet = apply;
+    apply('half');
+    window.addEventListener('resize', () => apply(state));
+  }
+
+  // ── 定位：我現在走在哪裡（共用控制項見 assets/locate.js）───────
+  let meLatLng = null;
+  let msgTimer = null;
+
+  function toast(text, ms = 5000) {
+    msgEl.textContent = text;
+    msgEl.hidden = false;
+    clearTimeout(msgTimer);
+    msgTimer = setTimeout(() => { msgEl.hidden = true; }, ms);
+  }
+
+  const fmtDist = (m) => (m < 1000 ? `${Math.round(m / 10) * 10} 公尺` : `${(m / 1000).toFixed(1)} 公里`);
+
+  const FAR_M = 20000;   // 超過 20 公里視為「不在這一天的城市」
+
+  function renderDistances() {
+    if (!meLatLng) {
+      document.body.classList.remove('has-me');
+      nearMeEl.hidden = true;
+      stopEls.forEach(({ li }) => li.classList.remove('nearest'));
+      return;
+    }
+    let best = null;
+    const rows = stopEls.map(({ li, stop }) => {
+      const d = distM([meLatLng.lat, meLatLng.lng], [stop.lat, stop.lng]);
+      li.classList.remove('nearest');
+      if (stop.kind !== 'buffer' && (!best || d < best.d)) best = { d, stop, li };
+      return { li, d };
+    });
+    if (!best) return;
+
+    const here = best.d <= FAR_M;
+    document.body.classList.toggle('has-me', here);
+    if (here) {
+      for (const { li, d } of rows) {
+        const el = li.querySelector('.stop-dist');
+        if (el) el.textContent = '· 距你 ' + fmtDist(d);
+      }
+      best.li.classList.add('nearest');
+      nearMeEl.innerHTML = `<span class="me-pin"></span><span>離你最近：<b>${esc(best.stop.name)}</b>，約 ${fmtDist(best.d)}</span>`;
+    } else {
+      nearMeEl.innerHTML = `<span class="me-pin"></span><span>你距這一天的行程約 ${fmtDist(best.d)}，可切換到所在城市的分頁。</span>`;
+    }
+    nearMeEl.hidden = false;
+  }
+
+  function setupLocate() {
+    createLocateControl(map, {
+      button: locateBtn,
+      toast: (text) => toast(text),
+      onPosition: (ll) => { meLatLng = ll; renderDistances(); },
+      onStop: () => { meLatLng = null; renderDistances(); },
     });
   }
 
