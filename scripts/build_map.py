@@ -45,8 +45,12 @@ PHOTOS_DIR = ROOT / "photos"
 THUMBS_DIR = ROOT / "thumbs"
 DATA_FILE = ROOT / "data" / "photos.json"
 
-DISPLAY_MAX = 1400   # 彈出視窗顯示用的圖片長邊像素
+# 縮圖尺寸與品質：在手機上看不出差異的前提下盡量壓小。
+# 維持 JPEG（而非 WebP／AVIF），使用者按「下載」拿到的仍是通用的 .jpg。
+DISPLAY_MAX = 1280   # 彈出視窗顯示用的圖片長邊像素
 SMALL_MAX = 400      # 側邊清單／地圖標記用的小縮圖長邊像素
+DISPLAY_Q = 80       # 漸進式 JPEG，行動網路下先出低解析預覽
+SMALL_Q = 78
 IMG_EXTS = {".jpg", ".jpeg", ".png", ".tif", ".tiff", ".heic", ".heif", ".webp"}
 
 
@@ -109,11 +113,11 @@ def make_thumbs(img, display_dest, small_dest):
 
     disp = base.copy()
     disp.thumbnail((DISPLAY_MAX, DISPLAY_MAX))
-    disp.save(display_dest, "JPEG", quality=85, optimize=True)
+    disp.save(display_dest, "JPEG", quality=DISPLAY_Q, optimize=True, progressive=True)
 
     small = base.copy()
     small.thumbnail((SMALL_MAX, SMALL_MAX))
-    small.save(small_dest, "JPEG", quality=80, optimize=True)
+    small.save(small_dest, "JPEG", quality=SMALL_Q, optimize=True, progressive=True)
 
 
 def add_locations(photos):
@@ -140,26 +144,35 @@ def add_locations(photos):
 def load_existing_captions():
     """保留先前填寫的 title / note。
 
-    以「檔名（不含副檔名）」為鍵，而非含資料夾的 id——這樣把照片搬到不同
-    分類資料夾後，既有的標題與說明仍能對應回來，不會被清空。
+    回傳 (by_source, by_stem) 兩份對照表：
+      by_source 以「photos/ 底下的相對路徑」為鍵，最精確；
+      by_stem   以「檔名（不含副檔名）」為鍵，讓照片搬到不同分類資料夾後
+                仍能對應回既有的標題與說明。
+    查找時先比對 source，再退回 stem——同一資料夾內若有同名但不同副檔名的
+    照片（例如 IMG_0229.heic 與 IMG_0229.JPG），才不會共用同一段說明。
     """
     if not DATA_FILE.exists():
-        return {}
+        return {}, {}
     try:
         data = json.loads(DATA_FILE.read_text(encoding="utf-8"))
     except (json.JSONDecodeError, OSError):
-        return {}
-    out = {}
+        return {}, {}
+    by_source, by_stem = {}, {}
     for p in data.get("photos", []):
-        stem = Path(p.get("source") or p.get("id", "")).stem
+        source = p.get("source") or ""
+        stem = Path(source or p.get("id", "")).stem
         if not stem:
             continue
         title, note = p.get("title", ""), p.get("note", "")
         if title == stem:      # 標題只是檔名，視為未命名
             title = ""
-        if title or note:
-            out[stem] = {"title": title, "note": note}
-    return out
+        if not (title or note):
+            continue
+        cap = {"title": title, "note": note}
+        if source:
+            by_source[source] = cap
+        by_stem.setdefault(stem, cap)
+    return by_source, by_stem
 
 
 def main():
@@ -181,14 +194,20 @@ def main():
         print("⚠ 偵測到 HEIC 照片，但未安裝 pillow-heif，這些照片會被略過。")
         print("  請執行：pip install pillow-heif")
 
-    captions = load_existing_captions()
+    cap_by_source, cap_by_stem = load_existing_captions()
     photos = []
+    used_ids = set()
     skipped_no_gps = []
     skipped_error = []
 
     for f in files:
         rel = f.relative_to(PHOTOS_DIR)
         pid = str(rel.with_suffix("")).replace("/", "__").replace("\\", "__")
+        if pid in used_ids:
+            # 同資料夾內同名不同副檔名（IMG_0229.heic / IMG_0229.JPG）：
+            # 附上副檔名以免兩張照片共用同一個縮圖檔。
+            pid = f"{pid}_{f.suffix.lstrip('.').upper()}"
+        used_ids.add(pid)
         try:
             with Image.open(f) as img:
                 gps = get_gps(img)
@@ -203,7 +222,8 @@ def main():
             skipped_error.append(f"{rel}（{e}）")
             continue
 
-        cap = captions.get(f.stem, {})
+        rel_key = str(rel).replace("\\", "/")
+        cap = cap_by_source.get(rel_key) or cap_by_stem.get(f.stem, {})
         lat, lng = gps
         category = rel.parts[0] if len(rel.parts) > 1 else "未分類"
         photos.append({
