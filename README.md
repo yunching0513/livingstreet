@@ -139,3 +139,11 @@ python -m http.server 8000
 <!-- redeploy trigger -->
 
 <!-- descriptions deploy -->
+
+
+---
+
+## 著作權 Copyright
+
+© 2026　吳昀慶 Yun-Ching Wu
+授權條款見 [`LICENSE`](LICENSE) 與 [`LICENSE-CONTENT`](LICENSE-CONTENT)　詳細聲明見 [`COPYRIGHT.md`](COPYRIGHT.md)
